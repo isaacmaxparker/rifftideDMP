@@ -6,7 +6,7 @@
 <head>
 
     <title>
-        Isaac's Hot
+        Rifftide
         <%block name="page_title">
                 My Project!
             </%block>
@@ -29,63 +29,22 @@
         <link rel="icon" href="${ STATIC_URL }homepage/media/favicon.ico">
 
     </head>
-    <body <%block name="bodclass"></%block> </body>
-
-
-
-
-        <div id="maintenence" class = "alert alert-danger" style="position:absolute;">Our server will be down all the times I am not working on this project.</div>
+    <body>
         <header>
-            <img src="${ STATIC_URL }homepage/media/hphones.png" alt="python" />
-            <nav class="mynav navbar">
-                <ul class="nav nav-tabs">
-                    
+        <div id="Topbar">
+            
+                <ul class="myNav">
+                    <li>
+                        <img src="${ STATIC_URL }homepage/media/thick logo.png" alt="python" />
+                    </li>
                     <%block name="navbar_items">
-                            
-                            <li class="nav-item mynav-item">
-                                    <a class="nav-link ${ 'active' if request.dmp.page =='index' else ' '}" data-toggle="tab" href="/">Home</a>
-                                  </li>
-                                
 
-                            </%block>
-                    
-                            %if request.user.is_authenticated:
-                            
-                                
-                            
-                                <li class="nav-item dropdown mynav-item" style="float:right; position: absolute; right: 0; margin-right:10;">
-                                    
-                                    <a class="nav-link dropdown-toggle" style="color:#085c49;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Hello, ${request.user.username} 
-                                    </a> 
-                                    
-                                    <div class="dropdown-menu mydropdown " aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item mydropddownitem" href="/account/index">Account</a>
-                                    <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="/account/logout">Logout</a>
-                                    </div>
-                                </li>
-                                
-                            %else:
-                                <li class="nav-item mynav-item" style="float:right; position: absolute; right: 0;"><a class="nav-link ${ 'active' if request.dmp.page =='login' else ' '}"" href="/account/login" style="color:#085c49">Log In</a></li>
-                            %endif
-
-                           
-                                
-
-
+                    </%block>
                  </ul>
-        
-            </nav>
-            %if request.user.is_authenticated:
-            
-                <img src="${STATIC_URL}homepage/media/UserImages/${request.user.username}.jpg" class="loginimg" >
-            
-            %endif
-            
+        </div>
 
-            <div class="title"><%block name="page_header_title">
-                Welcome to Isaac's Project
+            <div id="bigTitle" class="title"><%block name="page_header_title">
+                We are
                 </%block></div>
         </header>
 
