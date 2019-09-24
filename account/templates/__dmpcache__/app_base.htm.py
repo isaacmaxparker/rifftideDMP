@@ -73,7 +73,7 @@ def render_navbar_items(context,**pageargs):
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='contact' else ' '))
         __M_writer('" href="/contact/">Contact</a>\r\n    </li>\r\n    <li class="nav-item mynav-item">\r\n      <a class="nav-link ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='' else ' '))
-        __M_writer('"  href="/catalog/">Catalog</a>\r\n    </li>             \r\n')
+        __M_writer('"  href="/store/">Store</a>\r\n    </li>             \r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
