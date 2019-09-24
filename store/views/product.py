@@ -40,14 +40,16 @@ def process_request(request, product:cmod.Product):
 
         request.session['cart_ID'] = sale2.id
 
-        thisItem = cmod.SaleItem()
-
-        thisItem.sale = sale
-        thisItem.product = product
-        thisItem.quantity = quantwant
-        thisItem.size = size
-        thisItem.price = round(product.price * thisItem.quantity,2)
-        thisItem.save()
+        try saleItem = cmod.SaleItem.objects.get(sale=sale2, product=product):
+            saleItem.quantity = saleItem.quantity + quantwant
+        except:
+            thisItem = cmod.SaleItem()
+            thisItem.sale = sale
+            thisItem.product = product
+            thisItem.quantity = quantwant
+            thisItem.size = size
+            thisItem.price = round(product.price * thisItem.quantity,2)
+            thisItem.save()
         
         return HttpResponseRedirect('/store/cart/')
 

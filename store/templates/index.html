@@ -38,9 +38,9 @@ Rifftide Shop
 
 <%block name="left_content">
 <div class="filterpanel">
-    <button id="filterbtn" class="${'buttonout' if filtered else ''}">${'H' if filtered else 'A'}</button>
-  <div class="filters ${'visible' if filtered else 'hidden'}">
-    <p class=filterstitle>Filters</p>
+  <div class="filters">
+      
+    <p class=filterstitle> <span id="filterbtn" class="">A</span>  Filters</p>
     <ul>
       <!-- //////////////DONT HARD CODE THIS ////////////////// -->
     <li class="catlist ${'bolder' if category is None else ' '}">
@@ -72,13 +72,12 @@ Rifftide Shop
 </div>
 </%block>
 
-
-<%block name="site_middle">
-<div id="site_middle" class="${'lefton' if filtered else 'leftoff'}">
-</%block>
+<%block name="site_right">
+ 
+            </%block>
 
 <%block name="right_content">
-<script>
+<!-- <script>
         $("#filterbtn").click(function() {
            if ($(".filters").hasClass("visible")){
             $(".filters").removeClass("visible");
@@ -98,13 +97,7 @@ Rifftide Shop
            }
             }
         )
-</script>
-
-<script>
-      if( $(filterbtn).hasclass("visible")){
-        alert("VISIBLE");
-      }  
-</script>
+</script> -->
 </%block>
 
 

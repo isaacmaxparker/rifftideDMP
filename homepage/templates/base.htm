@@ -47,21 +47,24 @@
                 We are
                 </%block></div>
         </header>
-
-        <main>
-            <div id="site_left">
+        
+       <table class=main>
+           <tr>
+            <td id="site_left">
                 <%block name="left_content">Left Side</%block>
-            </div>
-            <%block name="site_middle">
-            <div id="site_middle" class="lefton">
-            </%block>
+            </td>
+            
+            <td id="site_middle">
+           
                 <%block name="site_content">Error Page Content not found</%block>
-            </div>
-
-            <div id="site_right" >
+            </td>
+            <%block name="site_right">
+            <td id="site_right" >
+            </%block>
                 <%block name="right_content">right Side</%block>
-            </div>
-        </main>
+            </td>
+        </tr>
+        </table>
 
         <footer>
             

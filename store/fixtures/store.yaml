@@ -14,7 +14,7 @@
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: True
+        isMain: true
         name: logo
         description: ''
         price: '15.00'
@@ -66,7 +66,7 @@
         category: 2
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: True
+        isMain: true
         name: splash
         description: ''
         price: '18.00'
@@ -79,7 +79,7 @@
         category: 2
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: True
+        isMain: true
         name: jungle
         description: ''
         price: '18.00'
@@ -92,20 +92,7 @@
         category: 2
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: False
-        name: jungle
-        description: ''
-        price: '18.00'
-        shirtColor: teal
-        decor: teal
-        cut: womens
--   model: store.product
-    pk: 7
-    fields:
-        category: 2
-        last_modified: 2019-09-23 11:56:41.710200
-        status: A
-        isMain: False
+        isMain: false
         name: jungle
         description: ''
         price: '18.00'
@@ -118,7 +105,7 @@
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: True
+        isMain: true
         name: flower sam
         description: ''
         price: '18.00'
@@ -131,25 +118,25 @@
         category: 2
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: True
+        isMain: true
         name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: 'four'
-        cut: 'womens'
+        decor: four
+        cut: womens
 -   model: store.product
     pk: 10
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: True
+        isMain: true
         name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: 'one'
+        decor: one
         cut: ''
 -   model: store.product
     pk: 11
@@ -157,12 +144,12 @@
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: False
+        isMain: false
         name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: 'two'
+        decor: two
         cut: ''
 -   model: store.product
     pk: 12
@@ -170,15 +157,69 @@
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: False
+        isMain: false
         name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: 'three'
+        decor: three
         cut: ''
 -   model: store.productimage
     pk: 1
     fields:
         filename: logo - white
         product: 1
+-   model: store.sale
+    pk: 1
+    fields:
+        created: 2019-09-23 21:49:38.908353
+        purchased: null
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+-   model: store.sale
+    pk: 2
+    fields:
+        created: 2019-09-23 21:49:59.956992
+        purchased: null
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+-   model: store.saleitem
+    pk: 2
+    fields:
+        status: D
+        sale: 2
+        product: 7
+        quantity: 2
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 3
+    fields:
+        status: A
+        sale: 2
+        product: 5
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 4
+    fields:
+        status: D
+        sale: 2
+        product: 5
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 5
+    fields:
+        status: D
+        sale: 2
+        product: 4
+        quantity: 1
+        size: XS
+        price: '15.00'

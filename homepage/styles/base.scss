@@ -212,52 +212,42 @@ h3 {
     color:rgb(3, 65, 61);
 }
 
+.main td{
+    padding:20px;
+}
+
 .buybtn{
     box-shadow: none;
     background-color:rgb(44, 168, 44);
     color:white;
     padding:10px;
 }
-$sidecolwidth:10%;
-main {
-    margin: 0;
-    padding: 15px;
-    position: relative;
+$sidecolwidth:15vw;
 
     #site_left{
-       // background-color: rgba(255, 255, 255, 0.315);
-        position: absolute;
-        left: 0; 
-        top: 0; 
-        width: 200px;
-        height: 100% ;
-        z-index: 8001;
+        position: relative;
+        width: $sidecolwidth;
+        height:100%;
     }
+
 
     #site_middle{
         background-color:rgba(255, 255, 255, 0.8);
         border-color: whitesmoke;
         border-width: 10px;
         border-style: solid;
-        min-width:385px;
-        width:80%;
-        min-height:200px;
-        position: absolute;
-        margin-right: $sidecolwidth;
+        width:auto;
     }
 
     #site_right{
-        //background-color: rgba(255, 255, 255, 0.315);
-        position: absolute;
-        right:0;
-        top:0;
-        height:100%;
+        width: $sidecolwidth;
     }
-}
+
 
 .product_container{
     width:100%;
 }
+
 
 .lefton{
     margin-left: $sidecolwidth;
@@ -362,17 +352,14 @@ a{
 padding:0;
 position: relative;
 }
-.filterpanel{
-    position:fixed;
-}
 
 #filterbtn{
-    background-color:rgba(245, 245, 245, 0.589);
+    display: inline-block;
+    background-color:rgba(245, 245, 245, 0);
     border:none;
     color:#065c49;
     font-family: $iconfont;
     font-weight: bolder;
-    border: 5px rgba(245, 245, 245, 0.589) solid;
     -webkit-transition:margin-left .8s;
 }
 
@@ -388,7 +375,7 @@ position: relative;
 
 .hidden{
     max-width:0px;
-    margin-left:$sidecolwidth;
+    margin-left:-$sidecolwidth;
     -webkit-transition:max-width 9s, margin-left 1s;
 }
 
@@ -406,7 +393,7 @@ position: relative;
     padding:10px;
 }
 
-@media(max-width:380px){
+@media(max-width:428px){
 
     .homeImg{
         margin-left:25%;
@@ -421,5 +408,8 @@ position: relative;
 @media(max-width:680px){   
     .lefton{
         margin-left:40px;
+    }
+    #instagram{
+        display: none;
     }
 }

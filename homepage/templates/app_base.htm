@@ -1,21 +1,12 @@
 <%inherit file="base.htm" />
 
 <%block name="navbar_items">
-                <li class="mynav-item">
-                      <a class="nav-link ${ 'active' if request.dmp.page =='index' else ' '}"  href="/">Home</a>
-                    </li>
                       <li class="nav-item mynav-item">
                         <a class="nav-link ${ 'active' if request.dmp.page =='store' else ' '}"  href="/store/">Store</a>
                       </li>
 </%block>
 
 <%block name="left_content">
-<ul>
-    <li class="mynav-item">
-        <a class="nav-link " data-toggle="tab" href="/">Home</a>
-      </li>
-</ul>
-
 
 </%block>
 

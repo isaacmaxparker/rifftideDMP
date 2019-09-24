@@ -5,14 +5,14 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569298438.7592647
+_modified_time = 1569304554.3184826
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/homepage/templates/base.htm'
 _template_uri = '/homepage/templates/base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
-_exports = ['page_title', 'navbar_items', 'page_header_title', 'left_content', 'site_middle', 'site_content', 'right_content']
+_exports = ['page_title', 'navbar_items', 'page_header_title', 'left_content', 'site_content', 'site_right', 'right_content']
 
 
 from datetime import datetime 
@@ -21,22 +21,22 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         def navbar_items():
             return render_navbar_items(context._locals(__M_locals))
+        def site_right():
+            return render_site_right(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
         def page_title():
             return render_page_title(context._locals(__M_locals))
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
-        def site_middle():
-            return render_site_middle(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n\r\n<head>\r\n\r\n    <title>\r\n        Rifftide\r\n        ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -69,27 +69,27 @@ def render_body(context,**pageargs):
             context['self'].page_header_title(**pageargs)
         
 
-        __M_writer('</div>\r\n        </header>\r\n\r\n        <main>\r\n            <div id="site_left">\r\n                ')
+        __M_writer('</div>\r\n        </header>\r\n        \r\n       <table class=main>\r\n           <tr>\r\n            <td id="site_left">\r\n                ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'left_content'):
             context['self'].left_content(**pageargs)
         
 
-        __M_writer('\r\n            </div>\r\n            ')
-        if 'parent' not in context._data or not hasattr(context._data['parent'], 'site_middle'):
-            context['self'].site_middle(**pageargs)
-        
-
-        __M_writer('\r\n                ')
+        __M_writer('\r\n            </td>\r\n            \r\n            <td id="site_middle">\r\n           \r\n                ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'site_content'):
             context['self'].site_content(**pageargs)
         
 
-        __M_writer('\r\n            </div>\r\n\r\n            <div id="site_right" >\r\n                ')
+        __M_writer('\r\n            </td>\r\n            ')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'site_right'):
+            context['self'].site_right(**pageargs)
+        
+
+        __M_writer('\r\n                ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'right_content'):
             context['self'].right_content(**pageargs)
         
 
-        __M_writer('\r\n            </div>\r\n        </main>\r\n\r\n        <footer>\r\n            \r\n            ')
+        __M_writer('\r\n            </td>\r\n        </tr>\r\n        </table>\r\n\r\n        <footer>\r\n            \r\n            ')
         __M_writer('\r\n\r\n           <p class="copy"> &copy; ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( datetime.now().strftime("%Y") ))
         __M_writer(' Isaac McDougal</p>\r\n\r\n        </footer>\r\n\r\n        </body>\r\n\r\n</html>\r\n<script>\r\n</script>')
@@ -146,18 +146,6 @@ def render_left_content(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_site_middle(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def site_middle():
-            return render_site_middle(context)
-        __M_writer = context.writer()
-        __M_writer('\r\n            <div id="site_middle" class="lefton">\r\n            ')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
@@ -165,6 +153,18 @@ def render_site_content(context,**pageargs):
             return render_site_content(context)
         __M_writer = context.writer()
         __M_writer('Error Page Content not found')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_site_right(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def site_right():
+            return render_site_right(context)
+        __M_writer = context.writer()
+        __M_writer('\r\n            <td id="site_right" >\r\n            ')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -184,6 +184,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/homepage/templates/base.htm", "uri": "/homepage/templates/base.htm", "source_encoding": "utf-8", "line_map": {"18": 68, "19": 69, "20": 0, "41": 2, "46": 12, "47": 17, "48": 17, "49": 17, "50": 19, "51": 19, "52": 20, "53": 20, "54": 25, "55": 25, "56": 27, "57": 28, "58": 28, "59": 29, "60": 29, "61": 38, "62": 38, "67": 42, "72": 48, "77": 53, "82": 57, "87": 58, "92": 62, "93": 68, "94": 70, "95": 70, "101": 10, "107": 10, "113": 40, "119": 40, "125": 46, "131": 46, "137": 53, "143": 53, "149": 55, "155": 55, "161": 58, "167": 58, "173": 62, "179": 62, "185": 179}}
+{"filename": "C:/Users/Isaac/mysite/homepage/templates/base.htm", "uri": "/homepage/templates/base.htm", "source_encoding": "utf-8", "line_map": {"18": 71, "19": 72, "20": 0, "41": 2, "46": 12, "47": 17, "48": 17, "49": 17, "50": 19, "51": 19, "52": 20, "53": 20, "54": 25, "55": 25, "56": 27, "57": 28, "58": 28, "59": 29, "60": 29, "61": 38, "62": 38, "67": 42, "72": 48, "77": 54, "82": 59, "87": 63, "92": 64, "93": 71, "94": 73, "95": 73, "101": 10, "107": 10, "113": 40, "119": 40, "125": 46, "131": 46, "137": 54, "143": 54, "149": 59, "155": 59, "161": 61, "167": 61, "173": 64, "179": 64, "185": 179}}
 __M_END_METADATA
 """

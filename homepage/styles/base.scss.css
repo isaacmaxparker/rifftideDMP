@@ -205,6 +205,10 @@ h3 {
   color: #03413d;
 }
 
+.main td {
+  padding: 20px;
+}
+
 .buybtn {
   box-shadow: none;
   background-color: #2ca82c;
@@ -212,35 +216,22 @@ h3 {
   padding: 10px;
 }
 
-main {
-  margin: 0;
-  padding: 15px;
+#site_left {
   position: relative;
-}
-main #site_left {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 200px;
+  width: 15vw;
   height: 100%;
-  z-index: 8001;
 }
-main #site_middle {
+
+#site_middle {
   background-color: rgba(255, 255, 255, 0.8);
   border-color: whitesmoke;
   border-width: 10px;
   border-style: solid;
-  min-width: 385px;
-  width: 80%;
-  min-height: 200px;
-  position: absolute;
-  margin-right: 10%;
+  width: auto;
 }
-main #site_right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
+
+#site_right {
+  width: 15vw;
 }
 
 .product_container {
@@ -248,7 +239,7 @@ main #site_right {
 }
 
 .lefton {
-  margin-left: 10%;
+  margin-left: 15vw;
   -webkit-transition: margin-left 1s;
 }
 
@@ -263,7 +254,7 @@ main #site_right {
 }
 
 .righton {
-  margin-right: 10%;
+  margin-right: 15vw;
   -webkit-transition: margin-right 1s;
 }
 
@@ -348,17 +339,13 @@ a {
   position: relative;
 }
 
-.filterpanel {
-  position: fixed;
-}
-
 #filterbtn {
-  background-color: rgba(245, 245, 245, 0.589);
+  display: inline-block;
+  background-color: rgba(245, 245, 245, 0);
   border: none;
   color: #065c49;
   font-family: "Glyphter";
   font-weight: bolder;
-  border: 5px rgba(245, 245, 245, 0.589) solid;
   -webkit-transition: margin-left 0.8s;
 }
 
@@ -368,13 +355,13 @@ a {
 }
 
 .visible {
-  max-width: 10%;
+  max-width: 15vw;
   -webkit-transition: max-width 0.1s, margin-left 1s;
 }
 
 .hidden {
   max-width: 0px;
-  margin-left: 10%;
+  margin-left: -15vw;
   -webkit-transition: max-width 9s, margin-left 1s;
 }
 
@@ -394,7 +381,7 @@ a {
   padding: 10px;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 428px) {
   .homeImg {
     margin-left: 25%;
     width: 50%;
@@ -407,6 +394,10 @@ a {
 @media (max-width: 680px) {
   .lefton {
     margin-left: 40px;
+  }
+
+  #instagram {
+    display: none;
   }
 }
 

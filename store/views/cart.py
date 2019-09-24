@@ -32,7 +32,9 @@ def process_request(request):
 
 @view_function
 def remove(request, product:cmod.Product):
-    sale = request.user.get_shopping_cart()
+    cartID = request.session.get('cart_ID', 'NONE') 
+    if cartID != 'NONE':
+        sale = cmod.Sale.objects.get(id=cartID)
     saleItem = cmod.SaleItem.objects.get(sale=sale, product=product)
     saleItem.status = 'D'
     saleItem.save()

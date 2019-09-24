@@ -11,12 +11,18 @@ store
 
 
 <%block name="navbar_items">
-<li class="mynav-item">
-  <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/">Home</a>
-</li>
   <li class="nav-item mynav-item">
     <a class="nav-link ${ 'active' if request.dmp.page =='index' else ' '}"  href="/store/">Store</a>
-  </li>             
+  </li>         
+  <li class="nav-item mynav-item">
+      <a class="nav-link "  href="https://open.spotify.com/artist/6TRcbaV03EF0bofJNKUSI8" target="_blank">Music</a>
+  </li>  
+  <li class="nav-item mynav-item">
+      <a class="nav-link "  href="https://www.youtube.com/rifftideacapella" target="_blank">Videos</a>
+  </li> 
+  <li id="instagram">
+    <a class="nav-link" href="https://www.instagram.com/rifftideacappella/" target="_blank">Instagram</a>
+  </li>    
 </%block>
 
 <%block name="left_content">
