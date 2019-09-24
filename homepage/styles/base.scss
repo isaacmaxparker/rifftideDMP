@@ -89,6 +89,10 @@ footer{
     align-self: center;
 }
 
+.show{
+    display: inline-block;
+}
+
 header {
     text-align: center;
 }
@@ -168,7 +172,7 @@ h3 {
 }
 
 .formlabel{
-    color:#a33f4e;
+    color:#272727;
     font-weight: lighter;
     font-size: 28px;
     font-family: $defaultfont;
@@ -177,7 +181,7 @@ h3 {
 .forminput{
     font-style: italic;
     font-weight: lighter;
-    font-family: 'TWICE';
+    font-family: $defaultfont2;
     padding-left: 10px;
     color:gray;
     border-radius: 10px;
@@ -185,6 +189,12 @@ h3 {
     border-width: 1px;
     border-color: lightgrey;
     font-size: 24px;
+    margin:10px;
+}
+
+.size{
+    padding-top:5px;
+    padding-bottom: 5px;
 }
 
 .mybtn{
@@ -193,7 +203,8 @@ h3 {
     border-radius: 10px;
     padding:10px;
     color:rgb(0, 109, 103);
-    font-family: 'Josefin'
+    font-family: 'Josefin';
+    border:none;
 }
 .mybtn:hover{
     text-decoration: none;
@@ -201,7 +212,13 @@ h3 {
     color:rgb(3, 65, 61);
 }
 
-$sidecolwidth:200px;
+.buybtn{
+    box-shadow: none;
+    background-color:rgb(44, 168, 44);
+    color:white;
+    padding:10px;
+}
+$sidecolwidth:10%;
 main {
     margin: 0;
     padding: 15px;
@@ -223,7 +240,10 @@ main {
         border-width: 10px;
         border-style: solid;
         min-width:385px;
+        width:80%;
+        min-height:200px;
         position: absolute;
+        margin-right: $sidecolwidth;
     }
 
     #site_right{
@@ -368,7 +388,7 @@ position: relative;
 
 .hidden{
     max-width:0px;
-    margin-left:($sidecolwidth * -1)+20px;
+    margin-left:$sidecolwidth;
     -webkit-transition:max-width 9s, margin-left 1s;
 }
 

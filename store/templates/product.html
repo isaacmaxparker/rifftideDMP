@@ -47,6 +47,33 @@ Product Details
                        <a id="${var.name}-${var.id}" href="/store/product/${var.id}"class="optionButton"><img src="${var.image_url()}""></a>
                        %endfor
                    </div>
+
+                   
+                   <form style="vertical-align:middle;" method="POST" id="productform">
+
+                   
+                    <label class="formlabel" style="font-size:18px;">Quantity:</label>
+                    <input type="number" value="0" class="forminput" step="1" name="QuantOrd">
+                    <select name="shirtSize" class="forminput size">
+                            <option value="XS">Adult XS</option>
+                            <option value="S">Adult Small</option>
+                            <option value="M">Adult Medium</option>
+                            <option value="L">Adult Large</option>
+                            <option value="XL">Adult XL</option>
+
+                            <option value="YXS">Youth XS</option>
+                            <option value="YS">Youth Small</option>
+                            <option value="YM">Youth Medium</option>
+                            <option value="YL">Youth Large</option>
+                            <option value="YXL">Youth XL</option>
+                    </select>
+                    <input type="submit" class="mybtn buybtn" value="Buy Now">
+                    %if message != '':
+                    <p class = "alert alert-danger" style="text-align: center;">${message}</p>
+                    %endif
+                   </form>
+
+
                    <a class="mybtn" href="/store/index/1/">Back to products</a>
                </div>
             </td>

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569288197.8114054
+_modified_time = 1569298438.7592647
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/homepage/templates/base.htm'
 _template_uri = '/homepage/templates/base.htm'
@@ -21,22 +21,22 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def page_title():
-            return render_page_title(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
         def left_content():
             return render_left_content(context._locals(__M_locals))
         def navbar_items():
             return render_navbar_items(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        def site_middle():
-            return render_site_middle(context._locals(__M_locals))
+        def page_title():
+            return render_page_title(context._locals(__M_locals))
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        def site_middle():
+            return render_site_middle(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n\r\n<head>\r\n\r\n    <title>\r\n        Rifftide\r\n        ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -69,7 +69,7 @@ def render_body(context,**pageargs):
             context['self'].page_header_title(**pageargs)
         
 
-        __M_writer('</div>\r\n        </header>\r\n\r\n        <main>\r\n            <div id="site_left" class="">\r\n                ')
+        __M_writer('</div>\r\n        </header>\r\n\r\n        <main>\r\n            <div id="site_left">\r\n                ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'left_content'):
             context['self'].left_content(**pageargs)
         
@@ -152,7 +152,7 @@ def render_site_middle(context,**pageargs):
         def site_middle():
             return render_site_middle(context)
         __M_writer = context.writer()
-        __M_writer('\r\n            <div id="site_middle" class="leftoff">\r\n            ')
+        __M_writer('\r\n            <div id="site_middle" class="lefton">\r\n            ')
         return ''
     finally:
         context.caller_stack._pop_frame()

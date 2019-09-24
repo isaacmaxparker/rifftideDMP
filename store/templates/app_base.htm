@@ -20,44 +20,9 @@ store
 </%block>
 
 <%block name="left_content">
-<div class="filterpanel">
-    <button id="filterbtn" class="${'buttonout' if filtered else ''}">${'H' if filtered else 'A'}</button>
-  <div class="filters ${'visible' if filtered else 'hidden'}">
-    <p class=filterstitle>Filters</p>
-    <ul>
-      <!-- //////////////DONT HARD CODE THIS ////////////////// -->
-    <li class="catlist ${'bolder' if category is None else ' '}">
-        <a href="/store/index/">All Products</a>
-    </li>
-    <hr>
-    <p class=filterstitle>Shirt cut</p>
-    %for cat in cmod.Category.objects.order_by('name'):
-    <li class="catlist ${'bolder' if category == cat else ' '}">
-      <a href="/store/index/1/${cat.id}/${colorid}">${cat.name}</a>
-    </li>
-    %endfor
-    <hr>
-    <p class=filterstitle>Shirt color</p>
-    <li class="catlist ${'bolder' if colorid == 1 else ' '}">
-      <a href="/store/index/1/${catid}/1">Black</a>
-    </li>
-    <li class="catlist ${'bolder' if colorid == 2 else ' '}">
-        <a href="/store/index/1/${catid}/2">White</a>
-    </li>
-    <li class="catlist ${'bolder' if colorid == 3 else ' '}">
-        <a href="/store/index/1/${catid}/3">Teal</a>
-    </li>
-    <li class="catlist ${'bolder' if colorid == 4 else ' '}">
-        <a href="/store/index/1/${catid}/4">Grey</a>
-    </li>
-    </ul>
-  </div>
-</div>
+
 </%block>
 
-<%block name="site_middle">
-<div id="site_middle" class="${'lefton' if filtered else 'leftoff'}">
-</%block>
 
 <%block name="right_content">
 

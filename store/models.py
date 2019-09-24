@@ -1,4 +1,5 @@
 from django.db import models
+from decimal import Decimal
 
 # Create your models here.
 class Category(models.Model):
@@ -55,3 +56,51 @@ class ProductImage(models.Model):
     
     def image_url(self):
         return '/static/store/media/samples/' + self.filename + ' teal' + '.png'
+
+TAX_RATE = Decimal(".00")
+
+class Sale(models.Model):
+        #user = models.ForeignKey("account.User", on_delete=models.PROTECT)
+        created = models.DateTimeField(auto_now_add=True)
+        purchased = models.DateTimeField(null=True, default=None)
+        subtotal = models.DecimalField(max_digits=7, decimal_places=2, default=Decimal(0))
+        tax = models.DecimalField(max_digits=7, decimal_places=2, default=Decimal(0))
+        total = models.DecimalField(max_digits=7, decimal_places=2, default=Decimal(0))
+        charge_id = models.TextField(null=True, default=None)   # successful charge id from stripe
+
+        def recalculate(self):
+            sales = SaleItem.objects.filter(sale=self, status='A')          
+            sub = Decimal("0.0")
+            for sale in sales:
+                sub += sale.price * sale.quantity
+            self.subtotal = sub
+            self.tax = self.subtotal * TAX_RATE
+            self.tax = round(self.tax, 2)
+            self.total = round(self.subtotal + self.tax,2)
+
+        def finalize(self, stripeToken):
+            '''Finalizes the sale'''
+            # complete this method!
+            # Ensure this sale isn't already finalized (purchased should be None)
+            if self.purchased is not None:
+                raise ValueError("This sale has already been finalized")
+            
+            # Call recalculate one more time
+            self.recalculate()
+
+            self.purchased = datetime.now()
+
+
+class SaleItem(models.Model):
+        STATUS_CHOICES = [
+            ( 'A', 'Active' ),
+            ( 'D', 'Deleted' ),
+        ]
+        status = models.CharField(max_length=1, default=STATUS_CHOICES[0][0], choices=STATUS_CHOICES)
+        sale = models.ForeignKey("Sale", on_delete=models.PROTECT, related_name="items")
+        product = models.ForeignKey("Product", on_delete=models.PROTECT)
+        quantity = models.IntegerField(default=0)
+        size = models.TextField(null=True)
+        price = models.DecimalField(max_digits=7, decimal_places=2, default=Decimal(0))
+        class Meta:
+            ordering = [ 'product__name' ]

@@ -9,7 +9,9 @@ ITEMS_PAGE_PAGE = 8
 
 @view_function
 def process_request(request, page:int=1, cat:int=0,color:int=0):
-  
+
+    print("*****************" + request.session['cart_item'])
+
     if cat !=0:
         category = cmod.Category.objects.get(id=cat)
     else:
