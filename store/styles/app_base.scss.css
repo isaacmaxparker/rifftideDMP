@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Josefin";
+  src: url("fonts/JosefinSans-Regular.ttf") format("truetype");
+  src: local("fonts/JosefinSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url("fonts/CenturyGothic.ttf") format("truetype");
+  src: local("fonts/CenturyGothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.catlist :active {
+  font-weight: bold;
+}
+
+.catlist a {
+  font-family: "Gill Sans MT", "Century Gothic";
+  color: #006669;
+  font-size: 24px;
+}
+
+.catlist :hover {
+  color: #571e26;
+  text-decoration: none;
+}
+
+.prodimgmain {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  box-shadow: 5px 10px 5px 0px #9fafad83;
+}
+
+.prodimg {
+  width: 116px;
+  margin: 0;
+  padding: 0;
+  margin: 10px;
+  border-style: solid;
+  border-color: #98e6d96c;
+  border-width: 3px;
+}
+
+.prodinfo {
+  padding-left: 20px;
+}
+
+.prodtitle {
+  font-family: "Century Gothic";
+  color: #167061;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.proddesc {
+  font-family: "Century Gothic";
+  color: #535353;
+  font-size: 20px;
+}
+
+.prodcolor {
+  display: inline-block;
+  font-family: "Century Gothic";
+  text-transform: uppercase;
+  color: #3b3b3b;
+  font-weight: bold;
+  font-size: 28px;
+  width: 100%;
+}
+
+.prodprice {
+  font-family: "Century Gothic";
+  color: #3fa396;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+  float: right;
+}
+
+.variationTitle {
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  color: grey;
+  font-style: italic;
+}
+
+.prodquant {
+  font-family: "Century Gothic";
+  color: #535353;
+  font-size: 12px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.content {
+  align-content: center;
+  padding: 20px;
+}
+
+.nextprev {
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  box-align: center;
+}
+
+.filterstitle {
+  text-align: center;
+  font-variant: small-caps;
+  font-family: "Josefin";
+}
+
+.prev {
+  font-family: "Century Gothic";
+  color: #7e383800;
+  font-size: 24px;
+}
+
+.feedback {
+  font-family: "Josefin";
+  text-align: center;
+  color: grey;
+  padding: 50px;
+}
+
+.parent {
+  width: 100%;
+  display: grid;
+}
+
+.parent:hover > span {
+  opacity: 0.85;
+}
+
+.parent:hover > span:hover {
+  opacity: 1;
+}
+
+.parent:hover > .prodimg {
+  opacity: 0;
+}
+
+.parent:hover > .prodimg:hover {
+  opacity: 1;
+}
+
+.nocolor {
+  font-size: 0px;
+  color: none;
+}
+
+@media (min-width: 1150px) {
+  .parent {
+    grid-template-columns: repeat(4, 1fr);
+    transition: grid-template-columns 1s;
+  }
+}
+@media (min-width: 850px) and (max-width: 1150px) {
+  .parent {
+    grid-template-columns: repeat(3, 1fr);
+    transition: grid-template-columns 1s;
+  }
+}
+@media (min-width: 545px) and (max-width: 850px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
+    transition: grid-template-columns 1s;
+  }
+}
+@media (max-width: 545px) {
+  .parent {
+    grid-template-columns: repeat(1, 1fr);
+    transition: grid-template-columns 1s;
+  }
+}
+
+/*# sourceMappingURL=app_base.scss.css.map */

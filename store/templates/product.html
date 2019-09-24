@@ -1,0 +1,63 @@
+<%inherit file="app_base.htm" />
+
+
+<%block name="page_header_title">
+Product Details
+</%block>
+
+<%block name="left_content">
+
+</%block>
+
+<%block name="site_content">
+
+<div class="content">
+    <table>
+        <tr>
+            <td width="38%">
+                <img src="${imageurl}" class="prodimgmain">
+            </td>
+            <td width="55%">
+               <div class="prodinfo">
+                   <p class="prodtitle">
+                        ${name.capitalize()} T-Shirt
+                        
+
+                   </p>
+                    <p class="prodcolor">
+                        %if shirtColor != decorColor:
+                        ${shirtColor} / ${decorColor}
+                        %else:
+                        ${shirtColor}
+                        %endif
+
+                        <span class="prodprice">
+                                $${price}
+                        </span>
+
+
+                    </p>
+                    <p class="proddesc">
+                            ${desc}
+                    </p>
+                   <p class="variationTitle">Other Styles:</p>
+                   <div class="options">
+                       %for var in variations:
+                       <input type="checkbox" class="hide" id="${var.id}">
+                       <a id="${var.name}-${var.id}" href="/store/product/${var.id}"class="optionButton"><img src="${var.image_url()}""></a>
+                       %endfor
+                   </div>
+                   <a class="mybtn" href="/store/index/1/">Back to products</a>
+               </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+</%block>
+
+<%block name="right_content">
+<script>
+</script>
+</%block>

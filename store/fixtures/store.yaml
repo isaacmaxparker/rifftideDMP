@@ -1,0 +1,184 @@
+-   model: store.category
+    pk: 1
+    fields:
+        last_modified: 2019-09-23 11:51:03.607047
+        name: Unisex
+-   model: store.category
+    pk: 2
+    fields:
+        last_modified: 2019-09-23 11:51:24.607516
+        name: Womens
+-   model: store.product
+    pk: 1
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: True
+        name: logo
+        description: ''
+        price: '15.00'
+        shirtColor: white
+        decor: teal
+        cut: ''
+-   model: store.product
+    pk: 2
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: logo
+        description: ''
+        price: '15.00'
+        shirtColor: black
+        decor: white
+        cut: ''
+-   model: store.product
+    pk: 3
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: logo
+        description: ''
+        price: '15.00'
+        shirtColor: black
+        decor: gold
+        cut: ''
+-   model: store.product
+    pk: 4
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: logo
+        description: ''
+        price: '15.00'
+        shirtColor: teal
+        decor: white
+        cut: ''
+-   model: store.product
+    pk: 5
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: True
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: zach
+        cut: womens
+-   model: store.product
+    pk: 6
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: True
+        name: jungle
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 7
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: False
+        name: jungle
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 7
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: False
+        name: jungle
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 8
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: True
+        name: flower sam
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: ''
+        cut: ''
+-   model: store.product
+    pk: 9
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: True
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: 'four'
+        cut: 'womens'
+-   model: store.product
+    pk: 10
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: True
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: 'one'
+        cut: ''
+-   model: store.product
+    pk: 11
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: False
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: 'two'
+        cut: ''
+-   model: store.product
+    pk: 12
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: False
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: 'three'
+        cut: ''
+-   model: store.productimage
+    pk: 1
+    fields:
+        filename: logo - white
+        product: 1
