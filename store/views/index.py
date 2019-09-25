@@ -10,8 +10,6 @@ ITEMS_PAGE_PAGE = 8
 @view_function
 def process_request(request, page:int=1, cat:int=0,color:int=0):
 
-    print("*****************" + request.session['cart_item'])
-
     if cat !=0:
         category = cmod.Category.objects.get(id=cat)
     else:
@@ -44,6 +42,17 @@ def process_request(request, page:int=1, cat:int=0,color:int=0):
     else:
         filtered = True
 
+    cartID = request.session.get('cart_ID', 'NONE') 
+
+    if cartID != 'NONE':
+        sale = cmod.Sale.objects.get(id=cartID)
+        sale.recalculate()
+        saleItems = cmod.SaleItem.objects.filter(sale=sale, status = 'A')
+
+    else:
+        sale = cmod.Sale()
+        saleItems = cmod.SaleItem.objects.filter(sale=sale, status = 'A')
+
     pgproducts= products[(page - 1) * ITEMS_PAGE_PAGE: page * ITEMS_PAGE_PAGE]
     context = {
         'category':category,
@@ -53,6 +62,8 @@ def process_request(request, page:int=1, cat:int=0,color:int=0):
         'products':pgproducts,
         'page':page,
         'numpages': ceil(products.count() / ITEMS_PAGE_PAGE),
+        'sale':sale,
+        'saleItems':saleItems,
        
     }
     return request.dmp.render('index.html', context)

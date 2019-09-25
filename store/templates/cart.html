@@ -7,9 +7,14 @@ Cart
 
 <%block name="site_content">
 <div id="content" style="padding:30px 0px;">
+%if len(saleItems) != 0:
+    <div class="centerTab">
+            <hr>
+        <p class="filterstitle"> Your Cart  <span class="glyphicon" style="float: right;">F</span></p>
+   
     <table class="carttab" width=100%; style="text-align:center;">
         <tr>
-            <th>
+            <th class="cartimg">
                 &nbsp;
             </th>
             <th>
@@ -19,32 +24,33 @@ Cart
                 Quantity
             </th>
             <th>
-                Price
+                Size
             </th>
             <th>
-                Extended
+                Price
             </th>
-            <th>Actions</th>
+           
+            
         </tr>
         %for item in saleItems :
         <tr>
-            <td>
+            <td class="cartimg">
                 <img src="${item.product.image_url()}" class="cartimg">
             </td>
             <td>
-                <a href="/store/product/${item.product.id}"><p class="link">${item.product.name}</p></a>
+                <a href="/store/product/${item.product.id}"><p class="link">${item.product.shirtColor.capitalize()}${'/' + item.product.decor.capitalize() if item.product.decor != '' else ''} ${item.product.name.capitalize()} T-Shirt</p></a>
             </td>
             <td>
                 ${item.quantity}
             </td>
             <td>
-              $${round(item.price,2)}
+              ${item.size}
             </td>
             <td>
-                    $${item.price * item.quantity}
+                $${round(item.price,2)} 
             </td>
             <td>
-                <a class="rmv" href="/store/cart.remove/${item.product.id}/">Remove</a>
+                <a class="rmv glyphicon" href="/store/cart.remove/${item.id}/">B</a>
             </td>
         </tr>
         %endfor
@@ -53,7 +59,7 @@ Cart
                 &nbsp;
             </td>
             <td>
-                Tax
+                Shipping
             </td>
             <td>
                 &nbsp;
@@ -92,16 +98,18 @@ Cart
             </tr>
     </table>
 <hr>
+<p class="filterstitle">Shipping <span class="glyphicon" style="float: right;" id="shipCheck">E</span></p>
+<form method="POST">
     <p class="formlabel" style="font-size:20px;padding-left:20px; display:inline-block;">Shipping Option:
-        <select class="shipSelect forminput" style="font-size:20px;padding:5px 10px;">
+        <select name="shipSelect" class="shipSelect forminput" style="font-size:20px;padding:5px 10px;">
             <option value="">  </option>
             <option value="IP">In Person - FREE </option>
             <option value="MAIL">UPS Shipping</option>
         </select>
     
     <span class="personselectspan hide" name="personSelect" style="margin-left:20px;" > Referring Member:
-            <select class="personselect forminput" style="font-size:20px;padding:5px 10px;">
-                <option value="">  </option>
+            <select name="personSelect" class="personselect forminput" style="font-size:20px;padding:5px 10px;">
+                <option value=" ">  </option>
                 <option value="LN">Loryn Norton</option>
                 <option value="CN">Cara Nickels</option>
                 <option value="BE">Bri Ellis</option>
@@ -113,17 +121,55 @@ Cart
             </select>
     </span>
     
+    <input type="submit"  value="${'Checkout' if shipSelect == None else 'Save'}" id="checkoutbtn" class="mybtn clearbtn hide" style="margin-left:20px;"></a>
+
+</form>
 </p>
-<div style="align-content:center; padding-bottom:10px; display:inline-block;">
-        <a id="shippingbtn" class="mybtn buybtn hide" style="margin-left:20px;" href="/store/checkout/${cart.id}">Enter Shipping Information</a>
-<a id="checkoutbtn" class="mybtn buybtn hide" style="margin-left:20px;" href="/store/checkout/${cart.id}">Checkout now</a>
 </div>
+%if shipSelect != None:
+<hr>
+<p class="filterstitle">Payment <span class="glyphicon" style="float: right;">E</span></p>
+<div width=100%; style="text-align: center" id="Payments">
+    <div id="paypal-button-container" style="display:inline-block"></div>
+    <hr>
 </div>
+
+%endif
+</div>
+%else:
+<div class="centerTab">
+    <p class="homeparg">You have no items in your cart!<br> Add one <a href="/store/">here.</a></p>
+    
+</div>
+
+%endif
+<input id="randomTag" name="orderid" type="hidden"></p>
+
 </%block>
+
+
+
 
 <%block name="left_content">
 <script type="text/javascript">
     $(document).ready(function(){
+
+        window.scrollTo(0,1000)
+
+        $("select.shipSelect").val("${shipSelect}")
+     
+        var selected = $("select.shipSelect").children("option:selected").val();
+   
+        if (selected == "IP"){
+            $(".personselectspan").addClass("show")
+            $(".personselectspan").removeClass("hide")
+            $("select.personselect").val("${personSelect}") 
+        }
+        if (selected != " "){
+            $("#shipCheck").html('F');
+        }
+
+
         $("select.shipSelect").change(function(){
             var selected = $(this).children("option:selected").val();
             if (selected == "IP"){
@@ -133,13 +179,10 @@ Cart
                 $("#shippingbtn").removeClass("show")
             }
             if (selected == "MAIL"){
-                $(".personselectspan").removeClass("show")
                 $(".personselectspan").addClass("hide")
-                $("#shippingbtn").addClass("show")
-                $("#shippingbtn").removeClass("hide")
-                $("#checkoutbtn").addClass("hide")
-                $("#checkoutbtn").removeClass("show")
-
+                $(".personselectspan").removeClass("show")
+                $("#checkoutbtn").addClass("show")
+                $("#checkoutbtn").removeClass("hide")
             }            
         });
         $("select.personselect").change(function(){
@@ -153,6 +196,44 @@ Cart
                 $("#checkoutbtn").removeClass("hide")
             }
         });
+       
+
     });
     </script>
+
+<script src="https://www.paypal.com/sdk/js?client-id=${SBClientId}&currency=USD"></script>
+        <script>
+          paypal.Buttons({
+            createOrder: function(data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  amount: {
+                    value: '.01'
+                  }
+                }]
+              });
+            },
+            onApprove: function(data, actions) {
+              return actions.order.capture().then(function(details) {
+                //alert('Transaction completed by ' + details.payer.name.given_name);
+                // Call your server to save the transaction
+
+                variable = data.orderID
+
+                $.ajax({
+                type: "POST",
+                url: "/store/cart.finishSale/" + data.orderID,
+                }).done(function(data) {
+            
+                    window.location.href="/store/receipt/" + variable;
+
+                });
+
+              });
+            }
+          }).render('#paypal-button-container');
+        </script>
+
+
+
 </%block>

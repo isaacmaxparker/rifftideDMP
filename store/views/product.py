@@ -27,9 +27,9 @@ def process_request(request, product:cmod.Product):
             return request.dmp.render('product.html', context)
 
         size = str(request.POST['shirtSize'])
-
+        
         cartID = request.session.get('cart_ID', 'None')
-        if (cartID == None):
+        if (cartID == 'None'):
             sale = cmod.Sale()
         else:
             sale = cmod.Sale.objects.get(id=cartID)
@@ -40,8 +40,10 @@ def process_request(request, product:cmod.Product):
 
         request.session['cart_ID'] = sale2.id
 
-        try saleItem = cmod.SaleItem.objects.get(sale=sale2, product=product):
-            saleItem.quantity = saleItem.quantity + quantwant
+        try:
+            thisItem = cmod.SaleItem.objects.get(sale=sale2, product=product)
+            thisItem.quantity = saleItem.quantity + quantwant
+            thisItem.save()
         except:
             thisItem = cmod.SaleItem()
             thisItem.sale = sale
@@ -51,7 +53,7 @@ def process_request(request, product:cmod.Product):
             thisItem.price = round(product.price * thisItem.quantity,2)
             thisItem.save()
         
-        return HttpResponseRedirect('/store/cart/')
+        return HttpResponseRedirect('/store')
 
 
 

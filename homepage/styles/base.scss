@@ -30,7 +30,7 @@
 }
 
 @font-face {
-    font-family: 'Glyphter';
+    font-family: 'Glyphter2';
     src: url('fonts/Glyphter.ttf') format('truetype');
     src: local('fonts/Glyphter.ttf') format('truetype');
     font-weight: normal;
@@ -39,7 +39,7 @@
 
 $defaultfont:'Century Gothic';
 $defaultfont2:'Josefin';
-$iconfont: 'Glyphter';
+$iconfont: 'Glyphter2';
 
 
 html, body {
@@ -99,7 +99,7 @@ header {
 
 .active{
     font-weight: bolder;
-    background-color: #08a58d48;
+    background-color: #08a58d48 !important;
     box-shadow: #08a58d48 0px 0px 20px 10px;
 }
 
@@ -122,7 +122,7 @@ header {
     font-size: 20px;
   }
 .myNav > li a:hover {
-    background-color: #111;
+    background-color: #4a8b823d;;
   }
 
  header > .title 
@@ -212,16 +212,44 @@ h3 {
     color:rgb(3, 65, 61);
 }
 
+.centerTab{
+    width:100%;
+    text-align: center;
+}
+
+.centerTab div table {
+    display: inline-block;
+}
+
 .main td{
     padding:20px;
 }
-
+.homeparg{
+    font-family: $defaultfont2;
+    font-size:24px;
+    font-weight: lighter;
+    color:grey;
+}
+.component-frame{
+    max-width:100vw !important;
+}
+a:hover{
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.774);
+}
 .buybtn{
     box-shadow: none;
     background-color:rgb(44, 168, 44);
     color:white;
     padding:10px;
 }
+.clearbtn{
+    box-shadow: none;
+    background-color:rgba(44, 168, 137, 0.514);
+    color:white;
+    padding:10 5px;
+}
+
 $sidecolwidth:15vw;
 
     #site_left{
@@ -236,7 +264,7 @@ $sidecolwidth:15vw;
         border-color: whitesmoke;
         border-width: 10px;
         border-style: solid;
-        width:auto;
+        width:100%;
     }
 
     #site_right{
@@ -269,11 +297,33 @@ $sidecolwidth:15vw;
     -webkit-transition: margin-right 1s;
 }
 
+#paypal-button-container{
+    
+}
+.paypal-buttons{
+    width:60vw !important;
+    min-width: 20vw;
+}
 
 footer {
     margin-top: 40px;
     border-top: 1px solid #CCCCCC;
     text-align: right;
+}
+
+li a:hover{
+    color: #043127b2;
+}
+.fismall{
+    width:10%;
+}
+
+.centerContent{
+    text-align: center;
+}
+
+.centerContent div{
+    display:inline-block;
 }
 
 footer a {
@@ -394,7 +444,7 @@ position: relative;
 }
 
 @media(max-width:428px){
-
+    
     .homeImg{
         margin-left:25%;
         width:50%;
@@ -403,13 +453,21 @@ position: relative;
     {
         display:none;
     }
-
-}
-@media(max-width:680px){   
-    .lefton{
-        margin-left:40px;
-    }
     #instagram{
         display: none;
     }
+
+}
+@media(max-width:680px){   
+    #musictab{
+        display: none;
+    }
+}
+
+.glyphicon{
+    font-family: $iconfont !important;
+}
+
+.twentyfour{
+    font-size:24px;
 }

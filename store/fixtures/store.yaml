@@ -178,6 +178,9 @@
         tax: '0.00'
         total: '0.00'
         charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
 -   model: store.sale
     pk: 2
     fields:
@@ -187,6 +190,21 @@
         tax: '0.00'
         total: '0.00'
         charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+-   model: store.sale
+    pk: 3
+    fields:
+        created: 2019-09-24 15:17:08.964409
+        purchased: null
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
 -   model: store.saleitem
     pk: 2
     fields:
@@ -223,3 +241,102 @@
         quantity: 1
         size: XS
         price: '15.00'
+-   model: store.saleitem
+    pk: 6
+    fields:
+        status: D
+        sale: 2
+        product: 3
+        quantity: 1
+        size: XS
+        price: '15.00'
+-   model: store.saleitem
+    pk: 7
+    fields:
+        status: D
+        sale: 2
+        product: 10
+        quantity: 2
+        size: XS
+        price: '36.00'
+-   model: store.saleitem
+    pk: 8
+    fields:
+        status: D
+        sale: 2
+        product: 1
+        quantity: 1
+        size: YM
+        price: '15.00'
+-   model: store.saleitem
+    pk: 9
+    fields:
+        status: D
+        sale: 3
+        product: 7
+        quantity: 2
+        size: YS
+        price: '36.00'
+-   model: store.saleitem
+    pk: 10
+    fields:
+        status: D
+        sale: 3
+        product: 2
+        quantity: 2
+        size: M
+        price: '30.00'
+-   model: store.saleitem
+    pk: 11
+    fields:
+        status: D
+        sale: 3
+        product: 2
+        quantity: 5
+        size: XS
+        price: '75.00'
+-   model: store.saleitem
+    pk: 12
+    fields:
+        status: D
+        sale: 3
+        product: 2
+        quantity: 3
+        size: M
+        price: '45.00'
+-   model: store.saleitem
+    pk: 13
+    fields:
+        status: A
+        sale: 3
+        product: 8
+        quantity: 2
+        size: XS
+        price: '36.00'
+-   model: store.saleitem
+    pk: 14
+    fields:
+        status: A
+        sale: 3
+        product: 8
+        quantity: 2
+        size: XS
+        price: '36.00'
+-   model: store.saleitem
+    pk: 15
+    fields:
+        status: A
+        sale: 3
+        product: 7
+        quantity: 4
+        size: XS
+        price: '72.00'
+-   model: store.saleitem
+    pk: 16
+    fields:
+        status: A
+        sale: 3
+        product: 6
+        quantity: 1
+        size: XS
+        price: '18.00'

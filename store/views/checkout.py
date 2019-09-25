@@ -3,6 +3,7 @@ from django_mako_plus import view_function, jscontext
 from datetime import datetime
 from django.http import HttpResponseRedirect
 from store import models as cmod
+from django.conf import settings
 
 @view_function
 def process_request(request, sale:cmod.Sale):
@@ -27,7 +28,13 @@ def process_request(request, sale:cmod.Sale):
         form = CheckoutForm()
     return request.dmp.render('checkout.html', {
         'form': form,
+        'SBClientId':settings.SBCLIENTID,
+        'total':sale.total,
     })
+
+
+
+
 
 class CheckoutForm(forms.Form):
     address = forms.CharField(label='Shipping Address')

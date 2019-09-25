@@ -30,7 +30,7 @@ Rifftide Shop
     </table>
     %else:
     <p class = "feedback">
-        No Products found. Adjust the filters to broaden your search
+        No Products found. Adjust the filters to widen your search
     </p>
     %endif
 </div>
@@ -72,11 +72,48 @@ Rifftide Shop
 </div>
 </%block>
 
-<%block name="site_right">
- 
-            </%block>
 
 <%block name="right_content">
+%if len(saleItems) > 0:
+<a href="/store/cart/">
+<div class="filterpanel">
+        <div class="filters" style="border: 10px rgba(245, 245, 245, 0.589) solid; width: 10vw">
+        <p class=filterstitle>My Cart <span class="glyphicon">C</span></p>
+        <hr>
+        <ul>
+            %if len(saleItems) <= 3:
+                %for item in saleItems:
+                <li style="padding:10px;">
+                    <img src="${item.product.image_url()}" class="cartimg">
+                </li>
+            
+                %endfor
+            %else:
+            <li style="padding:10px;">
+                    <img src="${saleItems[0].product.image_url()}" class="cartimg">
+            </li>
+            <li style="padding:10px;">
+                    <img src="${saleItems[1].product.image_url()}" class="cartimg">
+            </li>
+            <li style="padding:10px;">
+                    <img src="${saleItems[2].product.image_url()}" class="cartimg">
+            </li>
+            <li style="text-align: center">...</li>
+            %endif
+            <hr>
+            <li class="cartlist ">
+                <p>Total: $${sale.total}</p>
+            </li>
+            <hr>
+            <li class="cartlist bolder"> 
+                <a href="/store/cart/">Checkout Now</a>
+            </li>
+        </ul>
+        </div>
+</div>
+</a>
+%endif
+
 <!-- <script>
         $("#filterbtn").click(function() {
            if ($(".filters").hasClass("visible")){

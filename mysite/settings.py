@@ -112,6 +112,7 @@ DATABASES = {
     }
 }
 
+SBCLIENTID = 'ARrw0jrQihOusmFX6Fto0okQj6c-4DvHbt901Rb_z37I4ViAHAjc4Yg5kKaNGpXIlfnALrlDSthlmnQM'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

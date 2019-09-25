@@ -5,14 +5,14 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569304554.3184826
+_modified_time = 1569343043.0061324
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/homepage/templates/base.htm'
 _template_uri = '/homepage/templates/base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
-_exports = ['page_title', 'navbar_items', 'page_header_title', 'left_content', 'site_content', 'site_right', 'right_content']
+_exports = ['page_title', 'head', 'navbar_items', 'page_header_title', 'left_content', 'site_content', 'site_right', 'right_content']
 
 
 from datetime import datetime 
@@ -21,22 +21,24 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         self = context.get('self', UNDEFINED)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        def navbar_items():
-            return render_navbar_items(context._locals(__M_locals))
         def site_right():
             return render_site_right(context._locals(__M_locals))
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
-        def page_title():
-            return render_page_title(context._locals(__M_locals))
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def head():
+            return render_head(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
+        def page_title():
+            return render_page_title(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        def navbar_items():
+            return render_navbar_items(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n\r\n<head>\r\n\r\n    <title>\r\n        Rifftide\r\n        ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -57,7 +59,12 @@ def render_body(context,**pageargs):
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( django_mako_plus.links(self) ))
         __M_writer('\r\n        <link rel="icon" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
-        __M_writer('homepage/media/favicon.ico">\r\n\r\n    </head>\r\n    <body>\r\n        <header>\r\n        <div id="Topbar">\r\n            \r\n                <ul class="myNav">\r\n                    <li class="homeImg">\r\n                        <img src="')
+        __M_writer('homepage/media/favicon.ico">\r\n\r\n            ')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'head'):
+            context['self'].head(**pageargs)
+        
+
+        __M_writer('\r\n\r\n    </head>\r\n    <body>\r\n        <header>\r\n        <div id="Topbar">\r\n            \r\n                <ul class="myNav">\r\n                    <li class="homeImg">\r\n                        <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
         __M_writer('homepage/media/thick logo.png" alt="python" />\r\n                    </li>\r\n                    ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'navbar_items'):
@@ -105,6 +112,18 @@ def render_page_title(context,**pageargs):
             return render_page_title(context)
         __M_writer = context.writer()
         __M_writer('\r\n                My Project!\r\n            ')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_head(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def head():
+            return render_head(context)
+        __M_writer = context.writer()
+        __M_writer('\r\n            ')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -184,6 +203,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/homepage/templates/base.htm", "uri": "/homepage/templates/base.htm", "source_encoding": "utf-8", "line_map": {"18": 71, "19": 72, "20": 0, "41": 2, "46": 12, "47": 17, "48": 17, "49": 17, "50": 19, "51": 19, "52": 20, "53": 20, "54": 25, "55": 25, "56": 27, "57": 28, "58": 28, "59": 29, "60": 29, "61": 38, "62": 38, "67": 42, "72": 48, "77": 54, "82": 59, "87": 63, "92": 64, "93": 71, "94": 73, "95": 73, "101": 10, "107": 10, "113": 40, "119": 40, "125": 46, "131": 46, "137": 54, "143": 54, "149": 59, "155": 59, "161": 61, "167": 61, "173": 64, "179": 64, "185": 179}}
+{"filename": "C:/Users/Isaac/mysite/homepage/templates/base.htm", "uri": "/homepage/templates/base.htm", "source_encoding": "utf-8", "line_map": {"18": 74, "19": 75, "20": 0, "43": 2, "48": 12, "49": 17, "50": 17, "51": 17, "52": 19, "53": 19, "54": 20, "55": 20, "56": 25, "57": 25, "58": 27, "59": 28, "60": 28, "61": 29, "62": 29, "67": 32, "68": 41, "69": 41, "74": 45, "79": 51, "84": 57, "89": 62, "94": 66, "99": 67, "100": 74, "101": 76, "102": 76, "108": 10, "114": 10, "120": 31, "126": 31, "132": 43, "138": 43, "144": 49, "150": 49, "156": 57, "162": 57, "168": 62, "174": 62, "180": 64, "186": 64, "192": 67, "198": 67, "204": 198}}
 __M_END_METADATA
 """

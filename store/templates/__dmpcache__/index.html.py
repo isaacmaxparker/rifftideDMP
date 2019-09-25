@@ -5,14 +5,14 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569304554.3025632
+_modified_time = 1569364874.0201619
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/store/templates/index.html'
 _template_uri = 'index.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
-_exports = ['page_header_title', 'site_content', 'left_content', 'site_right', 'right_content']
+_exports = ['page_header_title', 'site_content', 'left_content', 'right_content']
 
 
 from store import models as cmod 
@@ -32,24 +32,24 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        self = context.get('self', UNDEFINED)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
-        catid = context.get('catid', UNDEFINED)
+        products = context.get('products', UNDEFINED)
         def right_content():
             return render_right_content(context._locals(__M_locals))
+        page = context.get('page', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        saleItems = context.get('saleItems', UNDEFINED)
+        catid = context.get('catid', UNDEFINED)
+        sale = context.get('sale', UNDEFINED)
+        colorid = context.get('colorid', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         category = context.get('category', UNDEFINED)
-        def site_right():
-            return render_site_right(context._locals(__M_locals))
-        products = context.get('products', UNDEFINED)
         def left_content():
             return render_left_content(context._locals(__M_locals))
-        len = context.get('len', UNDEFINED)
-        page = context.get('page', UNDEFINED)
-        numpages = context.get('numpages', UNDEFINED)
-        colorid = context.get('colorid', UNDEFINED)
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        numpages = context.get('numpages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         __M_writer('\r\n\r\n')
@@ -67,12 +67,7 @@ def render_body(context,**pageargs):
             context['self'].left_content(**pageargs)
         
 
-        __M_writer('\r\n\r\n')
-        if 'parent' not in context._data or not hasattr(context._data['parent'], 'site_right'):
-            context['self'].site_right(**pageargs)
-        
-
-        __M_writer('\r\n\r\n')
+        __M_writer('\r\n\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'right_content'):
             context['self'].right_content(**pageargs)
         
@@ -98,13 +93,13 @@ def render_page_header_title(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        products = context.get('products', UNDEFINED)
+        page = context.get('page', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         self = context.get('self', UNDEFINED)
+        category = context.get('category', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        category = context.get('category', UNDEFINED)
-        products = context.get('products', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        page = context.get('page', UNDEFINED)
         numpages = context.get('numpages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="content" style="margin:0 0px;">\r\n    <div class="parent">\r\n')
@@ -130,7 +125,7 @@ def render_site_content(context,**pageargs):
                 __M_writer('">Next</a>\r\n')
             __M_writer('            </td>\r\n        </tr>\r\n    </table>\r\n')
         else:
-            __M_writer('    <p class = "feedback">\r\n        No Products found. Adjust the filters to broaden your search\r\n    </p>\r\n')
+            __M_writer('    <p class = "feedback">\r\n        No Products found. Adjust the filters to widen your search\r\n    </p>\r\n')
         __M_writer('</div>\r\n')
         return ''
     finally:
@@ -140,12 +135,12 @@ def render_site_content(context,**pageargs):
 def render_left_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
         catid = context.get('catid', UNDEFINED)
+        colorid = context.get('colorid', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         category = context.get('category', UNDEFINED)
         def left_content():
             return render_left_content(context)
-        colorid = context.get('colorid', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div class="filterpanel">\r\n  <div class="filters">\r\n      \r\n    <p class=filterstitle> <span id="filterbtn" class="">A</span>  Filters</p>\r\n    <ul>\r\n      <!-- //////////////DONT HARD CODE THIS ////////////////// -->\r\n    <li class="catlist ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)('bolder' if category is None else ' '))
@@ -182,24 +177,35 @@ def render_left_content(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_site_right(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def site_right():
-            return render_site_right(context)
-        __M_writer = context.writer()
-        __M_writer('\r\n \r\n            ')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 def render_right_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         def right_content():
             return render_right_content(context)
+        len = context.get('len', UNDEFINED)
+        saleItems = context.get('saleItems', UNDEFINED)
+        sale = context.get('sale', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
+        __M_writer('\r\n')
+        if len(saleItems) > 0:
+            __M_writer('<a href="/store/cart/">\r\n<div class="filterpanel">\r\n        <div class="filters" style="border: 10px rgba(245, 245, 245, 0.589) solid; width: 10vw">\r\n        <p class=filterstitle>My Cart <span class="glyphicon">C</span></p>\r\n        <hr>\r\n        <ul>\r\n')
+            if len(saleItems) <= 3:
+                for item in saleItems:
+                    __M_writer('                <li style="padding:10px;">\r\n                    <img src="')
+                    __M_writer(django_mako_plus.ExpressionPostProcessor(self)(item.product.image_url()))
+                    __M_writer('" class="cartimg">\r\n                </li>\r\n            \r\n')
+            else:
+                __M_writer('            <li style="padding:10px;">\r\n                    <img src="')
+                __M_writer(django_mako_plus.ExpressionPostProcessor(self)(saleItems[0].product.image_url()))
+                __M_writer('" class="cartimg">\r\n            </li>\r\n            <li style="padding:10px;">\r\n                    <img src="')
+                __M_writer(django_mako_plus.ExpressionPostProcessor(self)(saleItems[1].product.image_url()))
+                __M_writer('" class="cartimg">\r\n            </li>\r\n            <li style="padding:10px;">\r\n                    <img src="')
+                __M_writer(django_mako_plus.ExpressionPostProcessor(self)(saleItems[2].product.image_url()))
+                __M_writer('" class="cartimg">\r\n            </li>\r\n            <li style="text-align: center">...</li>\r\n')
+            __M_writer('            <hr>\r\n            <li class="cartlist ">\r\n                <p>Total: $')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)(sale.total))
+            __M_writer('</p>\r\n            </li>\r\n            <hr>\r\n            <li class="cartlist bolder"> \r\n                <a href="/store/cart/">Checkout Now</a>\r\n            </li>\r\n        </ul>\r\n        </div>\r\n</div>\r\n</a>\r\n')
         __M_writer('\r\n<!-- <script>\r\n        $("#filterbtn").click(function() {\r\n           if ($(".filters").hasClass("visible")){\r\n            $(".filters").removeClass("visible");\r\n            $(".filters").addClass("hidden");\r\n            $("#filterbtn").html("A");\r\n            $("#filterbtn").removeClass("buttonout");\r\n            $("#site_middle").removeClass("lefton");\r\n            $("#site_middle").addClass("leftoff");\r\n           }\r\n           else{\r\n            $(".filters").removeClass("hidden")\r\n            $(".filters").addClass("visible"); \r\n            $("#filterbtn").html("H");  \r\n            $("#filterbtn").addClass("buttonout");\r\n            $("#site_middle").removeClass("leftoff");\r\n            $("#site_middle").addClass("lefton");\r\n           }\r\n            }\r\n        )\r\n</script> -->\r\n')
         return ''
     finally:
@@ -208,6 +214,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/store/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "54": 1, "55": 2, "60": 6, "65": 37, "70": 73, "75": 77, "80": 101, "86": 4, "92": 4, "98": 8, "110": 8, "111": 11, "112": 12, "113": 12, "114": 12, "115": 14, "116": 15, "117": 16, "118": 19, "119": 20, "120": 20, "121": 20, "122": 20, "123": 20, "124": 22, "125": 25, "126": 26, "127": 26, "128": 26, "129": 26, "130": 26, "131": 28, "132": 31, "133": 32, "134": 36, "140": 39, "150": 39, "151": 46, "152": 46, "153": 51, "154": 52, "155": 52, "156": 52, "157": 53, "158": 53, "159": 53, "160": 53, "161": 53, "162": 53, "163": 56, "164": 58, "165": 58, "166": 59, "167": 59, "168": 61, "169": 61, "170": 62, "171": 62, "172": 64, "173": 64, "174": 65, "175": 65, "176": 67, "177": 67, "178": 68, "179": 68, "185": 75, "191": 75, "197": 79, "203": 79, "209": 203}}
+{"filename": "C:/Users/Isaac/mysite/store/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "54": 1, "55": 2, "60": 6, "65": 37, "70": 73, "75": 138, "81": 4, "87": 4, "93": 8, "105": 8, "106": 11, "107": 12, "108": 12, "109": 12, "110": 14, "111": 15, "112": 16, "113": 19, "114": 20, "115": 20, "116": 20, "117": 20, "118": 20, "119": 22, "120": 25, "121": 26, "122": 26, "123": 26, "124": 26, "125": 26, "126": 28, "127": 31, "128": 32, "129": 36, "135": 39, "145": 39, "146": 46, "147": 46, "148": 51, "149": 52, "150": 52, "151": 52, "152": 53, "153": 53, "154": 53, "155": 53, "156": 53, "157": 53, "158": 56, "159": 58, "160": 58, "161": 59, "162": 59, "163": 61, "164": 61, "165": 62, "166": 62, "167": 64, "168": 64, "169": 65, "170": 65, "171": 67, "172": 67, "173": 68, "174": 68, "180": 76, "190": 76, "191": 77, "192": 78, "193": 84, "194": 85, "195": 86, "196": 87, "197": 87, "198": 91, "199": 92, "200": 93, "201": 93, "202": 96, "203": 96, "204": 99, "205": 99, "206": 103, "207": 105, "208": 105, "209": 116, "215": 209}}
 __M_END_METADATA
 """

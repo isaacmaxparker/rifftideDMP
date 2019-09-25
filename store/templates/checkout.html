@@ -5,20 +5,24 @@
 Checkout
 </%block>
 
+<%block name="head">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+</%block>
+
 <%block name="site_content">
-<div class="content" style="margin-left:5%; padding-right:9%; width: 90%">
-
-        <form action="" method="post">
-            
-            <table class="formlabel">
-            ${ form }
-            </table>
-
-            <hr>
-            <p class="btn btn-lg buybtn" style="margin-left:80%; margin-top:20px;" href="/catalog/checkout">Checkout</p>
-          </form>
+<div class="content">
+          <div id="paypal-button-container"></div>
 
       </div>
+
+      
+
+        <!-- Include the PayPal JavaScript SDK -->
+        
+
 </%block>
 
 <%block name="right_content">

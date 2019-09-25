@@ -1,5 +1,6 @@
 from django.db import models
 from decimal import Decimal
+from datetime import datetime
 
 # Create your models here.
 class Category(models.Model):
@@ -67,29 +68,30 @@ class Sale(models.Model):
         tax = models.DecimalField(max_digits=7, decimal_places=2, default=Decimal(0))
         total = models.DecimalField(max_digits=7, decimal_places=2, default=Decimal(0))
         charge_id = models.TextField(null=True, default=None)   # successful charge id from stripe
+        shipMethod = models.TextField(null=True,default=None)
+        referrer = models.TextField(null=True, default=None)
+        orderID = models.TextField(null=True, default=None)
 
         def recalculate(self):
-            sales = SaleItem.objects.filter(sale=self, status='A')          
+            sales = SaleItem.objects.filter(sale=self, status='A')
             sub = Decimal("0.0")
             for sale in sales:
-                sub += sale.price * sale.quantity
+                sub += sale.price
             self.subtotal = sub
-            self.tax = self.subtotal * TAX_RATE
-            self.tax = round(self.tax, 2)
+            if self.shipMethod != "IP":
+                self.total = self.tax = 5
+            else:
+                self.tax = 0
             self.total = round(self.subtotal + self.tax,2)
+ 
 
-        def finalize(self, stripeToken):
+        def finalize(self,orderId):
             '''Finalizes the sale'''
-            # complete this method!
-            # Ensure this sale isn't already finalized (purchased should be None)
-            if self.purchased is not None:
-                raise ValueError("This sale has already been finalized")
-            
-            # Call recalculate one more time
-            self.recalculate()
+            self.orderID = orderId
+            #if self.purchased is not None:
+                #raise ValueError("This sale has already been finalized")
 
             self.purchased = datetime.now()
-
 
 class SaleItem(models.Model):
         STATUS_CHOICES = [

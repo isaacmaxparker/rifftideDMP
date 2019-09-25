@@ -1,5 +1,5 @@
 <%inherit file="app_base.htm" />
-<%! from catalog import models as cmod %>
+<%! from store import models as cmod %>
 
 <%block name="page_header_title">
 Reciept
@@ -7,9 +7,8 @@ Reciept
 
 <%block name="site_content">
 <div id="content">
-    <p class="paragraph">
-        Thank you for shopping with FOMO! 
-        <a href="/homepage/contact/" class="link">Let us know how we did!</a>
+    <p class="homeparg" style="font-size: 18px">
+        Thank you for supporting Rifftide! You will be e-mailed a reciept through PayPal and you can revisit this page anytime using this link.
         <hr>
     </p>
     <table class="carttab" width=100%; style="text-align:center;">
@@ -26,9 +25,6 @@ Reciept
             <th>
                 Price
             </th>
-            <th>
-                Extended
-            </th>
         </tr>
         %for item in saleItems :
         <tr>
@@ -36,16 +32,13 @@ Reciept
                 <img src="${item.product.image_url()}" class="cartimg">
             </td>
             <td>
-                ${item.product.name}
+                    ${item.product.shirtColor.capitalize()}${'/' + item.product.decor.capitalize() if item.product.decor != '' else ''} ${item.product.name.capitalize()} T-Shirt
             </td>
             <td>
                 ${item.quantity}
             </td>
             <td>
                     $${round(item.price,2)}
-            </td>
-            <td>
-                    $${round(item.price * item.quantity,2)}
             </td>
         </tr>
         %endfor
@@ -58,24 +51,15 @@ Reciept
                         &nbsp;
                 </td>
                 <td>
-                    &nbsp;
-                </td>
-                <td>
                     <b>Subtotal</b>
                 </td>
                 <td>
                     $${subtotal}
                 </td>
-                <td>
-                     &nbsp;
-                </td>
     
             </tr>
         
         <tr>
-            <td>
-                &nbsp;
-            </td>
             <td>
                     &nbsp;
             </td>
@@ -96,7 +80,6 @@ Reciept
         <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
                 <td><hr></td>
                 <td><hr></td>
  
@@ -109,9 +92,6 @@ Reciept
                 </td>
                 <td>
                     
-                </td>
-                <td>
-                    &nbsp;
                 </td>
                 <td>
                         <b><em>Total</em></b>

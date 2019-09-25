@@ -5,14 +5,14 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569300300.8477411
+_modified_time = 1569343244.9496973
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/store/templates/checkout.html'
 _template_uri = 'checkout.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
-_exports = ['page_header_title', 'site_content', 'right_content']
+_exports = ['page_header_title', 'head', 'site_content', 'right_content']
 
 
 from store import models as cmod 
@@ -32,19 +32,26 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        def page_header_title():
-            return render_page_header_title(context._locals(__M_locals))
-        form = context.get('form', UNDEFINED)
         def right_content():
             return render_right_content(context._locals(__M_locals))
+        def page_header_title():
+            return render_page_header_title(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
+        SBClientId = context.get('SBClientId', UNDEFINED)
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        def head():
+            return render_head(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n')
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_header_title'):
             context['self'].page_header_title(**pageargs)
+        
+
+        __M_writer('\r\n\r\n')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'head'):
+            context['self'].head(**pageargs)
         
 
         __M_writer('\r\n\r\n')
@@ -74,17 +81,29 @@ def render_page_header_title(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_head(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def head():
+            return render_head(context)
+        __M_writer = context.writer()
+        __M_writer('\r\n<head>\r\n  <meta name="viewport" content="width=device-width, initial-scale=1">\r\n  <meta http-equiv="X-UA-Compatible" content="IE=edge" />\r\n</head>\r\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        self = context.get('self', UNDEFINED)
+        SBClientId = context.get('SBClientId', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        self = context.get('self', UNDEFINED)
-        form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\r\n<div class="content" style="margin-left:5%; padding-right:9%; width: 90%">\r\n\r\n        <form action="" method="post">\r\n            \r\n            <table class="formlabel">\r\n            ')
-        __M_writer(django_mako_plus.ExpressionPostProcessor(self)( form ))
-        __M_writer('\r\n            </table>\r\n\r\n            <hr>\r\n            <p class="btn btn-lg buybtn" style="margin-left:80%; margin-top:20px;" href="/catalog/checkout">Checkout</p>\r\n          </form>\r\n\r\n      </div>\r\n')
+        __M_writer('\r\n<div class="content">\r\n          <div id="paypal-button-container"></div>\r\n\r\n      </div>\r\n\r\n      \r\n\r\n        <!-- Include the PayPal JavaScript SDK -->\r\n        <script src="https://www.paypal.com/sdk/js?client-id=')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)(SBClientId))
+        __M_writer('&currency=USD"></script>\r\n        <script>\r\n          paypal.Buttons({\r\n            createOrder: function(data, actions) {\r\n              return actions.order.create({\r\n                purchase_units: [{\r\n                  amount: {\r\n                    value: \'0.01\'\r\n                  }\r\n                }]\r\n              });\r\n            },\r\n            onApprove: function(data, actions) {\r\n              return actions.order.capture().then(function(details) {\r\n                alert(\'Transaction completed by \' + details.payer.name.given_name);\r\n                // Call your server to save the transaction\r\n                return fetch(\'/paypal-transaction-complete\', {\r\n                  method: \'post\',\r\n                  headers: {\r\n                    \'content-type\': \'application/json\'\r\n                  },\r\n                  body: JSON.stringify({\r\n                    orderID: data.orderID\r\n                  })\r\n                });\r\n              });\r\n            }\r\n          }).render(\'#paypal-button-container\');\r\n        </script>\r\n\r\n\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -104,6 +123,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/store/templates/checkout.html", "uri": "checkout.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "44": 1, "45": 2, "50": 6, "55": 22, "65": 4, "71": 4, "77": 8, "85": 8, "86": 14, "87": 14, "93": 24, "99": 24, "105": 99}}
+{"filename": "C:/Users/Isaac/mysite/store/templates/checkout.html", "uri": "checkout.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "46": 1, "47": 2, "52": 6, "57": 13, "62": 55, "72": 4, "78": 4, "84": 8, "90": 8, "96": 15, "104": 15, "105": 24, "106": 24, "112": 57, "118": 57, "124": 118}}
 __M_END_METADATA
 """

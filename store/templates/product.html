@@ -2,7 +2,7 @@
 
 
 <%block name="page_header_title">
-Product Details
+
 </%block>
 
 <%block name="left_content">
@@ -48,12 +48,13 @@ Product Details
                        %endfor
                    </div>
 
-                   
+                   <div class="centerContent">
+                       <div>
                    <form style="vertical-align:middle;" method="POST" id="productform">
 
                    
                     <label class="formlabel" style="font-size:18px;">Quantity:</label>
-                    <input type="number" value="0" class="forminput" step="1" name="QuantOrd">
+                    <input type="number" value="0" class="forminput fismall" step="1" name="QuantOrd">
                     <select name="shirtSize" class="forminput size">
                             <option value="XS">Adult XS</option>
                             <option value="S">Adult Small</option>
@@ -67,14 +68,17 @@ Product Details
                             <option value="YL">Youth Large</option>
                             <option value="YXL">Youth XL</option>
                     </select>
-                    <input type="submit" class="mybtn buybtn" value="Buy Now">
+                    <input type="submit" class="mybtn buybtn" value="Add to Cart">
                     %if message != '':
-                    <p class = "alert alert-danger" style="text-align: center;">${message}</p>
+                    <p class = "message" style="text-align: center;">${message}</p>
                     %endif
                    </form>
 
 
-                   <a class="mybtn" href="/store/index/1/">Back to products</a>
+ 
+                </div>
+            </div>
+            <a class="mybtn" href="/store/index/1/" style="font-size: 16px;">Back to products</a>
                </div>
             </td>
         </tr>

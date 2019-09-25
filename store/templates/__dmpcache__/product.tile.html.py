@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569281407.2152781
+_modified_time = 1569359511.0851092
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/store/templates/product.tile.html'
 _template_uri = 'product.tile.html'
@@ -30,8 +30,8 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        self = context.get('self', UNDEFINED)
         product = context.get('product', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
         __M_writer = context.writer()
@@ -48,8 +48,8 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
         product = context.get('product', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         def content():
             return render_content(context)
         __M_writer = context.writer()
@@ -58,6 +58,8 @@ def render_content(context,**pageargs):
         __M_writer('">\r\n    <div class="product-tile">\r\n        <div ><img class="product-image" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.image_url()))
         __M_writer('"></div>\r\n        <div class="product-name">')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.cut.capitalize() if product.cut != '' else '' ))
+        __M_writer(' ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.name.capitalize()))
         __M_writer(' T-Shirt</div>\r\n        <div class="product-price">$')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.price))
@@ -69,6 +71,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/store/templates/product.tile.html", "uri": "product.tile.html", "source_encoding": "utf-8", "line_map": {"29": 0, "38": 1, "48": 2, "56": 2, "57": 3, "58": 3, "59": 5, "60": 5, "61": 6, "62": 6, "63": 7, "64": 7, "70": 64}}
+{"filename": "C:/Users/Isaac/mysite/store/templates/product.tile.html", "uri": "product.tile.html", "source_encoding": "utf-8", "line_map": {"29": 0, "38": 1, "48": 2, "56": 2, "57": 3, "58": 3, "59": 5, "60": 5, "61": 6, "62": 6, "63": 6, "64": 6, "65": 7, "66": 7, "72": 66}}
 __M_END_METADATA
 """

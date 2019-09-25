@@ -1,15 +1,21 @@
 from django.conf import settings
 from django_mako_plus import view_function, jscontext
 from datetime import datetime, timezone
-from catalog import models as cmod
+from store import models as cmod
 from django.http import HttpResponseRedirect
 
 @view_function
-def process_request(request, sale:cmod.Sale): 
+def process_request(request, orderId:str): 
 
-    saleItems = cmod.SaleItem.objects.filter(sale=sale, status ='A')
+   print("*****************************************")
+   print(orderId)
+   print("*****************************************")
 
-    context = {
+   sale = cmod.Sale.objects.get(orderID=orderId)
+
+   saleItems = cmod.SaleItem.objects.filter(sale=sale, status ='A')
+
+   context = {
        'total':sale.total,
        'subtotal':sale.subtotal,
        'tax':sale.tax,
@@ -17,4 +23,4 @@ def process_request(request, sale:cmod.Sale):
        'cart':sale,
        'sale':sale,
     }
-    return request.dmp.render('receipt.html', context)
+   return request.dmp.render('receipt.html', context)
