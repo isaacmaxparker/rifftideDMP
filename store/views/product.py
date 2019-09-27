@@ -17,6 +17,7 @@ def process_request(request, product:cmod.Product):
             context = {
                 'name':product.name,
                 'price':product.price,
+                'cut': product.cut,
                 'shirtColor':product.shirtColor,
                 'decorColor':product.decor,
                 'desc':product.description,
@@ -61,6 +62,7 @@ def process_request(request, product:cmod.Product):
     context = {    
         'name':product.name,
         'price':product.price,
+        'cut': product.cut,
         'shirtColor':product.shirtColor,
         'decorColor':product.decor,
         'desc':product.description,

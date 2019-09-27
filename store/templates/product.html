@@ -20,12 +20,13 @@
             <td width="55%">
                <div class="prodinfo">
                    <p class="prodtitle">
+                       ${cut.capitalize()}
                         ${name.capitalize()} T-Shirt
                         
 
                    </p>
                     <p class="prodcolor">
-                        %if shirtColor != decorColor:
+                        %if shirtColor != decorColor and decorColor != '':
                         ${shirtColor} / ${decorColor}
                         %else:
                         ${shirtColor}

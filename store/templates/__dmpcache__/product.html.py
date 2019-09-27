@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569364655.0770128
+_modified_time = 1569544753.895631
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/store/templates/product.html'
 _template_uri = 'product.html'
@@ -30,23 +30,24 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        name = context.get('name', UNDEFINED)
-        message = context.get('message', UNDEFINED)
         def right_content():
             return render_right_content(context._locals(__M_locals))
-        desc = context.get('desc', UNDEFINED)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
-        decorColor = context.get('decorColor', UNDEFINED)
-        variations = context.get('variations', UNDEFINED)
-        price = context.get('price', UNDEFINED)
         self = context.get('self', UNDEFINED)
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
+        shirtColor = context.get('shirtColor', UNDEFINED)
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
         imageurl = context.get('imageurl', UNDEFINED)
-        shirtColor = context.get('shirtColor', UNDEFINED)
+        variations = context.get('variations', UNDEFINED)
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        price = context.get('price', UNDEFINED)
+        desc = context.get('desc', UNDEFINED)
+        name = context.get('name', UNDEFINED)
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        cut = context.get('cut', UNDEFINED)
+        message = context.get('message', UNDEFINED)
+        decorColor = context.get('decorColor', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_header_title'):
@@ -101,24 +102,27 @@ def render_left_content(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        name = context.get('name', UNDEFINED)
-        message = context.get('message', UNDEFINED)
-        desc = context.get('desc', UNDEFINED)
-        decorColor = context.get('decorColor', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        shirtColor = context.get('shirtColor', UNDEFINED)
+        imageurl = context.get('imageurl', UNDEFINED)
         variations = context.get('variations', UNDEFINED)
         price = context.get('price', UNDEFINED)
-        self = context.get('self', UNDEFINED)
-        imageurl = context.get('imageurl', UNDEFINED)
+        desc = context.get('desc', UNDEFINED)
+        name = context.get('name', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        shirtColor = context.get('shirtColor', UNDEFINED)
+        cut = context.get('cut', UNDEFINED)
+        message = context.get('message', UNDEFINED)
+        decorColor = context.get('decorColor', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n<div class="content">\r\n    <table>\r\n        <tr>\r\n            <td width="38%">\r\n                <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(imageurl))
-        __M_writer('" class="prodimgmain">\r\n            </td>\r\n            <td width="55%">\r\n               <div class="prodinfo">\r\n                   <p class="prodtitle">\r\n                        ')
+        __M_writer('" class="prodimgmain">\r\n            </td>\r\n            <td width="55%">\r\n               <div class="prodinfo">\r\n                   <p class="prodtitle">\r\n                       ')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)(cut.capitalize()))
+        __M_writer('\r\n                        ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(name.capitalize()))
         __M_writer(' T-Shirt\r\n                        \r\n\r\n                   </p>\r\n                    <p class="prodcolor">\r\n')
-        if shirtColor != decorColor:
+        if shirtColor != decorColor and decorColor != '':
             __M_writer('                        ')
             __M_writer(django_mako_plus.ExpressionPostProcessor(self)(shirtColor))
             __M_writer(' / ')
@@ -170,6 +174,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/store/templates/product.html", "uri": "product.html", "source_encoding": "utf-8", "line_map": {"29": 0, "51": 1, "56": 6, "61": 10, "66": 89, "71": 94, "77": 4, "83": 4, "89": 8, "95": 8, "101": 12, "116": 12, "117": 18, "118": 18, "119": 23, "120": 23, "121": 28, "122": 29, "123": 29, "124": 29, "125": 29, "126": 29, "127": 30, "128": 31, "129": 31, "130": 31, "131": 33, "132": 35, "133": 35, "134": 41, "135": 41, "136": 45, "137": 46, "138": 46, "139": 46, "140": 47, "141": 47, "142": 47, "143": 47, "144": 47, "145": 47, "146": 47, "147": 47, "148": 49, "149": 72, "150": 73, "151": 73, "152": 73, "153": 75, "159": 91, "165": 91, "171": 165}}
+{"filename": "C:/Users/Isaac/mysite/store/templates/product.html", "uri": "product.html", "source_encoding": "utf-8", "line_map": {"29": 0, "52": 1, "57": 6, "62": 10, "67": 90, "72": 95, "78": 4, "84": 4, "90": 8, "96": 8, "102": 12, "118": 12, "119": 18, "120": 18, "121": 23, "122": 23, "123": 24, "124": 24, "125": 29, "126": 30, "127": 30, "128": 30, "129": 30, "130": 30, "131": 31, "132": 32, "133": 32, "134": 32, "135": 34, "136": 36, "137": 36, "138": 42, "139": 42, "140": 46, "141": 47, "142": 47, "143": 47, "144": 48, "145": 48, "146": 48, "147": 48, "148": 48, "149": 48, "150": 48, "151": 48, "152": 50, "153": 73, "154": 74, "155": 74, "156": 74, "157": 76, "163": 92, "169": 92, "175": 169}}
 __M_END_METADATA
 """
