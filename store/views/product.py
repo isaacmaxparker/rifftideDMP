@@ -13,7 +13,7 @@ def process_request(request, product:cmod.Product):
         
         quantwant = int(request.POST['QuantOrd'])
 
-        if quantwant == 0:
+        if quantwant <= 0:
             context = {
                 'name':product.name,
                 'price':product.price,
