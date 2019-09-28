@@ -1,0 +1,360 @@
+-   model: store.category
+    pk: 1
+    fields:
+        last_modified: 2019-09-23 11:51:03.607047
+        name: Unisex
+-   model: store.category
+    pk: 2
+    fields:
+        last_modified: 2019-09-23 11:51:24.607516
+        name: Womens
+-   model: store.product
+    pk: 1
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: gold slash
+        cut: womens
+-   model: store.product
+    pk: 2
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: gold slash
+        cut: ''
+-   model: store.product
+    pk: 3
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: gold
+        cut: womens
+-   model: store.product
+    pk: 4
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: gold
+        cut: ''
+-   model: store.product
+    pk: 5
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: teal slash
+        cut: womens
+-   model: store.product
+    pk: 6
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: teal slash
+        cut: ''
+-   model: store.product
+    pk: 7
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 8
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: teal
+        cut: ''
+-   model: store.product
+    pk: 9
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: grey
+        decor: teal slash
+        cut: ''
+-   model: store.product
+    pk: 10
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: grey
+        decor: teal
+        cut: ''
+-   model: store.product
+    pk: 11
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: gold slash
+        cut: womens
+-   model: store.product
+    pk: 12
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: gold slash
+        cut: ''
+-   model: store.product
+    pk: 13
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: gold
+        cut: womens
+-   model: store.product
+    pk: 14
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: gold
+        cut: ''
+-   model: store.product
+    pk: 15
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: teal slash
+        cut: womens
+-   model: store.product
+    pk: 16
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: teal slash
+        cut: ''
+-   model: store.product
+    pk: 17
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 18
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: box
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: teal
+        cut: ''
+-   model: store.product
+    pk: 19
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: circle
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: ''
+        cut: womens
+-   model: store.product
+    pk: 20
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: circle
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: ''
+        cut: ''
+-   model: store.product
+    pk: 21
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: circle
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: ''
+        cut: womens
+-   model: store.product
+    pk: 22
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: circle
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: ''
+        cut: ''
+-   model: store.product
+    pk: 23
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: circle
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: ''
+        cut: womens
+-   model: store.product
+    pk: 24
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: circle
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: ''
+        cut: ''
+-   model: store.productimage
+    pk: 1
+    fields:
+        filename: logo - white
+        product: 1
+-   model: store.sale
+    pk: 1
+    fields:
+        created: 2019-09-23 21:49:38.908353
+        purchased: null
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+-   model: store.sale
+    pk: 2
+    fields:
+        created: 2019-09-28 10:46:26.893961
+        purchased: null
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+-   model: store.saleitem
+    pk: 1
+    fields:
+        status: A
+        sale: 2
+        product: 18
+        quantity: 1
+        size: XS
+        price: '18.00'

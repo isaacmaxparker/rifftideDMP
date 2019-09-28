@@ -8,8 +8,19 @@ Rifftide Shop
 <%block name="site_content">
 <div id="content" style="margin:0 0px;">
     <div class="parent">
+    %if len(products) == 0:
+    <p class="homeparg">Error: No Products. Contact rifftideacapella@gmail.com</p>
+    %endif
     %for product in products:
-        <span class="product_container" data-product-id="${product.id}"></span>
+        <span class="product_container" data-product-id="${product.id}">
+                <a class="nocolor" href="/store/product/${product.id}">
+                    <div class="product-tile">
+                        <div ><img class="product-image" src="${product.image_url()}"></div>
+                        <div class="product-name">${product.cut.capitalize() if product.cut != '' else '' } ${product.name.capitalize()} T-Shirt</div>
+                        <div class="product-price">$${product.price}</div>   
+                    </div>
+                </a>
+        </span>
     %endfor
    </div>
    %if len(products) > 0:
@@ -44,7 +55,7 @@ Rifftide Shop
     <ul>
       <!-- //////////////DONT HARD CODE THIS ////////////////// -->
     <li class="catlist ${'bolder' if category is None else ' '}">
-        <a href="/store/index/">All Products</a>
+        <a href="/store/index/">All Shirts</a>
     </li>
     <hr>
     <p class=filterstitle>Shirt cut</p>

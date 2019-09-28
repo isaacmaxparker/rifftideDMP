@@ -29,7 +29,7 @@ class Product(models.Model):
 
     def image_url(self):
 
-        image_url = '/static/store/media/samples/' + self.name + ' - ' + self.shirtColor
+        image_url = 'https://storage.googleapis.com/rifftidesite-content/static/store/media/samples/' + self.name + ' - ' + self.shirtColor
 
         if self.decor != "":
             image_url = image_url + ' ' + self.decor

@@ -103,15 +103,17 @@ AUTH_USER_MODEL = 'account.User'
 
 # [START db_setup]
 if os.getenv('GAE_APPLICATION', None):
+#if(True):
+    print("THIS ONE IS CONNECTING")
     # Running on production App Engine, so connect to Google Cloud SQL using
     # the unix socket at /cloudsql/<your-cloudsql-connection string>
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'HOST': '/cloudsql/rifftideproject:us-central1:rifftidesite',
+            'NAME': 'rifftidesitedata',
             'USER': 'isaacadmin',
             'PASSWORD': 'keepflyingtwentyseventeen',
-            'NAME': 'rifftidesitedata',
         }
     }
 else:
@@ -169,7 +171,7 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'https://storage.googleapis.com/rifftidesite-content/static/'
 
 STATICFILES_DIRS = (
     # SECURITY WARNING: this next line must be commented out at deployment

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569364874.0201619
+_modified_time = 1569688952.356641
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/store/templates/index.html'
 _template_uri = 'index.html'
@@ -32,24 +32,24 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        products = context.get('products', UNDEFINED)
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        page = context.get('page', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        saleItems = context.get('saleItems', UNDEFINED)
         catid = context.get('catid', UNDEFINED)
-        sale = context.get('sale', UNDEFINED)
-        colorid = context.get('colorid', UNDEFINED)
-        self = context.get('self', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         category = context.get('category', UNDEFINED)
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
-        def page_header_title():
-            return render_page_header_title(context._locals(__M_locals))
+        numpages = context.get('numpages', UNDEFINED)
+        sale = context.get('sale', UNDEFINED)
         def site_content():
             return render_site_content(context._locals(__M_locals))
-        numpages = context.get('numpages', UNDEFINED)
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
+        def page_header_title():
+            return render_page_header_title(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
+        colorid = context.get('colorid', UNDEFINED)
+        page = context.get('page', UNDEFINED)
+        products = context.get('products', UNDEFINED)
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        saleItems = context.get('saleItems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         __M_writer('\r\n\r\n')
@@ -93,20 +93,32 @@ def render_page_header_title(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        products = context.get('products', UNDEFINED)
-        page = context.get('page', UNDEFINED)
         len = context.get('len', UNDEFINED)
-        self = context.get('self', UNDEFINED)
         category = context.get('category', UNDEFINED)
+        numpages = context.get('numpages', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        numpages = context.get('numpages', UNDEFINED)
+        page = context.get('page', UNDEFINED)
+        products = context.get('products', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="content" style="margin:0 0px;">\r\n    <div class="parent">\r\n')
+        if len(products) == 0:
+            __M_writer('    <p class="homeparg">Error: No Products. Contact rifftideacapella@gmail.com</p>\r\n')
         for product in products:
             __M_writer('        <span class="product_container" data-product-id="')
             __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.id))
-            __M_writer('"></span>\r\n')
+            __M_writer('">\r\n                <a class="nocolor" href="/store/product/')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.id))
+            __M_writer('">\r\n                    <div class="product-tile">\r\n                        <div ><img class="product-image" src="')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.image_url()))
+            __M_writer('"></div>\r\n                        <div class="product-name">')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.cut.capitalize() if product.cut != '' else '' ))
+            __M_writer(' ')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.name.capitalize()))
+            __M_writer(' T-Shirt</div>\r\n                        <div class="product-price">$')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)(product.price))
+            __M_writer('</div>   \r\n                    </div>\r\n                </a>\r\n        </span>\r\n')
         __M_writer('   </div>\r\n')
         if len(products) > 0:
             __M_writer('    <table class="nextprev" width=100%>\r\n        <tr>\r\n            <td style="float:right; margin-right: 0;">\r\n')
@@ -136,15 +148,15 @@ def render_left_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         catid = context.get('catid', UNDEFINED)
-        colorid = context.get('colorid', UNDEFINED)
-        self = context.get('self', UNDEFINED)
         category = context.get('category', UNDEFINED)
+        colorid = context.get('colorid', UNDEFINED)
         def left_content():
             return render_left_content(context)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div class="filterpanel">\r\n  <div class="filters">\r\n      \r\n    <p class=filterstitle> <span id="filterbtn" class="">A</span>  Filters</p>\r\n    <ul>\r\n      <!-- //////////////DONT HARD CODE THIS ////////////////// -->\r\n    <li class="catlist ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)('bolder' if category is None else ' '))
-        __M_writer('">\r\n        <a href="/store/index/">All Products</a>\r\n    </li>\r\n    <hr>\r\n    <p class=filterstitle>Shirt cut</p>\r\n')
+        __M_writer('">\r\n        <a href="/store/index/">All Shirts</a>\r\n    </li>\r\n    <hr>\r\n    <p class=filterstitle>Shirt cut</p>\r\n')
         for cat in cmod.Category.objects.order_by('name'):
             __M_writer('    <li class="catlist ')
             __M_writer(django_mako_plus.ExpressionPostProcessor(self)('bolder' if category == cat else ' '))
@@ -180,12 +192,12 @@ def render_left_content(context,**pageargs):
 def render_right_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        len = context.get('len', UNDEFINED)
+        sale = context.get('sale', UNDEFINED)
         def right_content():
             return render_right_content(context)
-        len = context.get('len', UNDEFINED)
-        saleItems = context.get('saleItems', UNDEFINED)
-        sale = context.get('sale', UNDEFINED)
         self = context.get('self', UNDEFINED)
+        saleItems = context.get('saleItems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         if len(saleItems) > 0:
@@ -214,6 +226,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/store/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "54": 1, "55": 2, "60": 6, "65": 37, "70": 73, "75": 138, "81": 4, "87": 4, "93": 8, "105": 8, "106": 11, "107": 12, "108": 12, "109": 12, "110": 14, "111": 15, "112": 16, "113": 19, "114": 20, "115": 20, "116": 20, "117": 20, "118": 20, "119": 22, "120": 25, "121": 26, "122": 26, "123": 26, "124": 26, "125": 26, "126": 28, "127": 31, "128": 32, "129": 36, "135": 39, "145": 39, "146": 46, "147": 46, "148": 51, "149": 52, "150": 52, "151": 52, "152": 53, "153": 53, "154": 53, "155": 53, "156": 53, "157": 53, "158": 56, "159": 58, "160": 58, "161": 59, "162": 59, "163": 61, "164": 61, "165": 62, "166": 62, "167": 64, "168": 64, "169": 65, "170": 65, "171": 67, "172": 67, "173": 68, "174": 68, "180": 76, "190": 76, "191": 77, "192": 78, "193": 84, "194": 85, "195": 86, "196": 87, "197": 87, "198": 91, "199": 92, "200": 93, "201": 93, "202": 96, "203": 96, "204": 99, "205": 99, "206": 103, "207": 105, "208": 105, "209": 116, "215": 209}}
+{"filename": "C:/Users/Isaac/mysite/store/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "54": 1, "55": 2, "60": 6, "65": 48, "70": 84, "75": 149, "81": 4, "87": 4, "93": 8, "105": 8, "106": 11, "107": 12, "108": 14, "109": 15, "110": 15, "111": 15, "112": 16, "113": 16, "114": 18, "115": 18, "116": 19, "117": 19, "118": 19, "119": 19, "120": 20, "121": 20, "122": 25, "123": 26, "124": 27, "125": 30, "126": 31, "127": 31, "128": 31, "129": 31, "130": 31, "131": 33, "132": 36, "133": 37, "134": 37, "135": 37, "136": 37, "137": 37, "138": 39, "139": 42, "140": 43, "141": 47, "147": 50, "157": 50, "158": 57, "159": 57, "160": 62, "161": 63, "162": 63, "163": 63, "164": 64, "165": 64, "166": 64, "167": 64, "168": 64, "169": 64, "170": 67, "171": 69, "172": 69, "173": 70, "174": 70, "175": 72, "176": 72, "177": 73, "178": 73, "179": 75, "180": 75, "181": 76, "182": 76, "183": 78, "184": 78, "185": 79, "186": 79, "192": 87, "202": 87, "203": 88, "204": 89, "205": 95, "206": 96, "207": 97, "208": 98, "209": 98, "210": 102, "211": 103, "212": 104, "213": 104, "214": 107, "215": 107, "216": 110, "217": 110, "218": 114, "219": 116, "220": 116, "221": 127, "227": 221}}
 __M_END_METADATA
 """
