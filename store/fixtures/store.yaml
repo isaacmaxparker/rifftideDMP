@@ -209,7 +209,7 @@
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: false
+        isMain: true
         name: box
         description: ''
         price: '18.00'
@@ -235,7 +235,7 @@
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
+        isMain: false
         name: box
         description: ''
         price: '18.00'
@@ -336,19 +336,6 @@
 -   model: store.product
     pk: 26
     fields:
-        category: 1
-        last_modified: 2019-09-23 11:56:41.710200
-        status: A
-        isMain: false
-        name: flower sam
-        description: ''
-        price: '18.00'
-        shirtColor: black
-        decor: ''
-        cut: ''
--   model: store.product
-    pk: 26
-    fields:
         category: 2
         last_modified: 2019-09-23 11:56:41.710200
         status: A
@@ -360,470 +347,1178 @@
         decor: ''
         cut: womens
 -   model: store.product
-    pk: 24
+    pk: 27
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
         isMain: true
-        name: circle
+        name: flower sam
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: ''
+        cut: ''
+-   model: store.product
+    pk: 28
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: flower sam
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: ''
+        cut: womens
+-   model: store.product
+    pk: 29
+    fields:
+        category: 1
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: flower sam
         description: ''
         price: '18.00'
         shirtColor: white
         decor: ''
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 30
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: jungle
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: gold
+        cut: womens
+-   model: store.product
+    pk: 31
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: jungle
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: gold
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 32
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: jungle
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 33
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: jungle
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: teal
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 34
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: jungle
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: grey
+        decor: teal
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 35
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: jungle
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 36
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
         isMain: true
-        name: circle
+        name: jungle
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: teal
+        decor: teal
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 37
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: jungle
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 38
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: jungle
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: teal
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 39
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: logo
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: gold
+        cut: womens
+-   model: store.product
+    pk: 40
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: logo
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: gold
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 41
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: logo
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: white
+        cut: womens
+-   model: store.product
+    pk: 42
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: logo
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: white
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 43
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: logo
+        description: ''
+        price: '18.00'
+        shirtColor: teal
+        decor: white
+        cut: womens
+-   model: store.product
+    pk: 44
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: logo
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: teal
+        decor: white
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 45
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: logo
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: teal
+        cut: womens
+-   model: store.product
+    pk: 46
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
         isMain: true
-        name: circle
+        name: logo
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: teal
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 47
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: one
+        cut: womens
+-   model: store.product
+    pk: 48
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: one
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 49
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: two
+        cut: womens
+-   model: store.product
+    pk: 50
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: two
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 51
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: three
+        cut: womens
+-   model: store.product
+    pk: 52
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
         isMain: true
-        name: circle
+        name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: three
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 53
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: four
+        cut: womens
+-   model: store.product
+    pk: 54
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: four
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 55
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: five
+        cut: womens
+-   model: store.product
+    pk: 56
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: five
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 57
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: polaroid
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: six
+        cut: womens
+-   model: store.product
+    pk: 58
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: polaroid
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: six
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 59
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: bri
+        cut: womens
+-   model: store.product
+    pk: 60
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: bri
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 61
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: cara
+        cut: womens
+-   model: store.product
+    pk: 62
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: cara
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 63
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: isaac
+        cut: womens
+-   model: store.product
+    pk: 64
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
         isMain: true
-        name: circle
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: isaac
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 65
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: johnnie
+        cut: womens
+-   model: store.product
+    pk: 66
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: johnnie
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 67
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: laurel
+        cut: womens
+-   model: store.product
+    pk: 68
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: laurel
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 69
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: loryn
+        cut: womens
+-   model: store.product
+    pk: 70
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: loryn
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 71
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: sam
+        cut: womens
+-   model: store.product
+    pk: 72
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: sam
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 73
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: black
+        decor: zach
+        cut: womens
+-   model: store.product
+    pk: 74
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
-        shirtColor: white
-        decor: ''
+        shirtColor: black
+        decor: zach
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 75
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: bri
+        cut: womens
+-   model: store.product
+    pk: 76
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: bri
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 77
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: cara
+        cut: womens
+-   model: store.product
+    pk: 78
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: cara
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 79
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: isaac
+        cut: womens
+-   model: store.product
+    pk: 80
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: isaac
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 81
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: johnnie
+        cut: womens
+-   model: store.product
+    pk: 82
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: johnnie
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 83
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: true
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: laurel
+        cut: womens
+-   model: store.product
+    pk: 84
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: laurel
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 85
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: loryn
+        cut: womens
+-   model: store.product
+    pk: 86
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: loryn
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 87
+    fields:
+        category: 2
+        last_modified: 2019-09-23 11:56:41.710200
+        status: A
+        isMain: false
+        name: splash
+        description: ''
+        price: '18.00'
+        shirtColor: white
+        decor: sam
+        cut: womens
+-   model: store.product
+    pk: 88
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: sam
         cut: ''
 -   model: store.product
-    pk: 24
+    pk: 89
     fields:
-        category: 1
+        category: 2
         last_modified: 2019-09-23 11:56:41.710200
         status: A
-        isMain: true
-        name: circle
+        isMain: false
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
-        cut: ''
+        decor: zach
+        cut: womens
 -   model: store.product
-    pk: 24
+    pk: 90
     fields:
         category: 1
         last_modified: 2019-09-23 11:56:41.710200
         status: A
         isMain: true
-        name: circle
+        name: splash
         description: ''
         price: '18.00'
         shirtColor: white
-        decor: ''
+        decor: zach
         cut: ''
--   model: store.product
-    pk: 24
+-   model: store.productimage
+    pk: 1
     fields:
-        category: 1
-        last_modified: 2019-09-23 11:56:41.710200
-        status: A
-        isMain: true
-        name: circle
-        description: ''
-        price: '18.00'
-        shirtColor: white
-        decor: ''
-        cut: ''
--   model: store.product
-    pk: 24
+        filename: logo - white
+        product: 1
+-   model: store.sale
+    pk: 1
     fields:
-        category: 1
-        last_modified: 2019-09-23 11:56:41.710200
-        status: A
-        isMain: true
-        name: circle
-        description: ''
-        price: '18.00'
-        shirtColor: white
-        decor: ''
-        cut: ''
--   model: store.product
-    pk: 24
+        created: 2019-09-23 21:49:38.908353
+        purchased: null
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+-   model: store.sale
+    pk: 2
     fields:
-        category: 1
-        last_modified: 2019-09-23 11:56:41.710200
-        status: A
-        isMain: true
-        name: circle
-        description: ''
+        created: 2019-09-28 10:46:26.893961
+        purchased: 2019-09-28 13:00:54.465733
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 77A28483SW928394L
+-   model: store.sale
+    pk: 3
+    fields:
+        created: 2019-09-28 20:41:55.916818
+        purchased: 2019-09-28 20:43:13.660769
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 5AJ63617932382613
+-   model: store.sale
+    pk: 4
+    fields:
+        created: 2019-09-28 14:56:46.865130
+        purchased: 2019-09-28 14:57:15.845536
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 5BK12512RM604521P
+-   model: store.sale
+    pk: 5
+    fields:
+        created: 2019-09-28 14:59:02.123393
+        purchased: 2019-09-29 15:58:16.999211
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 20G789763P6259610
+-   model: store.sale
+    pk: 6
+    fields:
+        created: 2019-09-29 16:06:19.611645
+        purchased: 2019-09-29 16:07:05.963466
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 3HL5893872284574D
+-   model: store.sale
+    pk: 7
+    fields:
+        created: 2019-09-29 16:08:27.098941
+        purchased: 2019-09-29 16:24:00.753476
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 28986771YE130490H
+-   model: store.sale
+    pk: 8
+    fields:
+        created: 2019-09-29 16:26:24.165174
+        purchased: 2019-09-29 16:26:51.467167
+        subtotal: '0.00'
+        tax: '0.00'
+        total: '0.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 0EU62838EB692235G
+-   model: store.sale
+    pk: 9
+    fields:
+        created: 2019-09-29 16:27:58.192057
+        purchased: 2019-09-29 16:28:24.631298
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: ZB
+        orderID: 1RR89768SD590792C
+-   model: store.sale
+    pk: 10
+    fields:
+        created: 2019-09-29 16:28:54.144956
+        purchased: null
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: JJ
+        orderID: null
+-   model: store.sale
+    pk: 11
+    fields:
+        created: 2019-09-29 22:43:07.608721
+        purchased: 2019-09-29 22:47:45.783450
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: IM
+        orderID: 09P31169JP614272V
+-   model: store.sale
+    pk: 12
+    fields:
+        created: 2019-09-30 23:43:53.184276
+        purchased: null
+        subtotal: '54.00'
+        tax: '5.00'
+        total: '59.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+-   model: store.sale
+    pk: 13
+    fields:
+        created: 2019-10-01 00:26:16.352057
+        purchased: 2019-10-01 00:30:06.083469
+        subtotal: '36.00'
+        tax: '0.00'
+        total: '36.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: SH
+        orderID: 6LE7418935356612F
+-   model: store.sale
+    pk: 14
+    fields:
+        created: 2019-10-01 04:53:58.392210
+        purchased: 2019-10-01 04:57:29.748003
+        subtotal: '36.00'
+        tax: '0.00'
+        total: '36.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: SH
+        orderID: 4DU09776N6570123D
+-   model: store.saleitem
+    pk: 1
+    fields:
+        status: D
+        sale: 2
+        product: 18
+        quantity: 1
+        size: XS
         price: '18.00'
-        shirtColor: white
-        decor: ''
-        cut: ''
+-   model: store.saleitem
+    pk: 2
+    fields:
+        status: A
+        sale: 2
+        product: 64
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 3
+    fields:
+        status: A
+        sale: 3
+        product: 24
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 4
+    fields:
+        status: A
+        sale: 4
+        product: 52
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 5
+    fields:
+        status: A
+        sale: 5
+        product: 9
+        quantity: 3
+        size: XS
+        price: '54.00'
+-   model: store.saleitem
+    pk: 6
+    fields:
+        status: A
+        sale: 6
+        product: 4
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 7
+    fields:
+        status: A
+        sale: 7
+        product: 20
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 8
+    fields:
+        status: A
+        sale: 8
+        product: 6
+        quantity: 2
+        size: XS
+        price: '36.00'
+-   model: store.saleitem
+    pk: 9
+    fields:
+        status: A
+        sale: 9
+        product: 27
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 10
+    fields:
+        status: A
+        sale: 10
+        product: 3
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 11
+    fields:
+        status: A
+        sale: 11
+        product: 52
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 12
+    fields:
+        status: A
+        sale: 12
+        product: 22
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 13
+    fields:
+        status: A
+        sale: 12
+        product: 83
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 14
+    fields:
+        status: A
+        sale: 13
+        product: 87
+        quantity: 1
+        size: S
+        price: '18.00'
+-   model: store.saleitem
+    pk: 15
+    fields:
+        status: A
+        sale: 13
+        product: 72
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 16
+    fields:
+        status: A
+        sale: 12
+        product: 86
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 17
+    fields:
+        status: A
+        sale: 14
+        product: 72
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 18
+    fields:
+        status: D
+        sale: 14
+        product: 22
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 19
+    fields:
+        status: A
+        sale: 14
+        product: 22
+        quantity: 1
+        size: M
+        price: '18.00'

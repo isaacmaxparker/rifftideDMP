@@ -28,13 +28,13 @@ Rifftide Shop
         <tr>
             <td style="float:right; margin-right: 0;">
                     %if page-1 != 0:
-                    <a class="btn btn-lg mybtn" href="/store/index/${category if category is not None else '-'}/${page-1}">Previous</a>
+                    <a class="btn btn-lg mybtn" href="/store/index/${page-1}/${category if category is not None else '-'}/${colorid}">Previous</a>
                     %endif
             </td>
         
             <td width=50%>       
                 %if page != numpages:
-                <a class="btn mybtn btn-lg" href="/store/index/${category if category is not None else '-'}/${page+1}">Next</a>
+                <a class="btn mybtn btn-lg" href="/store/index/${page+1}/${category if category is not None else '-'}/${colorid}">Next</a>
                 %endif
             </td>
         </tr>
@@ -94,20 +94,20 @@ Rifftide Shop
         <ul>
             %if len(saleItems) <= 3:
                 %for item in saleItems:
-                <li style="padding:10px;">
-                    <img src="${item.product.image_url()}" class="cartimg">
+                <li>
+                    <img src="${item.product.image_url()}" class="cartimg" style="width:100%">
                 </li>
             
                 %endfor
             %else:
-            <li style="padding:10px;">
-                    <img src="${saleItems[0].product.image_url()}" class="cartimg">
+            <li>
+                    <img src="${saleItems[0].product.image_url()}" class="cartimg" style="width:100%">
             </li>
-            <li style="padding:10px;">
-                    <img src="${saleItems[1].product.image_url()}" class="cartimg">
+            <li>
+                    <img src="${saleItems[1].product.image_url()}" class="cartimg" style="width:100%">
             </li>
-            <li style="padding:10px;">
-                    <img src="${saleItems[2].product.image_url()}" class="cartimg">
+            <li>
+                    <img src="${saleItems[2].product.image_url()}" class="cartimg" style="width:100%">
             </li>
             <li style="text-align: center">...</li>
             %endif

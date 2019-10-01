@@ -23,13 +23,10 @@ def process_request(request):
             shippingMethod = sale.shipMethod
             shippingPerson = sale.referrer
 
-
-
     if cartID != 'NONE':
         sale = cmod.Sale.objects.get(id=cartID)
         sale.recalculate()
         saleItems = cmod.SaleItem.objects.filter(sale=sale, status = 'A')
-
     else:
         sale = cmod.Sale()
         saleItems = cmod.SaleItem.objects.filter(sale=sale, status = 'A')

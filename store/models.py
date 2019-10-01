@@ -83,13 +83,13 @@ class Sale(models.Model):
             else:
                 self.tax = 0
             self.total = round(self.subtotal + self.tax,2)
- 
+            self.save()
 
         def finalize(self,orderId):
             '''Finalizes the sale'''
             self.orderID = orderId
-            #if self.purchased is not None:
-                #raise ValueError("This sale has already been finalized")
+            if self.purchased is not None:
+                raise ValueError("This sale has already been finalized")
 
             self.purchased = datetime.now()
 

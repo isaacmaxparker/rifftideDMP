@@ -7,11 +7,18 @@ from django.http import HttpResponseRedirect
 @view_function
 def process_request(request, orderId:str): 
 
-   print("*****************************************")
-   print(orderId)
-   print("*****************************************")
-
-   sale = cmod.Sale.objects.get(orderID=orderId)
+      
+   cartID = request.session.get('cart_ID', 'NONE') 
+   if cartID != 'NONE': 
+       sale = cmod.Sale.objects.get(id=cartID)
+   else:
+       sale = cmod.Sale.objects.get(orderID=orderId)
+    
+   if sale.purchased == None:
+      print("NOUNE")
+      sale.finalize(orderId)
+      del request.session['cart_ID']
+      sale.save()
 
    saleItems = cmod.SaleItem.objects.filter(sale=sale, status ='A')
 

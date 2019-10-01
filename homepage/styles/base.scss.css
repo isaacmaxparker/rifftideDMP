@@ -3,7 +3,6 @@ html, body {
   padding: 0;
   font-family: sans-serif;
   color: #777788;
-  background-image: url("https://storage.cloud.google.com/rifftidesite-content/static/homepage/media/whitesparklebackground.jpg");
   background-size: 100%;
 }
 
@@ -85,7 +84,7 @@ header > .title {
   margin-top: 40px;
   display: inline-block;
   color: white;
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", "Arial", "Sans-Serif";
   text-transform: uppercase;
   font-size: 80px;
   font-weight: bold;
@@ -108,7 +107,7 @@ header img {
   position: fixed;
   z-index: 8000;
   width: 100%;
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", "Arial", "Sans-Serif";
   font-variant: small-caps;
 }
 
@@ -132,13 +131,13 @@ h3 {
   color: #272727;
   font-weight: lighter;
   font-size: 28px;
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", "Arial", "Sans-Serif";
 }
 
 .forminput {
   font-style: italic;
   font-weight: lighter;
-  font-family: "Josefin";
+  font-family: "Josefin", "Sans-Serif";
   padding-left: 10px;
   color: gray;
   border-radius: 10px;
@@ -184,7 +183,7 @@ h3 {
 }
 
 .homeparg {
-  font-family: "Josefin";
+  font-family: "Josefin", "Sans-Serif";
   font-size: 24px;
   font-weight: lighter;
   color: grey;
@@ -272,6 +271,7 @@ li a:hover {
 
 .fismall {
   width: 10%;
+  min-width: 50px;
 }
 
 .centerContent {
@@ -290,7 +290,7 @@ footer a {
 
 .copy {
   color: #0336345e;
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", "Arial", "Sans-Serif";
   text-align: center;
 }
 

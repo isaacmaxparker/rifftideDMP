@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569375526.4059188
+_modified_time = 1569796011.5494258
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/store/templates/receipt.html'
 _template_uri = 'receipt.html'
@@ -32,17 +32,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def page_header_title():
-            return render_page_header_title(context._locals(__M_locals))
-        subtotal = context.get('subtotal', UNDEFINED)
-        total = context.get('total', UNDEFINED)
         def right_content():
             return render_right_content(context._locals(__M_locals))
+        def page_header_title():
+            return render_page_header_title(context._locals(__M_locals))
+        total = context.get('total', UNDEFINED)
         self = context.get('self', UNDEFINED)
+        subtotal = context.get('subtotal', UNDEFINED)
         round = context.get('round', UNDEFINED)
-        tax = context.get('tax', UNDEFINED)
         def site_content():
             return render_site_content(context._locals(__M_locals))
+        tax = context.get('tax', UNDEFINED)
         saleItems = context.get('saleItems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
@@ -81,16 +81,16 @@ def render_page_header_title(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        subtotal = context.get('subtotal', UNDEFINED)
-        self = context.get('self', UNDEFINED)
-        round = context.get('round', UNDEFINED)
-        tax = context.get('tax', UNDEFINED)
+        total = context.get('total', UNDEFINED)
         saleItems = context.get('saleItems', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        subtotal = context.get('subtotal', UNDEFINED)
+        round = context.get('round', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        total = context.get('total', UNDEFINED)
+        tax = context.get('tax', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\r\n<div id="content">\r\n    <p class="homeparg" style="font-size: 18px">\r\n        Thank you for supporting Rifftide! You will be e-mailed a reciept through PayPal and you can revisit this page anytime using this link.\r\n        <hr>\r\n    </p>\r\n    <table class="carttab" width=100%; style="text-align:center;">\r\n        <tr>\r\n            <th>\r\n                &nbsp;\r\n            </th>\r\n            <th>\r\n                Product Name\r\n            </th>\r\n            <th>\r\n                Quantity\r\n            </th>\r\n            <th>\r\n                Price\r\n            </th>\r\n        </tr>\r\n')
+        __M_writer('\r\n<div id="content">\r\n    <p class="homeparg" style="font-size: 18px">\r\n        Thank you for supporting Rifftide! You will be e-mailed a reciept through PayPal and you can revisit this page anytime using this link. \r\n        <hr>\r\n    </p>\r\n    <table class="carttab" width=100%; style="text-align:center;">\r\n        <tr>\r\n            <th>\r\n                &nbsp;\r\n            </th>\r\n            <th>\r\n                Product Name\r\n            </th>\r\n            <th>\r\n                Quantity\r\n            </th>\r\n            <th>\r\n                Price\r\n            </th>\r\n        </tr>\r\n')
         for item in saleItems :
             __M_writer('        <tr>\r\n            <td>\r\n                <img src="')
             __M_writer(django_mako_plus.ExpressionPostProcessor(self)(item.product.image_url()))

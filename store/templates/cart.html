@@ -219,15 +219,15 @@ Cart
                 // Call your server to save the transaction
 
                 variable = data.orderID
+                window.location.href="/store/receipt/" + variable;
 
-                $.ajax({
-                type: "POST",
-                url: "/store/cart.finishSale/" + data.orderID,
-                }).done(function(data) {
-            
-                    window.location.href="/store/receipt/" + variable;
+                // $.ajax({
+                // type: "POST",
+                // url: "/store/cart.finishSale/" + data.orderID,
+                // }).done(function(data) {
+                //    
 
-                });
+                // });
 
               });
             }
