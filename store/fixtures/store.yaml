@@ -1195,6 +1195,7 @@
         shipMethod: null
         referrer: null
         orderID: null
+        status: I
 -   model: store.sale
     pk: 2
     fields:
@@ -1207,6 +1208,7 @@
         shipMethod: null
         referrer: null
         orderID: 77A28483SW928394L
+        status: P
 -   model: store.sale
     pk: 3
     fields:
@@ -1219,6 +1221,7 @@
         shipMethod: null
         referrer: null
         orderID: 5AJ63617932382613
+        status: P
 -   model: store.sale
     pk: 4
     fields:
@@ -1231,6 +1234,7 @@
         shipMethod: null
         referrer: null
         orderID: 5BK12512RM604521P
+        status: E
 -   model: store.sale
     pk: 5
     fields:
@@ -1243,6 +1247,7 @@
         shipMethod: null
         referrer: null
         orderID: 20G789763P6259610
+        status: E
 -   model: store.sale
     pk: 6
     fields:
@@ -1255,6 +1260,7 @@
         shipMethod: null
         referrer: null
         orderID: 3HL5893872284574D
+        status: E
 -   model: store.sale
     pk: 7
     fields:
@@ -1267,6 +1273,7 @@
         shipMethod: null
         referrer: null
         orderID: 28986771YE130490H
+        status: E
 -   model: store.sale
     pk: 8
     fields:
@@ -1279,6 +1286,7 @@
         shipMethod: null
         referrer: null
         orderID: 0EU62838EB692235G
+        status: E
 -   model: store.sale
     pk: 9
     fields:
@@ -1291,6 +1299,7 @@
         shipMethod: IP
         referrer: ZB
         orderID: 1RR89768SD590792C
+        status: E
 -   model: store.sale
     pk: 10
     fields:
@@ -1303,6 +1312,7 @@
         shipMethod: IP
         referrer: JJ
         orderID: null
+        status: I
 -   model: store.sale
     pk: 11
     fields:
@@ -1315,18 +1325,20 @@
         shipMethod: IP
         referrer: IM
         orderID: 09P31169JP614272V
+        status: P
 -   model: store.sale
     pk: 12
     fields:
         created: 2019-09-30 23:43:53.184276
         purchased: null
-        subtotal: '54.00'
+        subtotal: '18.00'
         tax: '5.00'
-        total: '59.00'
+        total: '23.00'
         charge_id: null
-        shipMethod: null
+        shipMethod: MAIL
         referrer: null
         orderID: null
+        status: I
 -   model: store.sale
     pk: 13
     fields:
@@ -1339,6 +1351,7 @@
         shipMethod: IP
         referrer: SH
         orderID: 6LE7418935356612F
+        status: D
 -   model: store.sale
     pk: 14
     fields:
@@ -1351,6 +1364,345 @@
         shipMethod: IP
         referrer: SH
         orderID: 4DU09776N6570123D
+        status: D
+-   model: store.sale
+    pk: 15
+    fields:
+        created: 2019-10-02 01:21:43.072515
+        purchased: 2019-10-02 01:36:47.538670
+        subtotal: '36.00'
+        tax: '5.00'
+        total: '41.00'
+        charge_id: null
+        shipMethod: MAIL
+        referrer: null
+        orderID: 98S00752S0522374A
+        status: P
+-   model: store.sale
+    pk: 16
+    fields:
+        created: 2019-10-02 02:08:51.402606
+        purchased: 2019-10-02 02:12:43.632656
+        subtotal: '36.00'
+        tax: '5.00'
+        total: '41.00'
+        charge_id: null
+        shipMethod: MAIL
+        referrer: null
+        orderID: 51D93134FT264613G
+        status: P
+-   model: store.sale
+    pk: 17
+    fields:
+        created: 2019-10-03 02:47:20.044579
+        purchased: null
+        subtotal: '18.00'
+        tax: '5.00'
+        total: '23.00'
+        charge_id: null
+        shipMethod: MAIL
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 18
+    fields:
+        created: 2019-10-03 03:12:16.073503
+        purchased: 2019-10-03 03:16:41.698240
+        subtotal: '36.00'
+        tax: '0.00'
+        total: '36.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: IM
+        orderID: 8YP61208U5766690Y
+        status: P
+-   model: store.sale
+    pk: 19
+    fields:
+        created: 2019-10-04 02:35:43.506982
+        purchased: null
+        subtotal: '36.00'
+        tax: '5.00'
+        total: '41.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 20
+    fields:
+        created: 2019-10-06 01:50:38.236263
+        purchased: 2019-10-06 02:00:25.006594
+        subtotal: '36.00'
+        tax: '0.00'
+        total: '36.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: LN
+        orderID: 8CM146087W792390W
+        status: P
+-   model: store.sale
+    pk: 21
+    fields:
+        created: 2019-10-06 02:47:56.764740
+        purchased: null
+        subtotal: '0.00'
+        tax: '5.00'
+        total: '5.00'
+        charge_id: null
+        shipMethod: ' '
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 22
+    fields:
+        created: 2019-10-07 02:40:06.110357
+        purchased: 2019-10-15 02:01:00.558246
+        subtotal: '126.00'
+        tax: '0.00'
+        total: '126.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: BE
+        orderID: 5HR06932C7732181H
+        status: P
+-   model: store.sale
+    pk: 23
+    fields:
+        created: 2019-10-07 04:34:36.136225
+        purchased: 2019-10-07 04:38:41.114022
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: SH
+        orderID: 0JP68023LP491001U
+        status: P
+-   model: store.sale
+    pk: 24
+    fields:
+        created: 2019-10-07 13:03:58.164273
+        purchased: null
+        subtotal: '0.00'
+        tax: '5.00'
+        total: '5.00'
+        charge_id: null
+        shipMethod: ' '
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 25
+    fields:
+        created: 2019-10-09 03:16:34.038765
+        purchased: null
+        subtotal: '72.00'
+        tax: '5.00'
+        total: '77.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 26
+    fields:
+        created: 2019-10-10 02:22:16.119652
+        purchased: 2019-10-10 02:23:20.576074
+        subtotal: '36.00'
+        tax: '0.00'
+        total: '36.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: BE
+        orderID: 7US239459P6777300
+        status: O
+-   model: store.sale
+    pk: 27
+    fields:
+        created: 2019-10-12 16:55:59.560135
+        purchased: 2019-10-12 16:57:03.330658
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: SH
+        orderID: 2BP982513H095104T
+        status: P
+-   model: store.sale
+    pk: 28
+    fields:
+        created: 2019-10-12 18:57:41.079603
+        purchased: null
+        subtotal: '18.00'
+        tax: '5.00'
+        total: '23.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 29
+    fields:
+        created: 2019-10-13 04:02:58.988650
+        purchased: null
+        subtotal: '36.00'
+        tax: '5.00'
+        total: '41.00'
+        charge_id: null
+        shipMethod: MAIL
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 30
+    fields:
+        created: 2019-10-13 15:39:31.131303
+        purchased: 2019-10-14 18:31:56.611753
+        subtotal: '36.00'
+        tax: '5.00'
+        total: '41.00'
+        charge_id: null
+        shipMethod: MAIL
+        referrer: null
+        orderID: 1PC65250L7497510Y
+        status: P
+-   model: store.sale
+    pk: 58
+    fields:
+        created: 2019-10-14 21:44:33.236860
+        purchased: null
+        subtotal: '18.00'
+        tax: '5.00'
+        total: '23.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 59
+    fields:
+        created: 2019-10-14 21:46:50.155119
+        purchased: 2019-10-16 10:21:56.290851
+        subtotal: '36.00'
+        tax: '5.00'
+        total: '41.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 7US239459P677730055
+        status: O
+-   model: store.sale
+    pk: 60
+    fields:
+        created: 2019-10-15 03:51:50.445133
+        purchased: 2019-10-16 15:52:52.614879
+        subtotal: '36.00'
+        tax: '5.00'
+        total: '41.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: 7US239459P677730056
+        status: E
+-   model: store.sale
+    pk: 61
+    fields:
+        created: 2019-10-15 03:52:11.359917
+        purchased: 2019-10-15 04:09:56.197893
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: IM
+        orderID: 5WY569975C854774M
+        status: P
+-   model: store.sale
+    pk: 62
+    fields:
+        created: 2019-10-15 04:02:23.657709
+        purchased: null
+        subtotal: '0.00'
+        tax: '5.00'
+        total: '5.00'
+        charge_id: null
+        shipMethod: null
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 63
+    fields:
+        created: 2019-10-15 04:12:15.351676
+        purchased: 2019-10-15 04:42:51.897494
+        subtotal: '126.00'
+        tax: '5.00'
+        total: '131.00'
+        charge_id: null
+        shipMethod: MAIL
+        referrer: null
+        orderID: 3FV59363DA915063D
+        status: P
+-   model: store.sale
+    pk: 64
+    fields:
+        created: 2019-10-15 04:21:25.179679
+        purchased: 2019-10-15 04:24:14.441644
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: SH
+        orderID: 86184376LV540601H
+        status: P
+-   model: store.sale
+    pk: 65
+    fields:
+        created: 2019-10-15 04:35:42.820821
+        purchased: 2019-10-15 04:40:55.562803
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: CN
+        orderID: 0N826398TX529560S
+        status: P
+-   model: store.sale
+    pk: 66
+    fields:
+        created: 2019-10-15 06:14:14.864560
+        purchased: 2019-10-15 06:32:21.176589
+        subtotal: '72.00'
+        tax: '5.00'
+        total: '77.00'
+        charge_id: null
+        shipMethod: MAIL
+        referrer: null
+        orderID: 57H199242P011615T
+        status: P
+-   model: store.sale
+    pk: 67
+    fields:
+        created: 2019-10-15 19:15:36.653574
+        purchased: 2019-10-15 19:17:18.794973
+        subtotal: '18.00'
+        tax: '0.00'
+        total: '18.00'
+        charge_id: null
+        shipMethod: IP
+        referrer: SH
+        orderID: 0CE921670P293423J
+        status: P
 -   model: store.saleitem
     pk: 1
     fields:
@@ -1453,7 +1805,7 @@
 -   model: store.saleitem
     pk: 12
     fields:
-        status: A
+        status: D
         sale: 12
         product: 22
         quantity: 1
@@ -1462,7 +1814,7 @@
 -   model: store.saleitem
     pk: 13
     fields:
-        status: A
+        status: D
         sale: 12
         product: 83
         quantity: 1
@@ -1489,7 +1841,7 @@
 -   model: store.saleitem
     pk: 16
     fields:
-        status: A
+        status: D
         sale: 12
         product: 86
         quantity: 1
@@ -1521,4 +1873,670 @@
         product: 22
         quantity: 1
         size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 20
+    fields:
+        status: A
+        sale: 15
+        product: 69
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 21
+    fields:
+        status: D
+        sale: 15
+        product: 9
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 22
+    fields:
+        status: A
+        sale: 15
+        product: 9
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 23
+    fields:
+        status: A
+        sale: 16
+        product: 70
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 24
+    fields:
+        status: D
+        sale: 16
+        product: 24
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 25
+    fields:
+        status: A
+        sale: 16
+        product: 24
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 26
+    fields:
+        status: D
+        sale: 12
+        product: 70
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 27
+    fields:
+        status: A
+        sale: 12
+        product: 70
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 28
+    fields:
+        status: A
+        sale: 17
+        product: 25
+        quantity: 1
+        size: YS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 29
+    fields:
+        status: A
+        sale: 18
+        product: 8
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 30
+    fields:
+        status: A
+        sale: 18
+        product: 63
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 31
+    fields:
+        status: A
+        sale: 19
+        product: 9
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 32
+    fields:
+        status: A
+        sale: 19
+        product: 27
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 33
+    fields:
+        status: D
+        sale: 20
+        product: 2
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 34
+    fields:
+        status: D
+        sale: 20
+        product: 42
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 35
+    fields:
+        status: A
+        sale: 20
+        product: 9
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 36
+    fields:
+        status: A
+        sale: 20
+        product: 4
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 37
+    fields:
+        status: D
+        sale: 20
+        product: 10
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 38
+    fields:
+        status: D
+        sale: 22
+        product: 24
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 39
+    fields:
+        status: D
+        sale: 22
+        product: 24
+        quantity: 1
+        size: S
+        price: '18.00'
+-   model: store.saleitem
+    pk: 40
+    fields:
+        status: D
+        sale: 23
+        product: 27
+        quantity: 1
+        size: S
+        price: '18.00'
+-   model: store.saleitem
+    pk: 41
+    fields:
+        status: A
+        sale: 23
+        product: 72
+        quantity: 1
+        size: S
+        price: '18.00'
+-   model: store.saleitem
+    pk: 42
+    fields:
+        status: A
+        sale: 25
+        product: 65
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 43
+    fields:
+        status: A
+        sale: 25
+        product: 21
+        quantity: 1
+        size: YL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 44
+    fields:
+        status: A
+        sale: 25
+        product: 66
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 45
+    fields:
+        status: A
+        sale: 25
+        product: 21
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 46
+    fields:
+        status: A
+        sale: 26
+        product: 24
+        quantity: 1
+        size: S
+        price: '18.00'
+-   model: store.saleitem
+    pk: 47
+    fields:
+        status: A
+        sale: 26
+        product: 24
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 48
+    fields:
+        status: A
+        sale: 27
+        product: 27
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 49
+    fields:
+        status: A
+        sale: 28
+        product: 61
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 50
+    fields:
+        status: A
+        sale: 29
+        product: 7
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 51
+    fields:
+        status: A
+        sale: 29
+        product: 4
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 52
+    fields:
+        status: D
+        sale: 30
+        product: 7
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 53
+    fields:
+        status: D
+        sale: 30
+        product: 4
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 54
+    fields:
+        status: D
+        sale: 30
+        product: 7
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 55
+    fields:
+        status: D
+        sale: 30
+        product: 7
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 56
+    fields:
+        status: D
+        sale: 30
+        product: 8
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 57
+    fields:
+        status: A
+        sale: 30
+        product: 8
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 58
+    fields:
+        status: A
+        sale: 30
+        product: 7
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 59
+    fields:
+        status: D
+        sale: 22
+        product: 24
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 60
+    fields:
+        status: D
+        sale: 22
+        product: 43
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 61
+    fields:
+        status: A
+        sale: 22
+        product: 19
+        quantity: 1
+        size: S
+        price: '18.00'
+-   model: store.saleitem
+    pk: 62
+    fields:
+        status: A
+        sale: 22
+        product: 19
+        quantity: 1
+        size: YS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 63
+    fields:
+        status: D
+        sale: 22
+        product: 9
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 64
+    fields:
+        status: A
+        sale: 22
+        product: 9
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 65
+    fields:
+        status: A
+        sale: 22
+        product: 20
+        quantity: 1
+        size: YL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 66
+    fields:
+        status: A
+        sale: 22
+        product: 34
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 67
+    fields:
+        status: A
+        sale: 22
+        product: 34
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 68
+    fields:
+        status: A
+        sale: 22
+        product: 40
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 69
+    fields:
+        status: A
+        sale: 58
+        product: 4
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 70
+    fields:
+        status: A
+        sale: 59
+        product: 8
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 71
+    fields:
+        status: A
+        sale: 60
+        product: 4
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 72
+    fields:
+        status: A
+        sale: 61
+        product: 46
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 73
+    fields:
+        status: A
+        sale: 59
+        product: 12
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 74
+    fields:
+        status: A
+        sale: 60
+        product: 16
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 75
+    fields:
+        status: D
+        sale: 62
+        product: 71
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 76
+    fields:
+        status: A
+        sale: 63
+        product: 24
+        quantity: 1
+        size: YL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 77
+    fields:
+        status: A
+        sale: 63
+        product: 4
+        quantity: 1
+        size: S
+        price: '18.00'
+-   model: store.saleitem
+    pk: 78
+    fields:
+        status: D
+        sale: 63
+        product: 6
+        quantity: 1
+        size: XS
+        price: '18.00'
+-   model: store.saleitem
+    pk: 79
+    fields:
+        status: A
+        sale: 63
+        product: 66
+        quantity: 1
+        size: XL
+        price: '18.00'
+-   model: store.saleitem
+    pk: 80
+    fields:
+        status: A
+        sale: 63
+        product: 66
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 81
+    fields:
+        status: A
+        sale: 64
+        product: 6
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 82
+    fields:
+        status: D
+        sale: 63
+        product: 34
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 83
+    fields:
+        status: A
+        sale: 63
+        product: 31
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 84
+    fields:
+        status: A
+        sale: 63
+        product: 6
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 85
+    fields:
+        status: A
+        sale: 63
+        product: 33
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 86
+    fields:
+        status: A
+        sale: 65
+        product: 61
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 87
+    fields:
+        status: D
+        sale: 66
+        product: 47
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 88
+    fields:
+        status: D
+        sale: 66
+        product: 65
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 89
+    fields:
+        status: A
+        sale: 66
+        product: 77
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 90
+    fields:
+        status: A
+        sale: 66
+        product: 61
+        quantity: 1
+        size: M
+        price: '18.00'
+-   model: store.saleitem
+    pk: 91
+    fields:
+        status: A
+        sale: 66
+        product: 78
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 92
+    fields:
+        status: A
+        sale: 66
+        product: 62
+        quantity: 1
+        size: L
+        price: '18.00'
+-   model: store.saleitem
+    pk: 93
+    fields:
+        status: A
+        sale: 67
+        product: 26
+        quantity: 1
+        size: XS
         price: '18.00'

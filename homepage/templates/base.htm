@@ -33,11 +33,16 @@
             <%block name="head">
             </%block>
 
-<style>
-body{
+            <%block name="BodyBackImage">
+            <style>
+            body{
+                background-image: url("https://storage.cloud.google.com/rifftidesite-content/whitesparkle2.jpg");
+            }
+            </style>
+            </%block>
 
-    background-image: url("https://storage.cloud.google.com/rifftidesite-content/whitesparkle2.jpg");
-}
+<style>
+
 .bigger{
     font-size:178px !important;
     text-shadow: 0px 12px 13px rgba(11, 216, 216, 0.699) !important;
@@ -56,13 +61,17 @@ body{
                     <li>
 
                     </li>
-                    <%block name="navbar_items">
-
-                    </%block>
+                    
+                        <%block name="navbar_items">
+                        <li class="nav-item mynav-item">
+                        <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/store/">Store</a>
+                        </li>             
+                        </%block>
                  </ul>
         </div>
 
-            <div id="bigTitle" class="title ${'bigger' if request.dmp.page =='index' else ''}" style="font-family:Josefin;font-weight: bolder;"><%block name="page_header_title">
+            <div id="bigTitle" class="title ${'bigger' if request.dmp.page =='index' else ''}" style="font-family:Josefin;font-weight: bolder;">
+                <%block name="page_header_title">
                 We are
                 </%block></div>
         </header>

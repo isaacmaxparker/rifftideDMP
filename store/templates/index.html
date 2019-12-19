@@ -28,13 +28,13 @@ Rifftide Shop
         <tr>
             <td style="float:right; margin-right: 0;">
                     %if page-1 != 0:
-                    <a class="btn btn-lg mybtn" href="/store/index/${page-1}/${category if category is not None else '-'}/${colorid}">Previous</a>
+                    <a class="btn btn-lg mybtn" href="/store/index/${page-1}/${category.id if category is not None else '-'}/${colorid}">Previous</a>
                     %endif
             </td>
         
             <td width=50%>       
                 %if page != numpages:
-                <a class="btn mybtn btn-lg" href="/store/index/${page+1}/${category if category is not None else '-'}/${colorid}">Next</a>
+                <a class="btn mybtn btn-lg" href="/store/index/${page+1}/${category.id if category is not None else '-'}/${colorid}">Next</a>
                 %endif
             </td>
         </tr>

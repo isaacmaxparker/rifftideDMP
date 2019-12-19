@@ -15,7 +15,6 @@ def process_request(request, orderId:str):
        sale = cmod.Sale.objects.get(orderID=orderId)
     
    if sale.purchased == None:
-      print("NOUNE")
       sale.finalize(orderId)
       del request.session['cart_ID']
       sale.save()

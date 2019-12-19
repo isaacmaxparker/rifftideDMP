@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569692544.6999257
+_modified_time = 1571112655.0462227
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/store/templates/index.html'
 _template_uri = 'index.html'
@@ -32,24 +32,24 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        self = context.get('self', UNDEFINED)
-        catid = context.get('catid', UNDEFINED)
-        def page_header_title():
-            return render_page_header_title(context._locals(__M_locals))
-        products = context.get('products', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        colorid = context.get('colorid', UNDEFINED)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
-        page = context.get('page', UNDEFINED)
-        numpages = context.get('numpages', UNDEFINED)
         def right_content():
             return render_right_content(context._locals(__M_locals))
-        saleItems = context.get('saleItems', UNDEFINED)
+        page = context.get('page', UNDEFINED)
+        numpages = context.get('numpages', UNDEFINED)
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        len = context.get('len', UNDEFINED)
         category = context.get('category', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
         sale = context.get('sale', UNDEFINED)
+        def page_header_title():
+            return render_page_header_title(context._locals(__M_locals))
+        saleItems = context.get('saleItems', UNDEFINED)
+        catid = context.get('catid', UNDEFINED)
+        colorid = context.get('colorid', UNDEFINED)
+        products = context.get('products', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         __M_writer('\r\n\r\n')
@@ -93,15 +93,15 @@ def render_page_header_title(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
-        products = context.get('products', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        colorid = context.get('colorid', UNDEFINED)
-        def site_content():
-            return render_site_content(context)
         page = context.get('page', UNDEFINED)
         numpages = context.get('numpages', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         category = context.get('category', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        def site_content():
+            return render_site_content(context)
+        colorid = context.get('colorid', UNDEFINED)
+        products = context.get('products', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="content" style="margin:0 0px;">\r\n    <div class="parent">\r\n')
         if len(products) == 0:
@@ -127,7 +127,7 @@ def render_site_content(context,**pageargs):
                 __M_writer('                    <a class="btn btn-lg mybtn" href="/store/index/')
                 __M_writer(django_mako_plus.ExpressionPostProcessor(self)(page-1))
                 __M_writer('/')
-                __M_writer(django_mako_plus.ExpressionPostProcessor(self)(category if category is not None else '-'))
+                __M_writer(django_mako_plus.ExpressionPostProcessor(self)(category.id if category is not None else '-'))
                 __M_writer('/')
                 __M_writer(django_mako_plus.ExpressionPostProcessor(self)(colorid))
                 __M_writer('">Previous</a>\r\n')
@@ -136,7 +136,7 @@ def render_site_content(context,**pageargs):
                 __M_writer('                <a class="btn mybtn btn-lg" href="/store/index/')
                 __M_writer(django_mako_plus.ExpressionPostProcessor(self)(page+1))
                 __M_writer('/')
-                __M_writer(django_mako_plus.ExpressionPostProcessor(self)(category if category is not None else '-'))
+                __M_writer(django_mako_plus.ExpressionPostProcessor(self)(category.id if category is not None else '-'))
                 __M_writer('/')
                 __M_writer(django_mako_plus.ExpressionPostProcessor(self)(colorid))
                 __M_writer('">Next</a>\r\n')
@@ -152,12 +152,12 @@ def render_site_content(context,**pageargs):
 def render_left_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
-        catid = context.get('catid', UNDEFINED)
-        colorid = context.get('colorid', UNDEFINED)
         def left_content():
             return render_left_content(context)
         category = context.get('category', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        catid = context.get('catid', UNDEFINED)
+        colorid = context.get('colorid', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div class="filterpanel">\r\n  <div class="filters">\r\n      \r\n    <p class=filterstitle> <span id="filterbtn" class="">A</span>  Filters</p>\r\n    <ul>\r\n      <!-- //////////////DONT HARD CODE THIS ////////////////// -->\r\n    <li class="catlist ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)('bolder' if category is None else ' '))
@@ -197,12 +197,12 @@ def render_left_content(context,**pageargs):
 def render_right_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
-        len = context.get('len', UNDEFINED)
         def right_content():
             return render_right_content(context)
-        saleItems = context.get('saleItems', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         sale = context.get('sale', UNDEFINED)
+        saleItems = context.get('saleItems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         if len(saleItems) > 0:

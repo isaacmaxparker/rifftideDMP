@@ -1,0 +1,90 @@
+-   model: portal.score
+    pk: 1
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Full Score
+        views: 0
+        status: I
+-   model: portal.score
+    pk: 2
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Soprano
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 3
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Mezzo
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 4
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Alto
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 5
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Contralto
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 6
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Tenor
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 7
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Baritone
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 8
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Bass
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 9
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Glorious
+        allURL: 5dfad603627efd61d8ae2850
+        partURL: NONE
+        part: Beatbox
+        views: 0
+        status: A

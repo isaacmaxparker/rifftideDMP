@@ -61,6 +61,17 @@ class ProductImage(models.Model):
 TAX_RATE = Decimal(".00")
 
 class Sale(models.Model):
+
+        
+        STATUS_CHOICES = (
+            ('I', 'Initialized'),
+            ('P', 'Payed for'),
+            ('O', 'Ordered'),
+            ('R', 'Recieved by Isaac'),
+            ('D', 'Delivered'),
+            ('E', 'Erased'),
+        )
+
         #user = models.ForeignKey("account.User", on_delete=models.PROTECT)
         created = models.DateTimeField(auto_now_add=True)
         purchased = models.DateTimeField(null=True, default=None)
@@ -71,6 +82,11 @@ class Sale(models.Model):
         shipMethod = models.TextField(null=True,default=None)
         referrer = models.TextField(null=True, default=None)
         orderID = models.TextField(null=True, default=None)
+        status = models.TextField(db_index=True, choices=STATUS_CHOICES, default='I')
+        
+        def getitems(self):
+            items = SaleItem.objects.filter(sale=self,status ='A')
+            return items
 
         def recalculate(self):
             sales = SaleItem.objects.filter(sale=self, status='A')
@@ -92,7 +108,7 @@ class Sale(models.Model):
                 raise ValueError("This sale has already been finalized")
 
             self.purchased = datetime.now()
-
+            self.status = "P"
 class SaleItem(models.Model):
         STATUS_CHOICES = [
             ( 'A', 'Active' ),
