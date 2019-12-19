@@ -1,0 +1,43 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_header_title">
+Admin Portal
+</%block>
+
+<%block name="page_title">&mdash; Admin</%block>
+
+<%block name="left_content">
+
+</%block>
+
+
+<%block name="site_content">
+<div class="content">
+<div style="text-align: center; font-family: Josefin Sans, Century Gothic, Helvetica; font-size: 34px;">
+    <p class="homeparg" style="text-align: center; font-weight:bold;font-family:Century Gothic, Helvetica; font-size: 34px;">Welcome Isa${request.user.first_name}!</p>
+</div>
+<table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 44px;width:100%;">
+    <tr>
+        <td>
+            <a href="/adminportal/orders/">View Merch Orders</a>
+        </td>
+        <td>
+            <a href="/adminportal/users/">View/Edit Users</a>
+        </td>
+        <td>
+            <a href="/adminportal/scores/">View/Edit Scores</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/adminportal/newScore/">Create a New Score</a>
+        </td>
+    </tr>
+</table>
+</div>
+
+</%block>
+
+<%block name="right_content">
+
+</%block>

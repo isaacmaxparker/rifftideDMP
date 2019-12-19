@@ -1,0 +1,88 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_header_title">
+New Score
+</%block>
+
+<%block name="page_title">&mdash; Scores</%block>
+
+<%block name="site_content">
+<div class="content">
+<form method="POST" id="editScoreForm">
+
+                    <table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 24px; width:100%; text-align: center; display: inline-block;">
+                            <tr>
+                                    <td>Score Name:</td>
+                               
+                                        <td><input type="text" name="scoreName" class="forminput" value="" width=100%></td>
+                               
+                                            <td>All Part URL</td>
+                         
+                                            <td><input type="text" name="allURL" class="forminput" value="" width=100%></td>
+                 
+                                       <td width="100px" style="text-align: center;"> <input type="submit" class="btn savebtn mybtn" style="display: inline-block;" value="Save"/></td>
+                                </tr>
+                            <tr>
+                              <td>
+                                Soprano
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL0" class="forminput" value="" width=90%>
+                              </td>  
+                              <td>
+                                Mezzo
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL1" class="forminput" value="" width=90%>
+                              </td>
+                            </tr>
+                            <tr>       
+                              <td>
+                                Alto
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL2" class="forminput" value="" width=90%>
+                              </td>  
+                              <td>
+                                Contralto
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL3" class="forminput" value="" width=90%>
+                              </td>      
+                            </tr>
+                            <tr>
+                              <td>
+                                Tenor
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL4" class="forminput" value="" width=90%>
+                              </td>  
+                              <td>
+                                Baritone
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL5" class="forminput" value="" width=90%>
+                              </td>
+                            </tr><tr>       
+                              <td>
+                                Bass
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL6" class="forminput" value="" width=90%>
+                              </td>  
+                              <td>
+                                Beatbox
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL7" class="forminput" value="" width=90%>
+                              </td>      
+                            </tr>
+
+                        </table>
+
+
+
+</form>
+</div>
+
+</%block>

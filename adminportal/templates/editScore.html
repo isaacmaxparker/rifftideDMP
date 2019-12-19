@@ -1,0 +1,54 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_header_title">
+${scores[0].name}
+</%block>
+
+<%block name="page_title">&mdash; Scores</%block>
+
+<%block name="site_content">
+<div class="content">
+<form method="POST" id="editScoreForm">
+    <table width="100%">
+        <tr>
+            <td>
+                    <table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 24px; width:50%; text-align: center; display: inline-block;">
+                            %for score in scores:
+                            <tr>
+                              <td>
+                                ${score.part}
+                              </td> 
+                              <td>
+                                <input type="text" name="partURL${score.id}" class="forminput" value="${score.partURL}" width=90%>
+                              </td>            
+                            </tr>
+                            %endfor
+                        </table>
+            </td>
+            <td>
+                    <table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 24px; width:100%; text-align: center; display: inline-block;">
+                        <tr>
+                            <td>Score Name:</td>
+                        </tr>    
+                        <tr>
+                                <td><input type="text" name="scoreName" class="forminput" value="${scores[0].name}" width=100%></td>
+                        </tr>
+                        <tr>
+                                    <td>All Part URL</td>
+                        </tr>
+                        <tr>
+                                    <td><input type="text" name="allURL" class="forminput" value="${scores[0].allURL}" width=100%></td>
+                        </tr>
+                        <tr>
+                               <td> <input type="submit" class="btn  mybtn" value="Save"/></td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+    </table>
+
+
+</form>
+</div>
+
+</%block>

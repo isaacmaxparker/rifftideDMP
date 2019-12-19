@@ -66,7 +66,7 @@ body{
                    
                     <%block name="navbar_items">
                     <li class="nav-item mynav-item">
-                      <a class="nav-link ${ 'active' if request.dmp.page =='index' else ' '}"  href="/store/">Store</a>
+                      <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/store/">Store</a>
                     </li>         
                     <li class="nav-item mynav-item" id="musictab">
                         <a class="nav-link"  href="https://open.spotify.com/artist/6TRcbaV03EF0bofJNKUSI8" target="_blank">Music</a>
@@ -90,7 +90,7 @@ body{
                         </li>   
                         %if request.user.has_perm('account.changeOrders'):
                         <li class="nav-item mynav-item">
-                                <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/account/orders/">Admin Portal</a>
+                                <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/adminportal/">Admin Portal</a>
                         </li> 
                         %endif
                         

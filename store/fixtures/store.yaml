@@ -1208,7 +1208,7 @@
         shipMethod: null
         referrer: null
         orderID: 77A28483SW928394L
-        status: P
+        status: D
 -   model: store.sale
     pk: 3
     fields:
@@ -1221,7 +1221,7 @@
         shipMethod: null
         referrer: null
         orderID: 5AJ63617932382613
-        status: P
+        status: O
 -   model: store.sale
     pk: 4
     fields:
@@ -1325,7 +1325,7 @@
         shipMethod: IP
         referrer: IM
         orderID: 09P31169JP614272V
-        status: P
+        status: D
 -   model: store.sale
     pk: 12
     fields:
@@ -1377,7 +1377,7 @@
         shipMethod: MAIL
         referrer: null
         orderID: 98S00752S0522374A
-        status: P
+        status: D
 -   model: store.sale
     pk: 16
     fields:
@@ -1390,7 +1390,7 @@
         shipMethod: MAIL
         referrer: null
         orderID: 51D93134FT264613G
-        status: P
+        status: D
 -   model: store.sale
     pk: 17
     fields:
@@ -1416,7 +1416,7 @@
         shipMethod: IP
         referrer: IM
         orderID: 8YP61208U5766690Y
-        status: P
+        status: R
 -   model: store.sale
     pk: 19
     fields:
@@ -1442,7 +1442,7 @@
         shipMethod: IP
         referrer: LN
         orderID: 8CM146087W792390W
-        status: P
+        status: D
 -   model: store.sale
     pk: 21
     fields:
@@ -1468,7 +1468,7 @@
         shipMethod: IP
         referrer: BE
         orderID: 5HR06932C7732181H
-        status: P
+        status: D
 -   model: store.sale
     pk: 23
     fields:
@@ -1481,7 +1481,7 @@
         shipMethod: IP
         referrer: SH
         orderID: 0JP68023LP491001U
-        status: P
+        status: D
 -   model: store.sale
     pk: 24
     fields:
@@ -1520,7 +1520,7 @@
         shipMethod: IP
         referrer: BE
         orderID: 7US239459P6777300
-        status: O
+        status: D
 -   model: store.sale
     pk: 27
     fields:
@@ -1533,7 +1533,7 @@
         shipMethod: IP
         referrer: SH
         orderID: 2BP982513H095104T
-        status: P
+        status: D
 -   model: store.sale
     pk: 28
     fields:
@@ -1572,7 +1572,7 @@
         shipMethod: MAIL
         referrer: null
         orderID: 1PC65250L7497510Y
-        status: P
+        status: D
 -   model: store.sale
     pk: 58
     fields:
@@ -1598,7 +1598,7 @@
         shipMethod: null
         referrer: null
         orderID: 7US239459P677730055
-        status: O
+        status: E
 -   model: store.sale
     pk: 60
     fields:
@@ -1624,7 +1624,7 @@
         shipMethod: IP
         referrer: IM
         orderID: 5WY569975C854774M
-        status: P
+        status: D
 -   model: store.sale
     pk: 62
     fields:
@@ -1650,7 +1650,7 @@
         shipMethod: MAIL
         referrer: null
         orderID: 3FV59363DA915063D
-        status: P
+        status: D
 -   model: store.sale
     pk: 64
     fields:
@@ -1663,7 +1663,7 @@
         shipMethod: IP
         referrer: SH
         orderID: 86184376LV540601H
-        status: P
+        status: D
 -   model: store.sale
     pk: 65
     fields:
@@ -1676,7 +1676,7 @@
         shipMethod: IP
         referrer: CN
         orderID: 0N826398TX529560S
-        status: P
+        status: D
 -   model: store.sale
     pk: 66
     fields:
@@ -1689,7 +1689,7 @@
         shipMethod: MAIL
         referrer: null
         orderID: 57H199242P011615T
-        status: P
+        status: D
 -   model: store.sale
     pk: 67
     fields:
@@ -1702,7 +1702,33 @@
         shipMethod: IP
         referrer: SH
         orderID: 0CE921670P293423J
-        status: P
+        status: D
+-   model: store.sale
+    pk: 68
+    fields:
+        created: 2019-10-27 18:30:15.993235
+        purchased: null
+        subtotal: '0.00'
+        tax: '5.00'
+        total: '5.00'
+        charge_id: null
+        shipMethod: ' '
+        referrer: null
+        orderID: null
+        status: I
+-   model: store.sale
+    pk: 69
+    fields:
+        created: 2019-10-28 22:33:13.918567
+        purchased: null
+        subtotal: '0.00'
+        tax: '5.00'
+        total: '5.00'
+        charge_id: null
+        shipMethod: ' '
+        referrer: null
+        orderID: null
+        status: I
 -   model: store.saleitem
     pk: 1
     fields:
