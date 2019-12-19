@@ -3,4 +3,12 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class User(AbstractUser):
-    birthdate=models.DateTimeField(null = True)
+    STATUS_CHOICES = (
+            ('A', 'Active'),
+            ('I', 'Inactive')
+    )
+
+    name = models.TextField(default='NONE')
+    loginname = models.TextField(default='NONE')
+    voicepart = models.TextField(default='NONE')
+    status = models.TextField(db_index=True, choices=STATUS_CHOICES, default='A')

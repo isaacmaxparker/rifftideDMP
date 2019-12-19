@@ -14,4 +14,5 @@ class Score(models.Model):
     partURL = models.TextField(default='NONE')
     part = models.TextField(default='ALL')
     views = models.IntegerField(default=0)
+    is_dark = models.BooleanField(default=False)
     status = models.TextField(db_index=True, choices=STATUS_CHOICES, default='A')

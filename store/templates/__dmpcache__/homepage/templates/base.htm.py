@@ -5,14 +5,14 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569689496.7494822
+_modified_time = 1576736257.7054925
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/homepage/templates/base.htm'
 _template_uri = '/homepage/templates/base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
-_exports = ['page_title', 'head', 'navbar_items', 'page_header_title', 'left_content', 'site_content', 'site_right', 'right_content']
+_exports = ['page_title', 'head', 'BodyBackImage', 'navbar_items', 'page_header_title', 'left_content', 'site_content', 'site_right', 'right_content']
 
 
 from datetime import datetime 
@@ -21,25 +21,27 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def page_header_title():
-            return render_page_header_title(context._locals(__M_locals))
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
-        def head():
-            return render_head(context._locals(__M_locals))
-        def site_right():
-            return render_site_right(context._locals(__M_locals))
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
         request = context.get('request', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def BodyBackImage():
+            return render_BodyBackImage(context._locals(__M_locals))
+        def navbar_items():
+            return render_navbar_items(context._locals(__M_locals))
+        def head():
+            return render_head(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        def site_right():
+            return render_site_right(context._locals(__M_locals))
+        def page_header_title():
+            return render_page_header_title(context._locals(__M_locals))
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
         def right_content():
             return render_right_content(context._locals(__M_locals))
         def page_title():
             return render_page_title(context._locals(__M_locals))
-        def navbar_items():
-            return render_navbar_items(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n<head>\r\n\r\n    <title>\r\n        Rifftide\r\n        ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -73,16 +75,37 @@ def render_body(context,**pageargs):
             context['self'].head(**pageargs)
         
 
-        __M_writer('\r\n\r\n<style>\r\nbody{\r\n\r\n    background-image: url("https://storage.cloud.google.com/rifftidesite-content/whitesparkle2.jpg");\r\n}\r\n.bigger{\r\n    font-size:178px !important;\r\n    text-shadow: 0px 12px 13px rgba(11, 216, 216, 0.699) !important;\r\n}\r\n</style>\r\n\r\n    </head>\r\n    <body>\r\n        <header>\r\n        <div id="Topbar">\r\n            \r\n                <ul class="myNav">\r\n                    <li class="homeImg">\r\n                        <img src="')
+        __M_writer('\r\n\r\n            ')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'BodyBackImage'):
+            context['self'].BodyBackImage(**pageargs)
+        
+
+        __M_writer('\r\n\r\n<style>\r\n\r\n.bigger{\r\n    font-size:178px !important;\r\n    text-shadow: 0px 12px 13px rgba(11, 216, 216, 0.699) !important;\r\n}\r\n</style>\r\n\r\n    </head>\r\n    <body>\r\n        <header>\r\n        <div id="Topbar">\r\n            \r\n                <ul class="myNav">\r\n                    <li class="homeImg">\r\n                        <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
-        __M_writer('homepage/media/thick logo.png" alt="python"  />\r\n                    </li>\r\n                    <li>\r\n\r\n                    </li>\r\n                    ')
+        __M_writer('homepage/media/thick logo.png" alt="python"  />\r\n                    </li>\r\n                    <li>\r\n\r\n                    </li>\r\n                   \r\n                    ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'navbar_items'):
             context['self'].navbar_items(**pageargs)
         
 
-        __M_writer('\r\n                 </ul>\r\n        </div>\r\n\r\n            <div id="bigTitle" class="title ')
+        __M_writer('\r\n')
+        if request.user.is_authenticated:
+            __M_writer('                        <li class="nav-item mynav-item">\r\n                            <a class="nav-link ')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='' else ' '))
+            __M_writer('"  href="/portal/">Member Portal</a>\r\n                        </li> \r\n                        <li class="nav-item mynav-item" style="float: right;">\r\n                                <a class="nav-link ')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='' else ' '))
+            __M_writer('"  href="/account/logout">Logout</a>\r\n                        </li>   \r\n')
+            if request.user.has_perm('account.changeOrders'):
+                __M_writer('                        <li class="nav-item mynav-item">\r\n                                <a class="nav-link ')
+                __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='' else ' '))
+                __M_writer('"  href="/account/orders/">Admin Portal</a>\r\n                        </li> \r\n')
+            __M_writer('                        \r\n')
+        else:
+            __M_writer('                        <li class="nav-item mynav-item" style="float: right;">\r\n                                <a class="nav-link ')
+            __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='' else ' '))
+            __M_writer('"  href="/account/login">Login</a>\r\n                        </li>    \r\n')
+        __M_writer('                 </ul>\r\n        </div>\r\n\r\n            <div id="bigTitle" class="title ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)('bigger' if request.dmp.page =='index' else ''))
-        __M_writer('" style="font-family:Josefin;font-weight: bolder;">')
+        __M_writer('" style="font-family:Josefin;font-weight: bolder;">\r\n                ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_header_title'):
             context['self'].page_header_title(**pageargs)
         
@@ -140,13 +163,29 @@ def render_head(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_BodyBackImage(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def BodyBackImage():
+            return render_BodyBackImage(context)
+        __M_writer = context.writer()
+        __M_writer('\r\n            <style>\r\n            body{\r\n                background-image: url("https://storage.cloud.google.com/rifftidesite-content/whitesparkle2.jpg");\r\n            }\r\n            </style>\r\n            ')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_navbar_items(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        request = context.get('request', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         def navbar_items():
             return render_navbar_items(context)
         __M_writer = context.writer()
-        __M_writer('\r\n\r\n                    ')
+        __M_writer('\r\n                    <li class="nav-item mynav-item">\r\n                      <a class="nav-link ')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='index' else ' '))
+        __M_writer('"  href="/store/">Store</a>\r\n                    </li>         \r\n                    <li class="nav-item mynav-item" id="musictab">\r\n                        <a class="nav-link"  href="https://open.spotify.com/artist/6TRcbaV03EF0bofJNKUSI8" target="_blank">Music</a>\r\n                    </li>  \r\n                    <li class="nav-item mynav-item" style="float:right">\r\n                        <a class="nav-link glyphicon twentyfour"  href="https://www.youtube.com/rifftideacapella" target="_blank">L</a>\r\n                    </li> \r\n                    <li id="instagram" style="float:right">\r\n                      <a class="nav-link glyphicon twentyfour" href="https://www.instagram.com/rifftideacappella/" target="_blank">K</a>\r\n                    </li>    \r\n                    <li id="instagram" style="float:right">\r\n                        <a class="nav-link glyphicon twentyfour" href="https://www.facebook.com/rifftideacappella/" target="_blank">J</a>\r\n                    </li>    \r\n                  ')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -214,6 +253,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/homepage/templates/base.htm", "uri": "/homepage/templates/base.htm", "source_encoding": "utf-8", "line_map": {"18": 90, "19": 91, "20": 0, "44": 2, "49": 11, "50": 16, "51": 16, "52": 16, "53": 18, "54": 18, "55": 19, "56": 19, "57": 23, "58": 23, "59": 24, "60": 24, "61": 25, "62": 25, "63": 26, "64": 26, "65": 27, "66": 27, "67": 29, "68": 30, "69": 30, "70": 31, "71": 31, "76": 34, "77": 54, "78": 54, "83": 61, "84": 65, "85": 65, "90": 67, "95": 73, "100": 78, "105": 82, "110": 83, "111": 90, "112": 92, "113": 92, "119": 9, "125": 9, "131": 33, "137": 33, "143": 59, "149": 59, "155": 65, "161": 65, "167": 73, "173": 73, "179": 78, "185": 78, "191": 80, "197": 80, "203": 83, "209": 83, "215": 209}}
+{"filename": "C:/Users/Isaac/mysite/homepage/templates/base.htm", "uri": "/homepage/templates/base.htm", "source_encoding": "utf-8", "line_map": {"18": 129, "19": 130, "20": 0, "46": 2, "51": 11, "52": 16, "53": 16, "54": 16, "55": 18, "56": 18, "57": 19, "58": 19, "59": 23, "60": 23, "61": 24, "62": 24, "63": 25, "64": 25, "65": 26, "66": 26, "67": 27, "68": 27, "69": 29, "70": 30, "71": 30, "72": 31, "73": 31, "78": 34, "83": 42, "84": 59, "85": 59, "90": 81, "91": 82, "92": 83, "93": 84, "94": 84, "95": 87, "96": 87, "97": 89, "98": 90, "99": 91, "100": 91, "101": 94, "102": 95, "103": 96, "104": 97, "105": 97, "106": 100, "107": 103, "108": 103, "113": 106, "118": 112, "123": 117, "128": 121, "133": 122, "134": 129, "135": 131, "136": 131, "142": 9, "148": 9, "154": 33, "160": 33, "166": 36, "172": 36, "178": 65, "186": 65, "187": 67, "188": 67, "194": 104, "200": 104, "206": 112, "212": 112, "218": 117, "224": 117, "230": 119, "236": 119, "242": 122, "248": 122, "254": 248}}
 __M_END_METADATA
 """

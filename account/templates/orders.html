@@ -1,8 +1,19 @@
 <%inherit file="app_base.htm" />
 <%! from store import models as cmod %>
 
+<%block name="BodyBackImage">
+<style>
+html{
+    background-image: url("https://storage.cloud.google.com/rifftidesite-content/blacksparklebackground.jpg?authuser=1");
+}
+#site_middle{
+    background: rgba(255, 255, 255, 0.906);
+}
+</style>
+</%block>
+
 <%block name="page_header_title">
-Reciept
+Orders
 </%block>
 
 <%block name="site_content">

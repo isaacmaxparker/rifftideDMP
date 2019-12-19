@@ -5,14 +5,14 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1571019970.6041205
+_modified_time = 1576736346.9853222
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/account/templates/orders.html'
 _template_uri = 'orders.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
-_exports = ['page_header_title', 'site_content', 'right_content']
+_exports = ['BodyBackImage', 'page_header_title', 'site_content', 'right_content']
 
 
 from store import models as cmod 
@@ -32,19 +32,26 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
+        oSales = context.get('oSales', UNDEFINED)
+        dSales = context.get('dSales', UNDEFINED)
+        rSales = context.get('rSales', UNDEFINED)
+        def BodyBackImage():
+            return render_BodyBackImage(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
         pSales = context.get('pSales', UNDEFINED)
-        rSales = context.get('rSales', UNDEFINED)
-        dSales = context.get('dSales', UNDEFINED)
-        oSales = context.get('oSales', UNDEFINED)
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n')
+        __M_writer('\r\n\r\n')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'BodyBackImage'):
+            context['self'].BodyBackImage(**pageargs)
+        
+
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_header_title'):
             context['self'].page_header_title(**pageargs)
@@ -65,13 +72,25 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_BodyBackImage(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def BodyBackImage():
+            return render_BodyBackImage(context)
+        __M_writer = context.writer()
+        __M_writer('\r\n<style>\r\nhtml{\r\n    background-image: url("https://storage.cloud.google.com/rifftidesite-content/blacksparklebackground.jpg?authuser=1");\r\n}\r\n#site_middle{\r\n    background: rgba(255, 255, 255, 0.906);\r\n}\r\n</style>\r\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_page_header_title(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         def page_header_title():
             return render_page_header_title(context)
         __M_writer = context.writer()
-        __M_writer('\r\nReciept\r\n')
+        __M_writer('\r\nOrders\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -80,13 +99,13 @@ def render_page_header_title(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        oSales = context.get('oSales', UNDEFINED)
+        dSales = context.get('dSales', UNDEFINED)
+        rSales = context.get('rSales', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        pSales = context.get('pSales', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        pSales = context.get('pSales', UNDEFINED)
-        self = context.get('self', UNDEFINED)
-        rSales = context.get('rSales', UNDEFINED)
-        dSales = context.get('dSales', UNDEFINED)
-        oSales = context.get('oSales', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="content">\r\n    <h2>Purchased</h2>\r\n    <hr>\r\n    <table class="carttab" width=100%; style="text-align:center;">\r\n        <tr>\r\n            <th></th>\r\n            <th>\r\n                Sale\r\n            </th>\r\n            <th>\r\n                Status\r\n            </th>\r\n            <th>\r\n                Referrer\r\n            </th>\r\n            <th>\r\n                Date\r\n            </th>\r\n            <th>\r\n                Total\r\n            </th>\r\n             <th>\r\n                Options\r\n            </th>\r\n        </tr>\r\n')
         for sale in pSales:
@@ -202,6 +221,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/account/templates/orders.html", "uri": "orders.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "47": 1, "48": 2, "53": 6, "58": 245, "68": 4, "74": 4, "80": 8, "91": 8, "92": 34, "93": 35, "94": 37, "95": 38, "96": 38, "97": 38, "98": 40, "99": 42, "100": 42, "101": 42, "102": 42, "103": 45, "104": 45, "105": 48, "106": 48, "107": 51, "108": 51, "109": 54, "110": 54, "111": 57, "112": 57, "113": 60, "114": 60, "115": 66, "116": 91, "117": 92, "118": 94, "119": 95, "120": 95, "121": 95, "122": 97, "123": 99, "124": 99, "125": 99, "126": 99, "127": 102, "128": 102, "129": 105, "130": 105, "131": 108, "132": 108, "133": 111, "134": 111, "135": 114, "136": 114, "137": 118, "138": 118, "139": 124, "140": 149, "141": 150, "142": 152, "143": 153, "144": 153, "145": 153, "146": 155, "147": 157, "148": 157, "149": 157, "150": 157, "151": 160, "152": 160, "153": 163, "154": 163, "155": 166, "156": 166, "157": 169, "158": 169, "159": 172, "160": 172, "161": 176, "162": 176, "163": 182, "164": 207, "165": 208, "166": 210, "167": 211, "168": 211, "169": 211, "170": 213, "171": 215, "172": 215, "173": 215, "174": 215, "175": 218, "176": 218, "177": 221, "178": 221, "179": 224, "180": 224, "181": 227, "182": 227, "183": 230, "184": 230, "185": 236, "191": 247, "197": 247, "203": 197}}
+{"filename": "C:/Users/Isaac/mysite/account/templates/orders.html", "uri": "orders.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "49": 1, "50": 2, "55": 13, "60": 17, "65": 256, "75": 4, "81": 4, "87": 15, "93": 15, "99": 19, "110": 19, "111": 45, "112": 46, "113": 48, "114": 49, "115": 49, "116": 49, "117": 51, "118": 53, "119": 53, "120": 53, "121": 53, "122": 56, "123": 56, "124": 59, "125": 59, "126": 62, "127": 62, "128": 65, "129": 65, "130": 68, "131": 68, "132": 71, "133": 71, "134": 77, "135": 102, "136": 103, "137": 105, "138": 106, "139": 106, "140": 106, "141": 108, "142": 110, "143": 110, "144": 110, "145": 110, "146": 113, "147": 113, "148": 116, "149": 116, "150": 119, "151": 119, "152": 122, "153": 122, "154": 125, "155": 125, "156": 129, "157": 129, "158": 135, "159": 160, "160": 161, "161": 163, "162": 164, "163": 164, "164": 164, "165": 166, "166": 168, "167": 168, "168": 168, "169": 168, "170": 171, "171": 171, "172": 174, "173": 174, "174": 177, "175": 177, "176": 180, "177": 180, "178": 183, "179": 183, "180": 187, "181": 187, "182": 193, "183": 218, "184": 219, "185": 221, "186": 222, "187": 222, "188": 222, "189": 224, "190": 226, "191": 226, "192": 226, "193": 226, "194": 229, "195": 229, "196": 232, "197": 232, "198": 235, "199": 235, "200": 238, "201": 238, "202": 241, "203": 241, "204": 247, "210": 258, "216": 258, "222": 216}}
 __M_END_METADATA
 """

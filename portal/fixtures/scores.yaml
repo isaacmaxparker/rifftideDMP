@@ -88,3 +88,163 @@
         part: Beatbox
         views: 0
         status: A
+-   model: portal.score
+    pk: 10
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Soprano
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 11
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Mezzo
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 12
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Alto
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 13
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Contralto
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 14
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Tenor
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 15
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Baritone
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 16
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Bass
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 17
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Abba Medley (Mamma Mia)
+        allURL: 5dfb19fe19cfff17ff566e36
+        partURL: NONE
+        part: Beatbox
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 18
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Soprano
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 19
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Mezzo
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 20
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Alto
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 21
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Contralto
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 22
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Tenor
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 23
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Baritone
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 24
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Bass
+        views: 0
+        status: A
+-   model: portal.score
+    pk: 25
+    fields:
+        last_modified: 2019-12-18 20:36:49.210758
+        name: Death of a Bachelor
+        allURL: 5dfb1ab89c7a5b61d9d801a6
+        partURL: NONE
+        part: Beatbox
+        views: 0
+        status: A

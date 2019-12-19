@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1576730163.2497723
+_modified_time = 1576737171.298219
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/portal/templates/app_base.htm'
 _template_uri = 'app_base.htm'
@@ -34,10 +34,10 @@ def render_body(context,**pageargs):
             return render_left_content(context._locals(__M_locals))
         def BodyBackImage():
             return render_BodyBackImage(context._locals(__M_locals))
-        def head():
-            return render_head(context._locals(__M_locals))
         def right_content():
             return render_right_content(context._locals(__M_locals))
+        def head():
+            return render_head(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'BodyBackImage'):
@@ -71,7 +71,7 @@ def render_BodyBackImage(context,**pageargs):
         def BodyBackImage():
             return render_BodyBackImage(context)
         __M_writer = context.writer()
-        __M_writer('\r\n<style>\r\nbody{\r\n    background-image: url("https://storage.cloud.google.com/rifftidesite-content/tealsparkle.png?authuser=1");\r\n}\r\n</style>\r\n')
+        __M_writer('\r\n<style>\r\nhtml{\r\n    background-image: url("https://storage.cloud.google.com/rifftidesite-content/tealsparkle.png?authuser=1");\r\n}\r\n#site_middle{\r\n    background: rgba(255, 255, 255, 0.906);\r\n}\r\n</style>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -83,7 +83,7 @@ def render_head(context,**pageargs):
         def head():
             return render_head(context)
         __M_writer = context.writer()
-        __M_writer("\r\n<style>\r\n.backlink{\r\n    color:rgb(138, 138, 138);\r\n    font-family: 'Century Gothic','Arial','Sans-Serif';\r\n    margin-bottom:100px;\r\n}\r\n\r\n.scoreTable{\r\n    width:100%;\r\n    border:solid 10px lightgrey;\r\n\r\n    padding:20px;\r\n    font-family:  'Century Gothic','Arial','Sans-Serif';\r\n}\r\n\r\n.darkRow{\r\n    background-color:rgba(211, 211, 211, 0.562);\r\n}\r\n\r\n.scoreTableRow{\r\n    padding:10px;\r\n}\r\n\r\n.scoreTableName{\r\n    color:black;\r\n    font-weight: bold;\r\n    font-size:26px;\r\n}\r\n\r\n.scoreTablePart{\r\n    color:rgba(0, 0, 0, 0.76);\r\n    font-style: italic;\r\n    font-size: 24px;\r\n    text-align: left;\r\n}\r\n\r\n.scoreTableLinks{\r\n    width:40%;\r\n}\r\n\r\n.scoreTableAll{\r\n    color:rgb(6, 116, 106);\r\n    font-weight: bold;\r\n    float:right;\r\n    font-size: 24px;\r\n}\r\n\r\n</style>\r\n")
+        __M_writer("\r\n<style>\r\n.backlink{\r\n    color:rgb(138, 138, 138);\r\n    font-family: 'Century Gothic','Arial','Sans-Serif';\r\n    margin-bottom:100px;\r\n}\r\n\r\n.scoreTable{\r\n    width:100%;\r\n    /* border:solid 10px lightgrey; */\r\n\r\n    padding:20px;\r\n    font-family:  'Century Gothic','Arial','Sans-Serif';\r\n}\r\n\r\n.darkRow{\r\n    background-color:rgba(211, 211, 211, 0.462);\r\n}\r\n\r\n.scoreTableRow{\r\n    padding:10px;\r\n}\r\n\r\n.scoreTableName{\r\n    color:black;\r\n    font-weight: bold;\r\n    font-size:26px;\r\n}\r\n\r\n.scoreTablePart{\r\n    color:rgba(0, 0, 0, 0.76);\r\n    font-style: italic;\r\n    font-size: 24px;\r\n    text-align: left;\r\n}\r\n\r\n.scoreTableLinks{\r\n    width:40%;\r\n}\r\n\r\n.scoreTableAll{\r\n    color:rgb(6, 116, 106);\r\n    font-weight: bold;\r\n    float:right;\r\n    font-size: 24px;\r\n}\r\n\r\n</style>\r\n")
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -115,6 +115,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/portal/templates/app_base.htm", "uri": "app_base.htm", "source_encoding": "utf-8", "line_map": {"29": 0, "42": 1, "47": 9, "52": 60, "57": 64, "62": 69, "68": 3, "74": 3, "80": 11, "86": 11, "92": 62, "98": 62, "104": 66, "110": 66, "116": 110}}
+{"filename": "C:/Users/Isaac/mysite/portal/templates/app_base.htm", "uri": "app_base.htm", "source_encoding": "utf-8", "line_map": {"29": 0, "42": 1, "47": 12, "52": 63, "57": 67, "62": 72, "68": 3, "74": 3, "80": 14, "86": 14, "92": 65, "98": 65, "104": 69, "110": 69, "116": 110}}
 __M_END_METADATA
 """

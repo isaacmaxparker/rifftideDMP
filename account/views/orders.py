@@ -7,22 +7,29 @@ from django.http import HttpResponseRedirect
 @view_function
 def process_request(request): 
 
-   sales=cmod.Sale.objects.all().exclude(orderID=None).order_by('purchased')
+   if request.user.is_authenticated:
 
-   pSales = sales.filter(status='P')
-   oSales = sales.filter(status='O')
-   rSales = sales.filter(status='R')
-   dSales = sales.filter(status='D')
+      if request.user.has_perm('account.changeOrders'):
 
-   context = {
-       'sales':sales,
-       'pSales':pSales,
-       'oSales':oSales,
-       'rSales':rSales,
-       'dSales':dSales,
-    }
-   return request.dmp.render('orders.html', context)
+            sales=cmod.Sale.objects.all().exclude(orderID=None).order_by('purchased')
 
+            pSales = sales.filter(status='P')
+            oSales = sales.filter(status='O')
+            rSales = sales.filter(status='R')
+            dSales = sales.filter(status='D')
+
+            context = {
+               'sales':sales,
+               'pSales':pSales,
+               'oSales':oSales,
+               'rSales':rSales,
+               'dSales':dSales,
+            }
+            return request.dmp.render('orders.html', context)
+      else:
+            return HttpResponseRedirect('/account/errors/')
+
+   return HttpResponseRedirect('/account/login/')
 
 @view_function
 def update(request, sale:cmod.Sale):

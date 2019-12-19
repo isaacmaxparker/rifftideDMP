@@ -1,0 +1,163 @@
+-   model: account.user
+    pk: 1
+    fields:
+        password: pbkdf2_sha256$150000$rpoSFHyjSsoQ$3LCsUydEcsG3hMmf3c/xPKEES2S1mLwwwm3PWDhVsX8=
+        last_login: 2019-12-18 22:37:30.589363
+        is_superuser: false
+        username: isaacmcdougal
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Isaac McDougal
+        loginname: isaacmcdougal
+        voicepart: Baritone
+        status: A
+        groups:
+        - 1
+        - 2
+        user_permissions:
+        - 50
+        - 49
+-   model: account.user
+    pk: 2
+    fields:
+        password: pbkdf2_sha256$150000$L1515SwGBaHu$6tlfy1wMkQVhkEaokqjPGQdChy7NTJAm6cERFJ5WhDo=
+        last_login: null
+        is_superuser: false
+        username: caranickels
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Cara Nickels
+        loginname: caranickels
+        voicepart: Mezzo
+        status: A
+        groups:
+        - 1
+        user_permissions: []
+-   model: account.user
+    pk: 3
+    fields:
+        password: pbkdf2_sha256$150000$V6M4deGglacd$kot9IRLTJCxBxZJT2hL5kDkqUlD1qWXx0Lto2Zu+EZM=
+        last_login: null
+        is_superuser: false
+        username: zachboyce
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Zach Boyce
+        loginname: zachboyce
+        voicepart: Tenor
+        status: A
+        groups:
+        - 1
+        user_permissions: []
+-   model: account.user
+    pk: 4
+    fields:
+        password: pbkdf2_sha256$150000$IGX2Qzcqsr5M$C39de665DthE4TRN1rabZF9WMMfunpwLg3hYeIH+wPU=
+        last_login: 2019-12-18 22:41:42.887799
+        is_superuser: false
+        username: samhepworth
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Sam Hepworth
+        loginname: samhepworth
+        voicepart: Beatbox
+        status: A
+        groups:
+        - 1
+        user_permissions: []
+-   model: account.user
+    pk: 5
+    fields:
+        password: pbkdf2_sha256$150000$h6zF1QAHzeEa$HE0hPKTg4DwGBH6jnoafJX46Mfh7V/IJTbZnWX31Y/g=
+        last_login: null
+        is_superuser: false
+        username: johnniejohnson
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Johnnie Johnson
+        loginname: johnniejohnson
+        voicepart: Bass
+        status: A
+        groups:
+        - 1
+        user_permissions: []
+-   model: account.user
+    pk: 6
+    fields:
+        password: pbkdf2_sha256$150000$YbKlqAelIvtJ$cBrkpGy0CTkzrxzDwgowwx4CnlmJfy0Ce/bGwbeEIjQ=
+        last_login: null
+        is_superuser: false
+        username: briellis
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Bri Ellis
+        loginname: briellis
+        voicepart: Alto
+        status: A
+        groups:
+        - 1
+        user_permissions: []
+-   model: account.user
+    pk: 7
+    fields:
+        password: pbkdf2_sha256$150000$aiFOfDm76MtP$c+esAWS8MxjErgqVPQKuB41CnrMc58m9lNakMxAC7a0=
+        last_login: null
+        is_superuser: false
+        username: laurelscott
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Laurel Scott
+        loginname: laurelscott
+        voicepart: Contralto
+        status: A
+        groups:
+        - 1
+        user_permissions: []
+-   model: account.user
+    pk: 8
+    fields:
+        password: pbkdf2_sha256$150000$R769RtfHynVj$TGHnFcquRb8JIhCPrtLpuChnTj43nOPLXsbRUn5AZuQ=
+        last_login: null
+        is_superuser: false
+        username: lorynnorton
+        first_name: ''
+        last_name: ''
+        email: ''
+        is_staff: false
+        is_active: true
+        date_joined: 2019-12-18 21:52:52.584534
+        name: Loryn Norton
+        loginname: lorynnorton
+        voicepart: Soprano
+        status: A
+        groups:
+        - 1
+        user_permissions: []

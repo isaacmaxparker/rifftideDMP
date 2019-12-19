@@ -35,14 +35,16 @@
 
             <%block name="BodyBackImage">
             <style>
-            body{
+            html{
                 background-image: url("https://storage.cloud.google.com/rifftidesite-content/whitesparkle2.jpg");
             }
             </style>
             </%block>
 
 <style>
-
+body{
+    background: none;
+}
 .bigger{
     font-size:178px !important;
     text-shadow: 0px 12px 13px rgba(11, 216, 216, 0.699) !important;
@@ -61,12 +63,42 @@
                     <li>
 
                     </li>
-                    
-                        <%block name="navbar_items">
+                   
+                    <%block name="navbar_items">
+                    <li class="nav-item mynav-item">
+                      <a class="nav-link ${ 'active' if request.dmp.page =='index' else ' '}"  href="/store/">Store</a>
+                    </li>         
+                    <li class="nav-item mynav-item" id="musictab">
+                        <a class="nav-link"  href="https://open.spotify.com/artist/6TRcbaV03EF0bofJNKUSI8" target="_blank">Music</a>
+                    </li>  
+                    <li class="nav-item mynav-item" style="float:right">
+                        <a class="nav-link glyphicon twentyfour"  href="https://www.youtube.com/rifftideacapella" target="_blank">L</a>
+                    </li> 
+                    <li id="instagram" style="float:right">
+                      <a class="nav-link glyphicon twentyfour" href="https://www.instagram.com/rifftideacappella/" target="_blank">K</a>
+                    </li>    
+                    <li id="instagram" style="float:right">
+                        <a class="nav-link glyphicon twentyfour" href="https://www.facebook.com/rifftideacappella/" target="_blank">J</a>
+                    </li>    
+                  </%block>
+                        %if request.user.is_authenticated:
                         <li class="nav-item mynav-item">
-                        <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/store/">Store</a>
-                        </li>             
-                        </%block>
+                            <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/portal/">Member Portal</a>
+                        </li> 
+                        <li class="nav-item mynav-item" style="float: right;">
+                                <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/account/logout">Logout</a>
+                        </li>   
+                        %if request.user.has_perm('account.changeOrders'):
+                        <li class="nav-item mynav-item">
+                                <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/account/orders/">Admin Portal</a>
+                        </li> 
+                        %endif
+                        
+                        %else:
+                        <li class="nav-item mynav-item" style="float: right;">
+                                <a class="nav-link ${ 'active' if request.dmp.page =='' else ' '}"  href="/account/login">Login</a>
+                        </li>    
+                        %endif
                  </ul>
         </div>
 

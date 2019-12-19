@@ -17,10 +17,10 @@ Scores
 
 
 <%block name="site_content">
-    <div class="content">
+    <div class="content" style="background: none;">
 <table class="scoreTable">
     %for score in Scores:
-    <tr class="scoreTableRow ${ 'darkRow' if score.id % 2 == 0 else ''}">
+    <tr class="scoreTableRow ${ 'darkRow' if score.is_dark else ''}">
         <td class="scoreTableName">
             ${score.name}
         </td>
