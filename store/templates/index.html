@@ -15,7 +15,7 @@ Rifftide Shop
         <span class="product_container" data-product-id="${product.id}">
                 <a class="nocolor" href="/store/product/${product.id}">
                     <div class="product-tile">
-                        <div ><img class="product-image" src="${product.image_url()}"></div>
+                        <div><img class="product-image" src="${product.image_url()}"></div>
                         <div class="product-name">${product.cut.capitalize() if product.cut != '' else '' } ${product.name.capitalize()} T-Shirt</div>
                         <div class="product-price">$${product.price}</div>   
                     </div>

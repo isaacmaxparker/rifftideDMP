@@ -12,3 +12,4 @@ class User(AbstractUser):
     loginname = models.TextField(default='NONE')
     voicepart = models.TextField(default='NONE')
     status = models.TextField(db_index=True, choices=STATUS_CHOICES, default='A')
+    priority = models.IntegerField(default=8)

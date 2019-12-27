@@ -1,0 +1,40 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_header_title">
+${users[0].name}
+</%block>
+
+<%block name="page_title">&mdash; users</%block>
+
+<%block name="site_content">
+<div class="content">
+<form method="POST" id="edituserForm">
+    <table width="100%">
+        <tr>
+            <td>
+                    <table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 24px; width:100%; text-align: center; display: inline-block;">
+                        <tr>
+                            <td>user Name:</td>
+                        </tr>    
+                        <tr>
+                                <td><input type="text" name="userName" class="forminput" value="${user.first_name}" width=100%></td>
+                        </tr>
+                        <tr>
+                                    <td>All Part URL</td>
+                        </tr>
+                        <tr>
+                                    <td><input type="text" name="allURL" class="forminput" value="${user.}" width=100%></td>
+                        </tr>
+                        <tr>
+                               <td> <input type="submit" class="btn  mybtn" value="Save"/></td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+    </table>
+
+
+</form>
+</div>
+
+</%block>
