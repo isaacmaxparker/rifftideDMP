@@ -273,4 +273,443 @@
         views: 0
         is_dark: false
         status: A
-
+-   model: portal.score
+    pk: 26
+    fields:
+        last_modified: 2019-12-19 01:31:20.831891
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 27
+    fields:
+        last_modified: 2019-12-19 01:31:20.893301
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 28
+    fields:
+        last_modified: 2019-12-19 01:31:20.953750
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 29
+    fields:
+        last_modified: 2019-12-19 01:31:20.052781
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 30
+    fields:
+        last_modified: 2019-12-19 01:31:20.111404
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 31
+    fields:
+        last_modified: 2019-12-19 01:31:20.170756
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 32
+    fields:
+        last_modified: 2019-12-19 01:31:20.229696
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 33
+    fields:
+        last_modified: 2019-12-19 01:31:20.288640
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 34
+    fields:
+        last_modified: 2019-12-19 01:31:20.772140
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 35
+    fields:
+        last_modified: 2019-12-19 01:31:20.347793
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 36
+    fields:
+        last_modified: 2019-12-19 01:31:20.408784
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 37
+    fields:
+        last_modified: 2019-12-19 01:31:20.468878
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 38
+    fields:
+        last_modified: 2019-12-19 01:31:20.529699
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 39
+    fields:
+        last_modified: 2019-12-19 01:31:20.589835
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 40
+    fields:
+        last_modified: 2019-12-19 01:31:20.652331
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 41
+    fields:
+        last_modified: 2019-12-19 01:31:20.711961
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: ALL
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 42
+    fields:
+        last_modified: 2019-12-19 01:31:52.567199
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Soprano
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 43
+    fields:
+        last_modified: 2019-12-19 01:31:52.627589
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Mezzo
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 44
+    fields:
+        last_modified: 2019-12-19 01:31:52.686818
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Alto
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 45
+    fields:
+        last_modified: 2019-12-19 01:31:52.746758
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Contralto
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 46
+    fields:
+        last_modified: 2019-12-19 01:31:52.804834
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Tenor
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 47
+    fields:
+        last_modified: 2019-12-19 01:31:52.864680
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Baritone
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 48
+    fields:
+        last_modified: 2019-12-19 01:31:52.924551
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Bass
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 49
+    fields:
+        last_modified: 2019-12-19 01:31:52.985830
+        name: Dream
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: ''
+        part: Beatbox
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 50
+    fields:
+        last_modified: 2019-12-19 01:36:12.886301
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: a
+        part: Soprano
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 51
+    fields:
+        last_modified: 2019-12-19 01:36:12.946938
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: b
+        part: Mezzo
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 52
+    fields:
+        last_modified: 2019-12-19 01:36:12.530723
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: c
+        part: Alto
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 53
+    fields:
+        last_modified: 2019-12-19 01:36:12.589137
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: d
+        part: Contralto
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 54
+    fields:
+        last_modified: 2019-12-19 01:36:12.647186
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: e
+        part: Tenor
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 55
+    fields:
+        last_modified: 2019-12-19 01:36:12.708026
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: f
+        part: Baritone
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 56
+    fields:
+        last_modified: 2019-12-19 01:36:12.767219
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: g
+        part: Bass
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 57
+    fields:
+        last_modified: 2019-12-19 01:36:12.827378
+        name: Dream24
+        allURL: 5dfb32a0e891ef20948ae65c
+        partURL: h
+        part: Beatbox
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 58
+    fields:
+        last_modified: 2019-12-19 01:38:11.342095
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Soprano
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 59
+    fields:
+        last_modified: 2019-12-19 01:38:11.402219
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Mezzo
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 60
+    fields:
+        last_modified: 2019-12-19 01:38:11.461749
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Alto
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 61
+    fields:
+        last_modified: 2019-12-19 01:38:11.521393
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Contralto
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 62
+    fields:
+        last_modified: 2019-12-19 01:38:11.583512
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Tenor
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 63
+    fields:
+        last_modified: 2019-12-19 01:38:11.652018
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Baritone
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 64
+    fields:
+        last_modified: 2019-12-19 01:38:11.719874
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Bass
+        views: 0
+        is_dark: false
+        status: A
+-   model: portal.score
+    pk: 65
+    fields:
+        last_modified: 2019-12-19 01:38:11.784984
+        name: Gad
+        allURL: Bad
+        partURL: j
+        part: Beatbox
+        views: 0
+        is_dark: false
+        status: A
