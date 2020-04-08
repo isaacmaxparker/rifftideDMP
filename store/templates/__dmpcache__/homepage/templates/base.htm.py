@@ -5,7 +5,11 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
+<<<<<<< HEAD
 _modified_time = 1577488921.442128
+=======
+_modified_time = 1577486296.2051125
+>>>>>>> d4a4b510c086bc809ae089826d6ca9291f0343a6
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/homepage/templates/base.htm'
 _template_uri = '/homepage/templates/base.htm'
@@ -21,19 +25,36 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+<<<<<<< HEAD
+=======
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def page_header_title():
+            return render_page_header_title(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        def site_right():
+            return render_site_right(context._locals(__M_locals))
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+>>>>>>> d4a4b510c086bc809ae089826d6ca9291f0343a6
         def BodyBackImage():
             return render_BodyBackImage(context._locals(__M_locals))
         def navbar_items():
             return render_navbar_items(context._locals(__M_locals))
+<<<<<<< HEAD
         request = context.get('request', UNDEFINED)
         def site_content():
             return render_site_content(context._locals(__M_locals))
+=======
+        self = context.get('self', UNDEFINED)
+>>>>>>> d4a4b510c086bc809ae089826d6ca9291f0343a6
         def right_content():
             return render_right_content(context._locals(__M_locals))
         def head():
             return render_head(context._locals(__M_locals))
         def page_title():
             return render_page_title(context._locals(__M_locals))
+<<<<<<< HEAD
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
         def site_right():
@@ -42,6 +63,11 @@ def render_body(context,**pageargs):
         self = context.get('self', UNDEFINED)
         def left_content():
             return render_left_content(context._locals(__M_locals))
+=======
+        def head():
+            return render_head(context._locals(__M_locals))
+        request = context.get('request', UNDEFINED)
+>>>>>>> d4a4b510c086bc809ae089826d6ca9291f0343a6
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n<head>\r\n\r\n    <title>\r\n        Rifftide\r\n        ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -178,10 +204,17 @@ def render_BodyBackImage(context,**pageargs):
 def render_navbar_items(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+<<<<<<< HEAD
         def navbar_items():
             return render_navbar_items(context)
         self = context.get('self', UNDEFINED)
         request = context.get('request', UNDEFINED)
+=======
+        request = context.get('request', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        def navbar_items():
+            return render_navbar_items(context)
+>>>>>>> d4a4b510c086bc809ae089826d6ca9291f0343a6
         __M_writer = context.writer()
         __M_writer('\r\n                    <li class="nav-item mynav-item">\r\n                      <a class="nav-link ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page =='' else ' '))
