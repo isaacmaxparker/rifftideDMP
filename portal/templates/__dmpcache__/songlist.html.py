@@ -5,14 +5,14 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1577482638.8144858
+_modified_time = 1577487266.2705507
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/portal/templates/songlist.html'
 _template_uri = 'songlist.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
-_exports = ['page_title', 'bodclass', 'page_header_title', 'left_content', 'site_content', 'right_content']
+_exports = ['page_title', 'page_header_title', 'left_content', 'site_content', 'right_content']
 
 
 def _mako_get_namespace(context, name):
@@ -30,22 +30,20 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        Scores = context.get('Scores', UNDEFINED)
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         def page_title():
             return render_page_title(context._locals(__M_locals))
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
         message = context.get('message', UNDEFINED)
-        request = context.get('request', UNDEFINED)
         self = context.get('self', UNDEFINED)
-        def bodclass():
-            return render_bodclass(context._locals(__M_locals))
+        request = context.get('request', UNDEFINED)
         def left_content():
             return render_left_content(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        Scores = context.get('Scores', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -53,11 +51,6 @@ def render_body(context,**pageargs):
         
 
         __M_writer('\r\n\r\n\r\n')
-        if 'parent' not in context._data or not hasattr(context._data['parent'], 'bodclass'):
-            context['self'].bodclass(**pageargs)
-        
-
-        __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_header_title'):
             context['self'].page_header_title(**pageargs)
         
@@ -94,18 +87,6 @@ def render_page_title(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_bodclass(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def bodclass():
-            return render_bodclass(context)
-        __M_writer = context.writer()
-        __M_writer('\r\nclass="back2"\r\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 def render_page_header_title(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
@@ -133,12 +114,12 @@ def render_left_content(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        Scores = context.get('Scores', UNDEFINED)
+        message = context.get('message', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        request = context.get('request', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        message = context.get('message', UNDEFINED)
-        request = context.get('request', UNDEFINED)
-        self = context.get('self', UNDEFINED)
+        Scores = context.get('Scores', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n    <div class="content" style="background: none;">\r\n')
         if message != "NONE":
@@ -187,6 +168,6 @@ def render_right_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/mysite/portal/templates/songlist.html", "uri": "songlist.html", "source_encoding": "utf-8", "line_map": {"29": 0, "50": 1, "55": 3, "60": 8, "65": 12, "70": 16, "75": 62, "85": 3, "91": 3, "97": 6, "103": 6, "109": 10, "115": 10, "121": 14, "127": 14, "133": 19, "143": 19, "144": 21, "145": 22, "146": 23, "147": 23, "148": 27, "149": 28, "150": 28, "151": 42, "152": 43, "153": 43, "154": 43, "155": 45, "156": 45, "157": 48, "158": 49, "159": 49, "160": 49, "161": 49, "162": 49, "163": 50, "164": 51, "165": 51, "166": 51, "167": 53, "168": 55, "169": 55, "170": 59, "176": 64, "182": 64, "188": 182}}
+{"filename": "C:/Users/Isaac/mysite/portal/templates/songlist.html", "uri": "songlist.html", "source_encoding": "utf-8", "line_map": {"29": 0, "48": 1, "53": 3, "58": 8, "63": 12, "68": 58, "78": 3, "84": 3, "90": 6, "96": 6, "102": 10, "108": 10, "114": 15, "124": 15, "125": 17, "126": 18, "127": 19, "128": 19, "129": 23, "130": 24, "131": 24, "132": 38, "133": 39, "134": 39, "135": 39, "136": 41, "137": 41, "138": 44, "139": 45, "140": 45, "141": 45, "142": 45, "143": 45, "144": 46, "145": 47, "146": 47, "147": 47, "148": 49, "149": 51, "150": 51, "151": 55, "157": 60, "163": 60, "169": 163}}
 __M_END_METADATA
 """

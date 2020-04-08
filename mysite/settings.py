@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'store',
     'portal',
     'adminportal',
+    'momsfoodstorage',
 ]
 
 MIDDLEWARE = [

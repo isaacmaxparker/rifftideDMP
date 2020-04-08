@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1576970930.2829015
+_modified_time = 1577487305.724306
 _enable_loop = True
 _template_filename = 'C:/Users/Isaac/mysite/portal/templates/app_base.htm'
 _template_uri = 'app_base.htm'
@@ -30,14 +30,14 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         def head():
             return render_head(context._locals(__M_locals))
         def BodyBackImage():
             return render_BodyBackImage(context._locals(__M_locals))
         def left_content():
             return render_left_content(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'BodyBackImage'):
@@ -71,7 +71,7 @@ def render_BodyBackImage(context,**pageargs):
         def BodyBackImage():
             return render_BodyBackImage(context)
         __M_writer = context.writer()
-        __M_writer('\r\n<style>\r\nhtml{\r\n    background-image: url("https://storage.cloud.google.com/rifftidesite-content/tealsparkle.png?authuser=1");\r\n}\r\n\r\n.message {\r\n    font-family: \'Century Gothic\',\'Arial\',\'Sans-Serif\';\r\n    position: absolute;\r\n    background-color: white;\r\n    padding:12px;\r\n    left:50%;\r\n    transform: translate(-50%);\r\n    border-radius: 10px;\r\n}\r\n#site_middle{\r\n    background: rgba(255, 255, 255, 0.906);\r\n}\r\n</style>\r\n')
+        __M_writer('\r\n<style>\r\nhtml{\r\n    background-image:black  url("https://storage.cloud.google.com/rifftidesite-content/tealsparkle.png?authuser=1");\r\n}\r\n\r\n.message {\r\n    font-family: \'Century Gothic\',\'Arial\',\'Sans-Serif\';\r\n    position: absolute;\r\n    background-color: white;\r\n    padding:12px;\r\n    left:50%;\r\n    transform: translate(-50%);\r\n    border-radius: 10px;\r\n}\r\n#site_middle{\r\n    background: rgba(255, 255, 255, 0.906);\r\n}\r\n</style>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

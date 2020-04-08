@@ -12,6 +12,8 @@ class Score(models.Model):
     name = models.TextField(default='')
     allURL = models.TextField(default='NONE')
     partURL = models.TextField(default='NONE')
+    drivePartURL = models.TextField(default='NONE')
+    driveAllURL = models.TextField(default='NONE')
     part = models.TextField(default='ALL')
     views = models.IntegerField(default=0)
     is_dark = models.BooleanField(default=False)
