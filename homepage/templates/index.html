@@ -2,32 +2,154 @@
 
 <%block name="page_title">&mdash; Home</%block>
 
-<%block name="bodclass">
-class="back2"
-</%block>
-
-<%block name="left_content">
-
-</%block>
-
-
-<%block name="site_content">
-    <div class="content">
-      <h3><span style="color:#a33f4e; text-transform: uppercase; font-size: 50px; font-weight: bold; text-align: left;">Welcome to my site.</span> <br>I make cool things. here is an example:</h3>
-      <p>
-
-          <iframe width="1000" height="600" src="https://www.youtube.com/embed/qIh-JV3RuSY?rel=0&amp;autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      </p>
-      <h3 style="text-align:left"><span style="color:#a33f4e; text-transform: uppercase; font-size: 50px; font-weight: bold; text-align: left;">Here is another example</span> <br>Here is another example</h3>
-      <p>
-
-        <iframe width="1000" height="600" src="https://www.youtube.com/embed/oKuAq4B4jZg?rel=0&amp;autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      </p>
+<%block name="page_content">
+<div class="homeContent">
+  <div class="slide" id="slide1">
+      <div class="imgDiv" id="imgDiv1">
+          <div class="blackCover"></div>
+          <img class="homeSlideImage" src="${ STATIC_URL }homepage/media/backgrounds/Jumpin.jpg">
       </div>
+      <div class="slidediv center" id="slidediv1">
+          <div style="margin-top: 55px;">
+              <p id="p1">
+                  <span id="we">We</span> <span id="are">Are</span><br><span id="rifftide">Rifftide</span>
+              </p>
+          </div>
+          <p id="down1" class="icon homeIcon bottom">
+              <span onclick="scrollToDiv('slide2')" onmouseover="hoverOn('down1')" onmouseout="hoverOff('down1')">#</span>
+          </p>
+      </div>
+  </div>
+  <div class="slide" id="slide2">
+      <div class="imgDiv" id="imgDiv2">
+          <div class="blackCover"></div>
+          <img class="homeSlideImage" src="${ STATIC_URL }homepage/media/backgrounds/Facebook Header.png">
+      </div>
+      <div class="slidediv center" id="slidediv2">
+          <p id="up2" class="icon homeIcon top">
+              <span onclick="scrollToDiv('slide1')" onmouseover="hoverOn('up2')" onmouseout="hoverOff('up2')">%</span>
+          </p>
+          <div>
+              <p class="homeTitle">
+                  Meet the Members
+              </p>
+              <p class="homeSubtitle">
+                  View <a>member profiles</a> or browse <a>member cards</a>
+              </p>
+          </div>
+          <p id="down2"class="icon homeIcon bottom">
+              <span onclick="scrollToDiv('slide3')" onmouseover="hoverOn('down2')" onmouseout="hoverOff('down2')">#</span>
+          </p>
+      </div>
+  </div>
+  <div class="slide" id="slide3">
+      <div class="imgDiv" id="imgDiv3">
+          <div class="blackCover"></div>
+          <img class="homeSlideImage" src="${ STATIC_URL }homepage/media/backgrounds/T-shirt banner.png">
+      </div>
+      <div class="slidediv center" id="slidediv3" >
+          <p id="up3" class="icon homeIcon top">
+              <span onclick="scrollToDiv('slide2')" onmouseover="hoverOn('up3')" onmouseout="hoverOff('up3')">%</span>
+          </p>
+              <div>
+                  <p class="homeTitle">
+                      Support Our Music
+                  </p>
+                  <p class="homeSubtitle">
+                      Check out our <a>Merch</a> or <a>Donate</a> through patreon!
+                  </p>
+              </div>
+          <p id="down3" class="icon homeIcon bottom">
+              <span onclick="scrollToDiv('slide4')" onmouseover="hoverOn('down3')" onmouseout="hoverOff('down3')">#</span>
+          </p>
+      </div>
+  </div>
+  <div class="slide" id="slide4">
+      <div class="imgDiv" id="imgDiv4">
+          <div class="blackCover"></div>
+          <img class="homeSlideImage" src="${ STATIC_URL }homepage/media/backgrounds/mV gif.gif">
+      </div>
+      <div class="slidediv center" id="slidediv4" >
+          <p id="up4" class="icon homeIcon top">
+              <span onclick="scrollToDiv('slide3')" onmouseover="hoverOn('up4')" onmouseout="hoverOff('up4')">%</span>
+          </p>
+              <div>
+                  <p class="homeTitle">
+                      Watch Our Videos
+                  </p>
+                  <p class="homeSubtitle">
+                      Check out our <a>Music Videos</a> on <a>Youtube</a>
+                  </p>
+              </div>
+          <p id="down4" class="icon homeIcon bottom">
+              <span onclick="scrollToDiv('slide5')" onmouseover="hoverOn('down4')" onmouseout="hoverOff('down4')">#</span>
+          </p>
+      </div>
+  </div>      
+  <div class="slide" id="slide5">
+      <div class="imgDiv" id="imgDiv5">
+          <div class="blackCover"></div>
+          <img class="homeSlideImage" src="${ STATIC_URL }homepage/media/backgrounds/comparison.png">
+      </div>
+      <div class="slidediv center" id="slidediv5" >
+          <p id="up5" class="icon homeIcon top">
+              <span onclick="scrollToDiv('slide4')" onmouseover="hoverOn('up5')" onmouseout="hoverOff('up5')">%</span>
+          </p>
+              <div>
+                  <p class="homeTitle">
+                      Stream Our Music
+                  </p>
+                  <p class="homeSubtitle">
+                      Stream our songs on <a>Spotify</a>,<a>iTunes</a>,<a>Apple Music</a>,<a>AmazonMusic</a>, and <a>More!</a>
+                  </p>
+              </div>
+          <p id="down5" class="icon homeIcon bottom">
+              <span onclick="scrollToDiv('slide6')" onmouseover="hoverOn('down5')" onmouseout="hoverOff('down5')">#</span>
+          </p>
+      </div>
+  </div>
+  <div class="slide" id="slide6">
+      <div class="imgDiv" id="imgDiv6">
+          <div class="blackCover"></div>
+          <img class="homeSlideImage" src="${ STATIC_URL }homepage/media/backgrounds/contactback.jpg">
+      </div>
+      <div class="slidediv center" id="slidediv6" >
+          <p id="up6" class="icon homeIcon top">
+              <span onclick="scrollToDiv('slide5')" onmouseover="hoverOn('up6')" onmouseout="hoverOff('up6')">%</span>
+          </p>
+              <div>
+                  <p class="homeTitle">
+                      Contact Us
+                  </p>
+                  <p class="homeSubtitle">
+                      <a>Contact us</a> for <a>Bookings</a>, <a>Collaborations</a>, or anything else!
+                  </p>
+              </div>
+          <p class="bottom">
+
+          </p>
+      </div>
+  </div>
+</div>
 </%block>
 
-<%block name="right_content">
+<%block name="page_scripts">
+<script type="text/javascript">
+  //let showLocation;
+  function ready(fn) {
+      if (document.readyState != 'loading') {
+          fn();
+      } else {
+          document.addEventListener('DOMContentLoaded', fn);
+      }
+  }
 
+  ready(function () {
+      Global.init();
+      Home.init();
+      scrollToDiv = Home.scrollToDiv
+      hoverOn = Global.hoverOn
+      hoverOff = Global.hoverOff
+  });
+</script>
 </%block>

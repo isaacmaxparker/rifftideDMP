@@ -1,0 +1,11 @@
+Django==2.2.4
+django-mako-plus==5.11.2
+gunicorn==19.9.0
+Mako==1.1.0
+MarkupSafe==1.1.1
+postgres==2.2.2
+psycopg2==2.8.3
+psycopg2-binary==2.8.3
+pytz==2019.2
+PyYAML==5.1.2
+sqlparse==0.3.0

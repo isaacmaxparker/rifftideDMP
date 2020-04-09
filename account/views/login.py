@@ -14,7 +14,7 @@ def process_request(request):
         if form.is_valid():
             user = authenticate(username=form.cleaned_data.get('username'), password=form.cleaned_data.get('password'))     
             login(request, user)
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/portal/')
 
            # return request.dmp.render('/account/templates/login.html')
 
@@ -32,6 +32,8 @@ class LoginForm(forms.Form):
     password = forms.CharField(label='Password', widget=forms.PasswordInput())
     
     def clean(self):
+        print(self.cleaned_data.get('username'))
+        print(self.cleaned_data.get('password'))
         user = authenticate(username=self.cleaned_data.get('username'), password=self.cleaned_data.get('password'))        
         if user is None:
             raise forms.ValidationError('Invalid Credentials')

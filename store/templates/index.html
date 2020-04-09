@@ -8,8 +8,19 @@ Rifftide Shop
 <%block name="site_content">
 <div id="content" style="margin:0 0px;">
     <div class="parent">
+    %if len(products) == 0:
+    <p class="homeparg">Error: No Products. Contact rifftideacapella@gmail.com</p>
+    %endif
     %for product in products:
-        <span class="product_container" data-product-id="${product.id}"></span>
+        <span class="product_container" data-product-id="${product.id}">
+                <a class="nocolor" href="/store/product/${product.id}">
+                    <div class="product-tile">
+                        <div><img class="product-image" src="${product.image_url()}"></div>
+                        <div class="product-name">${product.cut.capitalize() if product.cut != '' else '' } ${product.name.capitalize()} T-Shirt</div>
+                        <div class="product-price">$${product.price}</div>   
+                    </div>
+                </a>
+        </span>
     %endfor
    </div>
    %if len(products) > 0:
@@ -17,13 +28,13 @@ Rifftide Shop
         <tr>
             <td style="float:right; margin-right: 0;">
                     %if page-1 != 0:
-                    <a class="btn btn-lg mybtn" href="/store/index/${category if category is not None else '-'}/${page-1}">Previous</a>
+                    <a class="btn btn-lg mybtn" href="/store/index/${page-1}/${category.id if category is not None else '-'}/${colorid}">Previous</a>
                     %endif
             </td>
         
             <td width=50%>       
                 %if page != numpages:
-                <a class="btn mybtn btn-lg" href="/store/index/${category if category is not None else '-'}/${page+1}">Next</a>
+                <a class="btn mybtn btn-lg" href="/store/index/${page+1}/${category.id if category is not None else '-'}/${colorid}">Next</a>
                 %endif
             </td>
         </tr>
@@ -44,7 +55,7 @@ Rifftide Shop
     <ul>
       <!-- //////////////DONT HARD CODE THIS ////////////////// -->
     <li class="catlist ${'bolder' if category is None else ' '}">
-        <a href="/store/index/">All Products</a>
+        <a href="/store/index/">All Shirts</a>
     </li>
     <hr>
     <p class=filterstitle>Shirt cut</p>
@@ -83,20 +94,20 @@ Rifftide Shop
         <ul>
             %if len(saleItems) <= 3:
                 %for item in saleItems:
-                <li style="padding:10px;">
-                    <img src="${item.product.image_url()}" class="cartimg">
+                <li>
+                    <img src="${item.product.image_url()}" class="cartimg" style="width:100%">
                 </li>
             
                 %endfor
             %else:
-            <li style="padding:10px;">
-                    <img src="${saleItems[0].product.image_url()}" class="cartimg">
+            <li>
+                    <img src="${saleItems[0].product.image_url()}" class="cartimg" style="width:100%">
             </li>
-            <li style="padding:10px;">
-                    <img src="${saleItems[1].product.image_url()}" class="cartimg">
+            <li>
+                    <img src="${saleItems[1].product.image_url()}" class="cartimg" style="width:100%">
             </li>
-            <li style="padding:10px;">
-                    <img src="${saleItems[2].product.image_url()}" class="cartimg">
+            <li>
+                    <img src="${saleItems[2].product.image_url()}" class="cartimg" style="width:100%">
             </li>
             <li style="text-align: center">...</li>
             %endif

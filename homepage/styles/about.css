@@ -1,0 +1,414 @@
+/* FOUNDING */
+#founding{
+  font-family: 'Renner';
+  margin-top:7vw;
+  margin-bottom: 10vw;
+}
+.foundingBanner{
+  max-width: 18vw;
+  margin-left: 1vw;
+}
+.foundingContent{
+  display: flex;
+  flex-direction: row;
+}
+.foundingImages{
+  min-width: 20vw;
+  max-width: 20vw;
+}
+.foundingText{
+  max-width: 60vw;
+  font-size:2vw;
+  line-height: 3vw;
+  font-family: 'RennerLight';
+}
+.foundingTitle{
+  text-align: center;
+  width: 100vw;
+  font-size: 12vw;
+  font-style: italic;
+  font-variant: small-caps;
+}
+.foundingTitle .icon{
+  font-style: normal;
+  font-variant: normal;
+  font-size: 7vw;
+}
+#ourStoryTitle, #ourStoryBody{
+  opacity: 0;
+}
+
+
+/* Group Bio */
+#groupImage{
+    min-width:100vw;
+    max-width: 100vw;
+}
+.blackCover{
+    opacity: .4;
+    background-color: black;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    max-width: 100vw;
+}
+#imgDiv{
+    opacity: 0;
+    height: 100%;
+    margin-bottom: -10px;
+}
+#groupBio{
+    margin:0;
+    padding:0;
+    font-family: 'RennerLight';
+    font-size: 3vw;
+    text-align: left;
+}
+#groupBioText{
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    max-height: 100vh;
+    color:black;
+    margin: 0vw 5vw;
+    margin-top: 55px;
+    width:90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#groupName{
+    font-family: 'Renner';
+    font-size:15vw;
+    display: inline-block;
+    font-weight: bold;
+
+}
+#groupBioTitle{
+    font-size: 10vw;
+    vertical-align:text-top;
+    font-family: 'Renner';
+    text-align: left;
+}
+#membersLink{
+    text-align: center;
+    font-size: 3vw;
+    font-family: "Renner";
+    margin-top:2vh;
+    color: rgb(5, 133, 133);
+}
+.memberNameLinks{
+  font-family: "RennerLight";
+  font-size: 1.5vw;
+}
+
+/* Member Profiles */
+
+.cardLink:hover{
+  opacity: .96;
+}
+.cardLink p{
+  opacity: 0;
+}
+.cardLink:hover p{
+  opacity: 1;
+}
+
+.memberBio{
+  padding:0;
+  margin:0;
+  font-size: 90%;
+}
+
+.memberBioDiv{
+  opacity: 0;
+}
+
+.memberCardsDiv{
+  min-height: 100%;
+  position: relative;
+  display: inline-block;
+  max-width: 19vw;
+  padding:2vw;
+  transform: rotate(29deg);
+  left: 18%;
+}
+.memberCardHolder{
+  transform: rotate(0deg);
+}
+.memberCardImg{
+  position: relative;
+  top:0;
+  max-width: 40vw;
+}
+
+.memberImg{
+  max-width:20vw;
+  width: 18vw;
+  filter: grayscale(100%);
+  opacity: .1;
+}
+
+.memberName{
+  display: inline-block;
+  font-size: 7vw;
+  padding:0;
+  margin:0;
+  color:rgb(45, 214, 214);
+}
+
+.memberNameDiv{
+  font-family: 'Renner';
+  margin:0;
+  opacity: 0;
+  filter: grayscale(100%);
+}
+
+.memberPart{
+  line-height: 2vw;
+  display: inline-block;
+  float: right;
+  margin-top: 1.5vw;
+  margin-bottom: .5vw;
+  color:rgb(7, 92, 92);
+  text-align: right;
+}
+
+.memberPhoto{
+  position: relative;
+  display: inline-block;
+  min-width:20vw;
+}
+
+.memberSocial{
+  float: right;
+  color:rgba(2, 48, 48, 0.315);
+  font-family: 'RifftideIcons';
+  font-style: normal;
+}
+
+.memberStrengths{
+  font-family: 'RennerLight';
+  font-style: italic;
+  font-size: 1.5vw;
+  margin-top: 1vw;
+}
+
+.memberStrengths p{
+  display: inline-block;
+  padding: 0px;
+  padding-right: 1vw;
+  margin:0px;
+}
+
+.memberText{
+  display: inline-block;
+  width: 55vw;
+  padding:2vw;
+  height: 100%;
+}
+
+.memberYear{
+  font-style: italic;
+  font-size: 2vw;
+  color:rgba(0, 128, 128, 0.596);
+}
+
+.profile{
+  background-color: rgb(255, 255, 255);
+  min-width: 100vw;
+  font-family: "RennerLight";
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  margin:20px 0px;
+}
+.strengthBass{
+  color:rgb(85, 8, 8);
+}
+.strengthLeader{
+  color:rgb(8, 85, 8);
+}
+.strengthDance{
+  color: rgb(102, 87, 1);
+}
+.strengthVocal{
+  color:rgb(6, 6, 102);
+}
+
+.viewCardText{
+  position: absolute;
+  top:22%;
+  right:15px;
+  color:white;
+  font-size: 3vw;
+  font-family: "Renner";
+  opacity: 0 ;
+}
+
+/* PAST GROUPS */
+
+.pastGroupDiv{
+  background-color: rgb(0, 190, 190);
+  display: flex;
+  font-family: 'Renner';
+  min-height: 50vw;
+}
+.pastGroupImgDiv{
+  width: 57vw;
+  padding: 2vw 2.5vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pastGroupImage{
+  max-height: 80%;
+  max-width: 45vw;
+  box-shadow: .7vw .7vw .5vw .1vw rgba(0, 0, 0, 0.205);
+  border:2vw white solid;
+  position: absolute;
+  left:-60vw;
+}
+.pastGroupSpacer{
+  background-color: rgb(0, 190, 190);
+  height: 6vw;
+}
+.pastGroupText{
+  max-width: 39vw;
+  margin-top: 2vw;
+  position: relative;
+}
+.pastGroupTextDiv{
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+#pastGroupsTitle{
+  font-family: 'Renner';
+  text-align: center;
+  width: 100vw;
+  font-size:  8vw;
+  color:rgb(0, 190, 190);
+  margin-top: 5vw;
+  margin-bottom: 1vw;
+}
+
+.pastGroupsTitle hr{
+  color:rgb(0, 190, 190);
+  height: 5px;
+  padding-left: 5vw;
+}
+
+.pastGroupYear{
+  color: white;
+  font-size: 5vw;
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+
+}
+.pastMembersList, .pastEventsList{
+  color:rgba(255, 255, 255, 0.719);
+  font-size: 1.7vw;
+  text-align: left;
+  margin-top: 1vw;
+}
+.pastMembersList p, .pastEventsList p{
+  color:white;
+  padding:0;
+  margin:.3vw 1.5vw;
+}
+
+/* SCROLLER */
+  
+  .scrollContent {
+    overflow:hidden;
+    display: inline-block;
+    font-family: 'Renner';
+    font-size: 12vw;
+    line-height: 13vw;
+    color: #000000;
+  } 
+    .scrollContentContainer {
+      font-weight: 600;
+      overflow: hidden;
+      height: 13vw;
+    }
+    
+    .scrollContentList {
+    padding:0;
+    margin-top: 0;
+    text-align: left;
+    list-style: none;
+    
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    }
+    .scrollListItem {
+          line-height:13vw;
+          margin:0;
+          color:rgb(31, 204, 204);
+        }
+    .darkTeal{
+        color:rgb(20, 235, 235);
+    }
+    
+        @-webkit-keyframes change {
+            0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+            16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+            33.32%,45.98% {transform:translate3d(0,-50%,0);}
+            49.98%,62.64% {transform:translate3d(0,-75%,0);}
+            66.64%,79.3% {transform:translate3d(0,-50%,0);}
+            83.3%,95.96% {transform:translate3d(0,-25%,0);}
+          }
+          
+          @-o-keyframes opacity {
+            0%, 100% {opacity:0;}
+            50% {opacity:1;}
+          }
+          
+          @-o-keyframes change {
+            0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+            16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+            33.32%,45.98% {transform:translate3d(0,-50%,0);}
+            49.98%,62.64% {transform:translate3d(0,-75%,0);}
+            66.64%,79.3% {transform:translate3d(0,-50%,0);}
+            83.3%,95.96% {transform:translate3d(0,-25%,0);}
+          }
+          
+          @-moz-keyframes opacity {
+            0%, 100% {opacity:0;}
+            50% {opacity:1;}
+          }
+          
+          @-moz-keyframes change {
+            0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+            16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+            33.32%,45.98% {transform:translate3d(0,-50%,0);}
+            49.98%,62.64% {transform:translate3d(0,-75%,0);}
+            66.64%,79.3% {transform:translate3d(0,-50%,0);}
+            83.3%,95.96% {transform:translate3d(0,-25%,0);}
+          }
+          
+          @keyframes opacity {
+            0%, 100% {opacity:0;}
+            50% {opacity:1;}
+          }
+          
+          @keyframes change {
+            0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+            16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+            33.32%,45.98% {transform:translate3d(0,-50%,0);}
+            49.98%,62.64% {transform:translate3d(0,-75%,0);}
+            66.64%,79.3% {transform:translate3d(0,-50%,0);}
+            83.3%,95.96% {transform:translate3d(0,-25%,0);}
+          }
+  

@@ -2,83 +2,77 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Isaac McDougal">
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <title>Rifftide<%block name="page_title"></%block></title>
 
-<head>
-
-    <title>
-        Rifftide
-        <%block name="page_title">
-                My Project!
-            </%block>
-        </title>
-
- 
         ## add any site-wide scripts or CSS here; for example, jquery:
-        <!-- <script src="${ STATIC_URL }homepage\media\jquery.js"></script> -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="${STATIC_URL}homepage/media/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="${ STATIC_URL }homepage/media/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
-         
-         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/base.scss">
+        <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/global.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="${ STATIC_URL }homepage/scripts/global.js"></script>
+        <%block name = "headLinks">
+        <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/home.css">
+        <script src="${ STATIC_URL }homepage/scripts/home.js"></script>
+        </%block>
+         <!-- <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/glyphs.css">
+         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/josefin.css">
+         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/centurygothic.css"> -->
+
         ## render the static file links with the same name as this template
         <script src="/django_mako_plus/dmp-common.min.js"></script>
         ${ django_mako_plus.links(self) }
-        <link rel="icon" href="${ STATIC_URL }homepage/media/favicon.ico">
-
-            <%block name="head">
-            </%block>
+        <link rel="icon" href="${ STATIC_URL }homepage/media/logos/favicon.ico">
 
     </head>
     <body>
-        <header>
-        <div id="Topbar">
-            
-                <ul class="myNav">
-                    <li class="homeImg">
-                        <img src="${ STATIC_URL }homepage/media/thick logo.png" alt="python" />
+        <div id="header">
+            <div id="nav">
+                <div class="navHead">
+                    <a><img class="navLogo" src="${ STATIC_URL }homepage/media/logos/thick logo - darker.png" alt="Rifftide Logo"></a>
+                </div>
+                <ul>
+                    <li>
+                        <a>About</a>
                     </li>
-                    <%block name="navbar_items">
-
-                    </%block>
-                 </ul>
+                    <li>
+                        <a>Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-            <div id="bigTitle" class="title"><%block name="page_header_title">
-                We are
-                </%block></div>
-        </header>
-        
-       <table class=main>
-           <tr>
-            <td id="site_left">
-                <%block name="left_content">Left Side</%block>
-            </td>
-            
-            <td id="site_middle">
-           
-                <%block name="site_content">Error Page Content not found</%block>
-            </td>
-            <%block name="site_right">
-            <td id="site_right" >
+        <div id="content" class="content-wrap">
+            <%block name="page_content">
             </%block>
-                <%block name="right_content">right Side</%block>
-            </td>
-        </tr>
-        </table>
+        </div>
+        <div class="footer centerRow">
 
-        <footer>
-            
-            <%! from datetime import datetime %>
+                <p class=icon><a href="https://instagram.com/rifftidemusic" target="_blank">d</a></p>
+                <p class=icon><a href="https://facebook.com/rifftideacappella" target="_blank">b</a></p>
+                <p>&copy; Isaac McDougal 2020</p>
+                <p class=icon><a href="https://Youtube.com/rifftide" target="_blank">w</a></p>
+                <p class=icon><a href="https://twitter.com/rifftidemusic" target="_blank">n</a></p>
 
-           <p class="copy"> &copy; ${ datetime.now().strftime("%Y") } Isaac McDougal</p>
+        </div>
+    </body>
+    <%block name="page_scripts">
+        <script type="text/javascript">
+            //let showLocation;
+            function ready(fn) {
+                if (document.readyState != 'loading') {
+                    fn();
+                } else {
+                    document.addEventListener('DOMContentLoaded', fn);
+                }
+            }
 
-        </footer>
-
-        </body>
+            ready(function () {
+                Global.init();
+                hoverOn = Global.hoverOn
+                hoverOff = Global.hoverOff
+            });
+        </script>
+    </%block>
 
 </html>
-<script>
-</script>

@@ -63,7 +63,6 @@ def process_request(request, page:int=1, cat:int=0,color:int=0):
         'page':page,
         'numpages': ceil(products.count() / ITEMS_PAGE_PAGE),
         'sale':sale,
-        'saleItems':saleItems,
-       
+        'saleItems':saleItems,  
     }
     return request.dmp.render('index.html', context)

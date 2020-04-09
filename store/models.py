@@ -29,7 +29,7 @@ class Product(models.Model):
 
     def image_url(self):
 
-        image_url = '/static/store/media/samples/' + self.name + ' - ' + self.shirtColor
+        image_url = 'https://storage.googleapis.com/rifftidesite-content/static/store/media/samples/' + self.name + ' - ' + self.shirtColor
 
         if self.decor != "":
             image_url = image_url + ' ' + self.decor
@@ -61,6 +61,17 @@ class ProductImage(models.Model):
 TAX_RATE = Decimal(".00")
 
 class Sale(models.Model):
+
+        
+        STATUS_CHOICES = (
+            ('I', 'Initialized'),
+            ('P', 'Payed for'),
+            ('O', 'Ordered'),
+            ('R', 'Recieved by Isaac'),
+            ('D', 'Delivered'),
+            ('E', 'Erased'),
+        )
+
         #user = models.ForeignKey("account.User", on_delete=models.PROTECT)
         created = models.DateTimeField(auto_now_add=True)
         purchased = models.DateTimeField(null=True, default=None)
@@ -71,6 +82,11 @@ class Sale(models.Model):
         shipMethod = models.TextField(null=True,default=None)
         referrer = models.TextField(null=True, default=None)
         orderID = models.TextField(null=True, default=None)
+        status = models.TextField(db_index=True, choices=STATUS_CHOICES, default='I')
+        
+        def getitems(self):
+            items = SaleItem.objects.filter(sale=self,status ='A')
+            return items
 
         def recalculate(self):
             sales = SaleItem.objects.filter(sale=self, status='A')
@@ -83,16 +99,16 @@ class Sale(models.Model):
             else:
                 self.tax = 0
             self.total = round(self.subtotal + self.tax,2)
- 
+            self.save()
 
         def finalize(self,orderId):
             '''Finalizes the sale'''
             self.orderID = orderId
-            #if self.purchased is not None:
-                #raise ValueError("This sale has already been finalized")
+            if self.purchased is not None:
+                raise ValueError("This sale has already been finalized")
 
             self.purchased = datetime.now()
-
+            self.status = "P"
 class SaleItem(models.Model):
         STATUS_CHOICES = [
             ( 'A', 'Active' ),

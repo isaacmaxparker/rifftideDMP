@@ -15,7 +15,7 @@ import shutil
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+LOCAL = False
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -24,9 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hv_4y40dd1j)5g+s(h466w4&hbgqznvlz_+o^a01#wqqm+)mdl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = LOCAL
 
-ALLOWED_HOSTS = []
+
+
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +47,7 @@ INSTALLED_APPS = [
     'homepage',
     'account',
     'store',
+    'adminportal',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +60,20 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+)
+
+
+DEFAULT_FROM_EMAIL = 'riffnotif@gmail.com'
+SERVER_EMAIL = 'riffnotif@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'riffnotif@gmail.com'
+EMAIL_HOST_PASSWORD = 'pRimv6Y5SdEtsGJHj5S2'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -101,16 +121,37 @@ AUTH_USER_MODEL = 'account.User'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'RiffTest',
-        'USER': 'postgres',
-        'PASSWORD': 'imcd4107',
-        'HOST': 'localhost',
-        'PORT': '',
+# [START db_setup]
+if os.getenv('GAE_APPLICATION', None):
+#if(True):
+    print("THIS ONE IS CONNECTING")
+    # Running on production App Engine, so connect to Google Cloud SQL using
+    # the unix socket at /cloudsql/<your-cloudsql-connection string>
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'HOST': 'rifftidedmp-273619:us-west2:rifftidesite-db',
+            'NAME': 'rifftidesite-data',
+            'USER': 'isaacadmin',
+            'PASSWORD': 'GO5W77bTcvPOSjLUSqrB',
+        }
     }
-}
+else:
+    # Running locally so connect to either a local MySQL instance or connect 
+    # to Cloud SQL via the proxy.  To start the proxy via command line: 
+    #    $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306 
+    # See https://cloud.google.com/sql/docs/mysql-connect-proxy
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+            'NAME': 'rifftidesite-data',
+            'USER': 'isaacadmin',
+            'PASSWORD': 'GO5W77bTcvPOSjLUSqrB',
+        }
+    }
+# [END db_setup]
 
 SBCLIENTID = 'ARrw0jrQihOusmFX6Fto0okQj6c-4DvHbt901Rb_z37I4ViAHAjc4Yg5kKaNGpXIlfnALrlDSthlmnQM'
 
@@ -150,12 +191,25 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
+STATIC_URL = ''
+
+if LOCAL == True:
+    STATIC_URL = '/static/'
+    DIRS = BASE_DIR,
+    STATICFILES_DIRS = (
     # SECURITY WARNING: this next line must be commented out at deployment
     BASE_DIR,
-)
+    )   
+else:
+    STATIC_URL = 'https://storage.googleapis.com/rifftidesite-static/'
+
+    STATICFILES_DIRS = (
+    # SECURITY WARNING: this next line must be commented out at deployment
+    #BASE_DIR
+    )
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 

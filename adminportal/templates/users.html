@@ -1,0 +1,68 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_header_title">
+Admin Portal
+</%block>
+
+<%block name="page_title">&mdash; Users</%block>
+
+<%block name="left_content">
+
+</%block>
+
+
+<%block name="site_content">
+<div class="content">
+    <form method="POST" id="userForm">
+<div style="text-align: center; font-family: Josefin Sans, Century Gothic, Helvetica; font-size: 34px;">
+    <p class="homeparg" style=" display:inline-block;text-align: center; font-weight:bold;font-family:Century Gothic, Helvetica; font-size: 34px;">Welcome ${request.user.first_name}!</p>     <input type="submit" value="Save Changes" class="btn btn-outline" style="float: right;">
+</div>
+<table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 24px; width:100%; text-align: center;">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Username
+        </th>
+        <th>
+            Voice Part
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    %for user in users:
+    <tr>
+      <td width=20%>
+        <input type="text" name="firstName${user.id}" class="forminput" style="margin:0px; width: 90%" value="${user.first_name}" width=100%></td>
+      </td>
+      <td width=20%>
+        <input type="text" name="lastName${user.id}" class="forminput" style="margin:0px; width: 90%" value="${user.last_name}" width=100%></td>
+      </td>
+      <td width=20%>
+        <input type="text" name="userName${user.id}" class="forminput"  style="margin:0px; width: 90%"value="${user.username}" width=100%></td>
+      </td>
+      <td width=20%>
+        <input type="text" name="voicePart${user.id}" class="forminput" style="margin:0px; width: 90%" value="${user.voicepart}" width=100%></td>
+      </td>    
+      <td width=20%>
+        <a style="font-size:20px;">Change Password</a>
+        <a href="/adminportal/deleteUser/${user.id}" class="glyphicon">B</a>
+      </td>            
+    </tr>
+    %endfor
+
+  </form>
+</table>
+</div>
+
+</%block>
+
+<%block name="right_content">
+
+</%block>

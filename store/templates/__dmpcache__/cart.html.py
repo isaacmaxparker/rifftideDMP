@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1569535840.964063
+_modified_time = 1569796161.0250285
 _enable_loop = True
-_template_filename = 'C:/Users/Isaac/newsite/rifftideDMP/store/templates/cart.html'
+_template_filename = 'C:/Users/Isaac/mysite/store/templates/cart.html'
 _template_uri = 'cart.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
@@ -32,21 +32,21 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        round = context.get('round', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         total = context.get('total', UNDEFINED)
-        def site_content():
-            return render_site_content(context._locals(__M_locals))
-        shipSelect = context.get('shipSelect', UNDEFINED)
-        saleItems = context.get('saleItems', UNDEFINED)
-        tax = context.get('tax', UNDEFINED)
-        self = context.get('self', UNDEFINED)
-        personSelect = context.get('personSelect', UNDEFINED)
         SBClientId = context.get('SBClientId', UNDEFINED)
         def left_content():
             return render_left_content(context._locals(__M_locals))
+        personSelect = context.get('personSelect', UNDEFINED)
+        def site_content():
+            return render_site_content(context._locals(__M_locals))
+        saleItems = context.get('saleItems', UNDEFINED)
         def page_header_title():
             return render_page_header_title(context._locals(__M_locals))
-        len = context.get('len', UNDEFINED)
+        round = context.get('round', UNDEFINED)
+        tax = context.get('tax', UNDEFINED)
+        shipSelect = context.get('shipSelect', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         __M_writer('\r\n\r\n')
@@ -84,15 +84,15 @@ def render_page_header_title(context,**pageargs):
 def render_site_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        round = context.get('round', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         total = context.get('total', UNDEFINED)
         def site_content():
             return render_site_content(context)
-        shipSelect = context.get('shipSelect', UNDEFINED)
         saleItems = context.get('saleItems', UNDEFINED)
+        round = context.get('round', UNDEFINED)
         tax = context.get('tax', UNDEFINED)
+        shipSelect = context.get('shipSelect', UNDEFINED)
         self = context.get('self', UNDEFINED)
-        len = context.get('len', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="content" style="padding:30px 0px;">\r\n')
         if len(saleItems) != 0:
@@ -137,13 +137,13 @@ def render_site_content(context,**pageargs):
 def render_left_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
-        personSelect = context.get('personSelect', UNDEFINED)
         total = context.get('total', UNDEFINED)
-        SBClientId = context.get('SBClientId', UNDEFINED)
         def left_content():
             return render_left_content(context)
+        personSelect = context.get('personSelect', UNDEFINED)
         shipSelect = context.get('shipSelect', UNDEFINED)
+        SBClientId = context.get('SBClientId', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<script type="text/javascript">\r\n    $(document).ready(function(){\r\n\r\n        window.scrollTo(0,1000)\r\n\r\n        $("select.shipSelect").val("')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(shipSelect))
@@ -153,7 +153,7 @@ def render_left_content(context,**pageargs):
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(SBClientId))
         __M_writer('&currency=USD"></script>\r\n        <script>\r\n          paypal.Buttons({\r\n            createOrder: function(data, actions) {\r\n              return actions.order.create({\r\n                purchase_units: [{\r\n                  amount: {\r\n                    value: \'')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(total))
-        __M_writer('\'\r\n                  }\r\n                }]\r\n              });\r\n            },\r\n            onApprove: function(data, actions) {\r\n              return actions.order.capture().then(function(details) {\r\n                //alert(\'Transaction completed by \' + details.payer.name.given_name);\r\n                // Call your server to save the transaction\r\n\r\n                variable = data.orderID\r\n\r\n                $.ajax({\r\n                type: "POST",\r\n                url: "/store/cart.finishSale/" + data.orderID,\r\n                }).done(function(data) {\r\n            \r\n                    window.location.href="/store/receipt/" + variable;\r\n\r\n                });\r\n\r\n              });\r\n            }\r\n          }).render(\'#paypal-button-container\');\r\n        </script>\r\n\r\n\r\n\r\n')
+        __M_writer('\'\r\n                  }\r\n                }]\r\n              });\r\n            },\r\n            onApprove: function(data, actions) {\r\n              return actions.order.capture().then(function(details) {\r\n                //alert(\'Transaction completed by \' + details.payer.name.given_name);\r\n                // Call your server to save the transaction\r\n\r\n                variable = data.orderID\r\n                window.location.href="/store/receipt/" + variable;\r\n\r\n                // $.ajax({\r\n                // type: "POST",\r\n                // url: "/store/cart.finishSale/" + data.orderID,\r\n                // }).done(function(data) {\r\n                //    \r\n\r\n                // });\r\n\r\n              });\r\n            }\r\n          }).render(\'#paypal-button-container\');\r\n        </script>\r\n\r\n\r\n\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -161,6 +161,6 @@ def render_left_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Isaac/newsite/rifftideDMP/store/templates/cart.html", "uri": "cart.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "51": 1, "52": 2, "57": 6, "62": 148, "72": 4, "78": 4, "84": 8, "97": 8, "98": 10, "99": 11, "100": 35, "101": 36, "102": 38, "103": 38, "104": 41, "105": 41, "106": 41, "107": 41, "108": 41, "109": 41, "110": 41, "111": 44, "112": 44, "113": 47, "114": 47, "115": 50, "116": 50, "117": 53, "118": 53, "119": 57, "120": 71, "121": 71, "122": 92, "123": 92, "124": 124, "125": 124, "126": 129, "127": 130, "128": 138, "129": 139, "130": 140, "131": 146, "137": 153, "148": 153, "149": 159, "150": 159, "151": 166, "152": 166, "153": 204, "154": 204, "155": 211, "156": 211, "162": 156}}
+{"filename": "C:/Users/Isaac/mysite/store/templates/cart.html", "uri": "cart.html", "source_encoding": "utf-8", "line_map": {"18": 2, "19": 3, "31": 0, "51": 1, "52": 2, "57": 6, "62": 148, "72": 4, "78": 4, "84": 8, "97": 8, "98": 10, "99": 11, "100": 35, "101": 36, "102": 38, "103": 38, "104": 41, "105": 41, "106": 41, "107": 41, "108": 41, "109": 41, "110": 41, "111": 44, "112": 44, "113": 47, "114": 47, "115": 50, "116": 50, "117": 53, "118": 53, "119": 57, "120": 71, "121": 71, "122": 92, "123": 92, "124": 124, "125": 124, "126": 129, "127": 130, "128": 138, "129": 139, "130": 140, "131": 146, "137": 153, "148": 153, "149": 159, "150": 159, "151": 166, "152": 166, "153": 204, "154": 204, "155": 211, "156": 211, "162": 156}}
 __M_END_METADATA
 """

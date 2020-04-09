@@ -1,0 +1,59 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_header_title">
+New User
+</%block>
+
+<%block name="page_title">&mdash; Users</%block>
+
+<%block name="site_content">
+<div class="content">
+<form method="POST" id="editUserForm">
+
+                    <table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 24px; width:100%; text-align: center; display: inline-block;  margin-left:25%;">
+                            <tr width=100%>
+                                        <td>First Name:</td>
+                               
+                                        <td><input type="text" name="firstName" class="forminput" value="" width=100%></td>
+                            </tr>
+                            <tr> 
+                                        <td>Last Name:</td>
+                               
+                                        <td><input type="text" name="lastName" class="forminput" value="" width=100%></td>
+                            </tr>
+                            <tr>                                
+                                        <td>Voice Part:</td>
+                               
+                                        <td><select name="voicePart" class="forminput" style="width:90%;padding:7px;" value="" width=100%>
+                                                        <option value="Soprano">Soprano</option>
+                                                        <option value="Mezzo">Mezzo</option>
+                                                        <option value="Alto">Alto</option>
+                                                        <option value="Contralto">Contralto</option>
+                                                        <option value="Tenor">Tenor</option>
+                                                        <option value="Baritone">Baritone</option>
+                                                        <option value="Bass">Bass</option>
+                                                        <option value="Beatbox">Beatbox</option>
+
+                                        </select></td>
+                            </tr>
+                            <tr>
+                                        <td>Username:</td>
+                               
+                                        <td><input type="text" name="userName" class="forminput" value="" width=100%></td>
+                            </tr>
+                            <tr>
+                                        <td>Password:</td>
+                               
+                                        <td><input type="text" name="password" class="forminput" value="" width=100%></td>
+                             </tr>
+                            <tr>                
+                                       <td width="100px" style="text-align: center;"> <input type="submit" class="btn savebtn mybtn" style="display: inline-block;" value="Save"/></td>
+                                </tr>
+                        </table>
+
+
+
+</form>
+</div>
+
+</%block>

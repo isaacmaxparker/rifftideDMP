@@ -1,0 +1,260 @@
+<%inherit file="app_base.htm" />
+<%! from store import models as cmod %>
+
+<%block name="BodyBackImage">
+<style>
+html{
+    background-image: url("https://storage.cloud.google.com/rifftidesite-content/blacksparklebackground.jpg?authuser=1");
+}
+#site_middle{
+    background: rgba(255, 255, 255, 0.906);
+}
+</style>
+</%block>
+
+<%block name="page_header_title">
+Orders
+</%block>
+
+<%block name="site_content">
+<div id="content">
+    <h2>Purchased</h2>
+    <hr>
+    <table class="carttab" width=100%; style="text-align:center;">
+        <tr>
+            <th></th>
+            <th>
+                Sale
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Referrer
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Total
+            </th>
+             <th>
+                Options
+            </th>
+        </tr>
+        %for sale in pSales:
+        <tr>
+            <td>
+                %for item in sale.getitems():
+                    <img src="${item.product.image_url()}" style="width:20px;display: inline-block;">
+                %endfor
+            </td>
+            <td>
+                <a href="/store/receipt/${sale.orderID}">${sale.orderID}</a>
+            </td>
+            <td>
+                ${sale.status}
+            </td>
+            <td>
+                ${sale.referrer}
+            </td>
+            <td>
+                ${sale.purchased}
+            </td>
+            <td>
+                ${sale.total}
+            </td>
+            <th>
+                <a href="/account/orders.update/${sale.id}" style="font-family: Glyphter2;">
+                    F
+                </a>
+                <a href="/account/orders.delete/${sale.id}" style="font-family: Glyphter2;">
+                    B
+                </a>
+            </th>
+        </tr>
+        %endfor
+    </table>
+    <h2>Ordered</h2>
+    <hr>
+    <table class="carttab" width=100%; style="text-align:center;">
+            <tr>
+                <th></th>
+                <th>
+                    Sale
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Referrer
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Total
+                </th>
+                 <th>
+                    Options
+                </th>
+            </tr>
+            %for sale in oSales:
+            <tr>
+                    <td>
+                            %for item in sale.getitems():
+                                <img src="${item.product.image_url()}" style="width:20px;display: inline-block;">
+                            %endfor
+                        </td>
+                <td>
+                    <a href="/store/receipt/${sale.orderID}">${sale.orderID}</a>
+                </td>
+                <td>
+                    ${sale.status}
+                </td>
+                <td>
+                    ${sale.referrer}
+                </td>
+                <td>
+                    ${sale.purchased}
+                </td>
+                <td>
+                    ${sale.total}
+                </td>
+                <th>
+                    <a href="/account/orders.downdate/${sale.id}" style="font-family: Glyphter2;">
+                        E
+                    </a>
+                    <a></a>
+                    <a href="/account/orders.update/${sale.id}" style="font-family: Glyphter2;">
+                        F
+                    </a>
+                </th>
+            </tr>
+            %endfor
+    </table>
+    <h2>Picked Up</h2>
+    <hr>
+    <table class="carttab" width=100%; style="text-align:center;">
+        <tr>
+            <th></th>
+            <th>
+                Sale
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Referrer
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Total
+            </th>
+             <th>
+                Options
+            </th>
+        </tr>
+        %for sale in rSales:
+        <tr>
+                <td>
+                        %for item in sale.getitems():
+                            <img src="${item.product.image_url()}" style="width:20px;display: inline-block;">
+                        %endfor
+                    </td>
+            <td>
+                <a href="/store/receipt/${sale.orderID}">${sale.orderID}</a>
+            </td>
+            <td>
+                ${sale.status}
+            </td>
+            <td>
+                ${sale.referrer}
+            </td>
+            <td>
+                ${sale.purchased}
+            </td>
+            <td>
+                ${sale.total}
+            </td>
+            <th>
+                <a href="/account/orders.downdate/${sale.id}" style="font-family: Glyphter2;">
+                    E
+                </a>
+                <a></a>
+                <a href="/account/orders.update/${sale.id}" style="font-family: Glyphter2;">
+                    F
+                </a>
+            </th>
+        </tr>
+        %endfor
+    </table>
+    <h2>Delivered</h2>
+    <hr>
+    <table class="carttab" width=100%; style="text-align:center;">
+        <tr>
+            <th></th>
+            <th>
+                Sale
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Referrer
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Total
+            </th>
+             <th>
+                Options
+            </th>
+        </tr>
+        %for sale in dSales:
+        <tr>
+                <td>
+                        %for item in sale.getitems():
+                            <img src="${item.product.image_url()}" style="width:20px;display: inline-block;">
+                        %endfor
+                    </td>
+            <td>
+                <a href="/store/receipt/${sale.orderID}">${sale.orderID}</a>
+            </td>
+            <td>
+                ${sale.status}
+            </td>
+            <td>
+                ${sale.referrer}
+            </td>
+            <td>
+                ${sale.purchased}
+            </td>
+            <td>
+                ${sale.total}
+            </td>
+            <th>
+                <a href="/account/orders.downdate/${sale.id}" style="font-family: Glyphter2;">
+                    E
+                </a>
+            </th>
+        </tr>
+        %endfor
+    </table>
+
+
+
+
+
+
+
+</div>
+</%block>
+
+<%block name="right_content">
+
+</%block>

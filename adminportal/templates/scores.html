@@ -1,0 +1,46 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_header_title">
+Admin Portal
+</%block>
+
+<%block name="page_title">&mdash; Users</%block>
+
+<%block name="left_content">
+
+</%block>
+
+
+<%block name="site_content">
+<div class="content">
+<div style="text-align: center; font-family: Josefin Sans, Century Gothic, Helvetica; font-size: 34px;">
+    <p class="homeparg" style="text-align: center; font-weight:bold;font-family:Century Gothic, Helvetica; font-size: 34px;"><a href="/adminportal/newScore">New Score</a></p>
+</div>
+<table style="font-family: Josefin Sans, Century Gothic, Helvetica; Font-size: 24px; width:100%; text-align: center;">
+    <tr>
+        <th>
+            Score Name
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+    %for score in scores:
+    <tr>
+      <td>
+        ${score.name}
+      </td> 
+      <td>
+        <a href="/adminportal/editScore/${score.id}" class="glyphicon">H</a>
+        <a href="/adminportal/deleteScore/${score.id}" class="glyphicon">B</a>
+      </td>            
+    </tr>
+    %endfor
+</table>
+</div>
+
+</%block>
+
+<%block name="right_content">
+
+</%block>
