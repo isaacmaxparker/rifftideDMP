@@ -1,0 +1,107 @@
+/* HOME STYLES */
+.activeSlide{
+    background-color: turquoise;
+}
+
+.blackCover{
+    opacity: .4;
+    background-color: black;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    max-width: 100vw;
+}
+
+
+
+.homeIcon{
+    font-size: calc(100vw / 20) !important;
+    text-align: center;
+}
+
+
+
+.homeSlideImage{
+    width:100vw;
+    max-height: 100vh !important;
+}
+
+.homeSubtitle{
+    font-family: 'RennerLight';
+    font-size: calc(100vw / 24);
+}
+
+.homeTitle{
+    font-family: 'Renner';
+    font-size: calc(100vw / 9);
+    text-align: center;
+    width: 100vw;
+}
+
+.imgDiv{
+    opacity: 0;
+}
+
+.slide{
+    position: relative;
+    margin-bottom: -5px;
+}
+
+
+
+#slidediv1{
+    width: 80vw;
+    left:10vw;
+    bottom: 0;
+}
+
+.slide p{
+    color: white;
+    margin:0px;
+    font-variant: small-caps;
+} 
+
+
+
+/* slide specific */
+#p1{
+
+    font-family: 'Renner';
+    font-size: calc(100vw / 8);
+    display:inline-block;
+    margin-top: 40px;
+    text-align: left;
+}
+#we{
+    font-family: 'RennerLight';
+    font-size: 100% ;
+    font-weight: lighter;
+    font-style: normal;
+    opacity: 0;
+}
+#are{
+    font-family: 'RennerLight';
+    font-size: 80%;
+    font-weight: lighter;
+    opacity: 0;
+}
+
+#rifftide{
+    text-transform: uppercase;
+    font-variant: normal;
+    font-size: 150%;
+    opacity: 0;
+}
+
+#down1{
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+

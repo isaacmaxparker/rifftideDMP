@@ -15,7 +15,7 @@ import shutil
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+LOCAL = False
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -24,7 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hv_4y40dd1j)5g+s(h466w4&hbgqznvlz_+o^a01#wqqm+)mdl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = LOCAL
+
+
+
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
@@ -44,9 +47,7 @@ INSTALLED_APPS = [
     'homepage',
     'account',
     'store',
-    'portal',
     'adminportal',
-    'momsfoodstorage',
 ]
 
 MIDDLEWARE = [
@@ -129,10 +130,10 @@ if os.getenv('GAE_APPLICATION', None):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'HOST': '/cloudsql/rifftideproject:us-central1:rifftidesite',
-            'NAME': 'rifftidesitedata',
+            'HOST': 'rifftidedmp-273619:us-west2:rifftidesite-db',
+            'NAME': 'rifftidesite-data',
             'USER': 'isaacadmin',
-            'PASSWORD': 'keepflyingtwentyseventeen',
+            'PASSWORD': 'GO5W77bTcvPOSjLUSqrB',
         }
     }
 else:
@@ -145,9 +146,9 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'HOST': '127.0.0.1',
             'PORT': '3306',
-            'NAME': 'rifftidesitedata',
+            'NAME': 'rifftidesite-data',
             'USER': 'isaacadmin',
-            'PASSWORD': 'keepflyingtwentyseventeen',
+            'PASSWORD': 'GO5W77bTcvPOSjLUSqrB',
         }
     }
 # [END db_setup]
@@ -190,12 +191,25 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = 'https://storage.googleapis.com/rifftidesite-content/static/'
 
-STATICFILES_DIRS = (
+STATIC_URL = ''
+
+if LOCAL == True:
+    STATIC_URL = '/static/'
+    DIRS = BASE_DIR,
+    STATICFILES_DIRS = (
     # SECURITY WARNING: this next line must be commented out at deployment
-    # BASE_DIR,
-)
+    BASE_DIR,
+    )   
+else:
+    STATIC_URL = 'https://storage.googleapis.com/rifftidesite-static/'
+
+    STATICFILES_DIRS = (
+    # SECURITY WARNING: this next line must be commented out at deployment
+    #BASE_DIR
+    )
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
