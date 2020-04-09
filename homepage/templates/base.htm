@@ -9,20 +9,14 @@
         <title>Rifftide<%block name="page_title"></%block></title>
 
         ## add any site-wide scripts or CSS here; for example, jquery:
-        <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/global.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="${ STATIC_URL }homepage/scripts/global.js"></script>
-        <%block name = "headLinks">
-        <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/home.css">
-        <script src="${ STATIC_URL }homepage/scripts/home.js"></script>
-        </%block>
-         <!-- <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/glyphs.css">
-         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/josefin.css">
-         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/centurygothic.css"> -->
-
+        <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/global.css">
+            <%block name = "headLinks">
+            <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/home.css">
+            <script src="${ STATIC_URL }homepage/scripts/home.js"></script>
+            </%block>
         ## render the static file links with the same name as this template
-        <script src="/django_mako_plus/dmp-common.min.js"></script>
-        ${ django_mako_plus.links(self) }
         <link rel="icon" href="${ STATIC_URL }homepage/media/logos/favicon.ico">
 
     </head>
@@ -30,11 +24,14 @@
         <div id="header">
             <div id="nav">
                 <div class="navHead">
-                    <a><img class="navLogo" src="${ STATIC_URL }homepage/media/logos/thick logo - darker.png" alt="Rifftide Logo"></a>
+                    <a href="/"><img class="navLogo" src="${ STATIC_URL }homepage/media/logos/thick logo - darker.png" alt="Rifftide Logo"></a>
                 </div>
                 <ul>
                     <li>
-                        <a>About</a>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="/cards/">Cards</a>
                     </li>
                     <li>
                         <a>Contact</a>

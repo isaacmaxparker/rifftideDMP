@@ -1,8 +1,8 @@
 /* CARDS */
 #cards{
+    opacity: 0;
     margin-top:55px;
     font-family: 'Renner';
-    background-image: url('../Images/whiteVelvet.jpg');
     background-size: 100%;
 }
 
@@ -15,10 +15,15 @@
 
 
 #cardLists{
+    opacity: 0;
+    padding-top:10vh;
     background-size: 100%;
     transition: transform .5s ease-in-out;
 }
 
+#imgURL{
+    opacity: 0;
+}
 
 .inactiveCard{
     filter: grayscale(100%) brightness(75%) !important;
@@ -55,13 +60,14 @@
 #filtersDiv{
     position: fixed;
     width: 100vw; 
-    top:55px;
+    top:-10px;
+    height: 75px;
     background-color:rgb(47, 197, 197);
     color: white;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.507) 5px 5px 5px 0px;
     transition: top 2s;
-    z-index: 900;
+    z-index: 600;
 }
 #filters{
     width: 100vw;
