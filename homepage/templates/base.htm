@@ -16,21 +16,19 @@
         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/home.css">
         <script src="${ STATIC_URL }homepage/scripts/home.js"></script>
         </%block>
-         <!-- <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/glyphs.css">
-         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/josefin.css">
-         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/fonts/centurygothic.css"> -->
+
 
         ## render the static file links with the same name as this template
         <script src="/django_mako_plus/dmp-common.min.js"></script>
         ${ django_mako_plus.links(self) }
-        <link rel="icon" href="${ STATIC_URL }homepage/media/logos/favicon.ico">
+        <link rel="icon" href="${settings.IMAGE_URL}logos/favicon.ico">
 
     </head>
     <body>
         <div id="header">
             <div id="nav">
                 <div class="navHead">
-                    <a><img class="navLogo" src="${ STATIC_URL }homepage/media/logos/thick logo - darker.png" alt="Rifftide Logo"></a>
+                    <a><img class="navLogo" src="${settings.IMAGE_URL}logos/thick logo - darker.png" alt="Rifftide Logo"></a>
                 </div>
                 <ul>
                     <li>

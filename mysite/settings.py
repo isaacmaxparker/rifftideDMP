@@ -109,9 +109,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_settings_export.settings_export',
             ],
         },
     },
+]
+
+IMAGE_URL="https://storage.googleapis.com/rifftidesite-static/images/"
+
+SETTINGS_EXPORT = [
+    'IMAGE_URL',
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
@@ -124,7 +131,6 @@ AUTH_USER_MODEL = 'account.User'
 # [START db_setup]
 if os.getenv('GAE_APPLICATION', None):
 #if(True):
-    print("THIS ONE IS CONNECTING")
     # Running on production App Engine, so connect to Google Cloud SQL using
     # the unix socket at /cloudsql/<your-cloudsql-connection string>
     DATABASES = {
@@ -186,6 +192,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
+
+DEFAULT_CONTENT_TYPE = 'MIME'
 
 
 # Static files (CSS, JavaScript, Images)

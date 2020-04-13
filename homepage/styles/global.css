@@ -176,4 +176,8 @@ body{
     max-height: 100vh;
 }
 
+.splitter{
+    display: none;
+}
+
 
