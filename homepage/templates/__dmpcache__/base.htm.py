@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1586814987.4542263
+_modified_time = 1586816875.363598
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/base.htm'
 _template_uri = 'base.htm'
@@ -19,19 +19,19 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def headLinks():
-            return render_headLinks(context._locals(__M_locals))
-        def page_scripts():
-            return render_page_scripts(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        settings = context.get('settings', UNDEFINED)
-        def page_content():
-            return render_page_content(context._locals(__M_locals))
         def page_title():
             return render_page_title(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
+        def page_scripts():
+            return render_page_scripts(context._locals(__M_locals))
+        def page_content():
+            return render_page_content(context._locals(__M_locals))
+        def headLinks():
+            return render_headLinks(context._locals(__M_locals))
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        settings = context.get('settings', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n    <head>\r\n        <meta charset="utf-8">\r\n        <meta name="author" content="Isaac McDougal">\r\n        <meta name="viewport" content="width=device-width, initial-scale=1" /> \r\n        <title>Rifftide')
+        __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n    <head>\r\n        <meta charset="utf-8">\r\n        <meta name="author" content="Isaac McDougal">\r\n        <meta name="viewport" content="width=device-width,initial-scale=1.0">\r\n\r\n        <style>\r\n            @media(max-width:1200px){\r\n    .homeSlideImage{\r\n        max-width:100vw;\r\n        min-width:100vw;\r\n        min-height: 80vh !important;\r\n        object-fit: cover;\r\n    }\r\n\r\n    .homeTitle{\r\n        font-size: calc(100vw / 5) !important;\r\n        word-break: keep-all;\r\n        text-align: center;\r\n        width: 90vw;\r\n        margin-left: 5vw;\r\n    }\r\n    \r\n    #slidediv1{\r\n        width: 80vw;\r\n        left:10vw;\r\n        margin-top: 55px;\r\n        max-height: calc(90vh - 55px);\r\n    }\r\n    \r\n    #slidediv1 div{\r\n        margin-top: 50%;\r\n        transform: translate(0,-50%);\r\n    }\r\n\r\n    #p1{\r\n        font-size: calc(100vw / 6.5) !important;\r\n    }\r\n\r\n    #down1{\r\n        display: none;\r\n    }\r\n}\r\n\r\n@media(max-width:900px){\r\n\r\n    #slidediv1{\r\n        margin-top: calc(10vh + 55px);\r\n        max-height: calc(80vh - 55px);\r\n    }\r\n\r\n    #rifftide{\r\n        font-size: 250% !important;\r\n        text-align: left;\r\n        line-height: 75%;\r\n    }\r\n    .homeIcon{\r\n        font-size: calc(100vw / 8) !important;\r\n    }\r\n    .splitter{\r\n        display: block;\r\n        font-size: 1vw;\r\n    }\r\n    #we{\r\n        margin-left: 30vw;\r\n    }\r\n    #riff{\r\n        margin-left:-5vw;\r\n    }\r\n    #tide{\r\n        margin-left:5vw;\r\n    }\r\n    \r\n    #slidediv1 div{\r\n        margin-top: 50%;\r\n        transform: translate(0,-30%);\r\n    }\r\n\r\n}\r\n\r\n@media(max-width:600px){\r\n    #slidediv1 div{\r\n        margin-top: 50%;\r\n        transform: translate(0,-40%);\r\n    }\r\n}\r\n        </style>\r\n\r\n        <title>Rifftide')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
             context['self'].page_title(**pageargs)
         
@@ -83,10 +83,10 @@ def render_page_title(context,**pageargs):
 def render_headLinks(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        self = context.get('self', UNDEFINED)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def headLinks():
             return render_headLinks(context)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n        <link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
@@ -124,6 +124,6 @@ def render_page_scripts(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 0, "34": 2, "39": 9, "40": 12, "41": 12, "42": 12, "43": 14, "44": 14, "49": 18, "50": 22, "51": 23, "52": 23, "53": 24, "54": 24, "55": 31, "56": 31, "61": 45, "66": 74, "72": 9, "83": 15, "91": 15, "92": 16, "93": 16, "94": 17, "95": 17, "101": 44, "107": 44, "113": 57, "119": 57, "125": 119}}
+{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 0, "34": 2, "39": 92, "40": 95, "41": 95, "42": 95, "43": 97, "44": 97, "49": 101, "50": 105, "51": 106, "52": 106, "53": 107, "54": 107, "55": 114, "56": 114, "61": 128, "66": 157, "72": 92, "83": 98, "91": 98, "92": 99, "93": 99, "94": 100, "95": 100, "101": 127, "107": 127, "113": 140, "119": 140, "125": 119}}
 __M_END_METADATA
 """
