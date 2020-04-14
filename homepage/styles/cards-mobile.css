@@ -1,0 +1,33 @@
+.cardList{
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, auto);
+    align-items:center;
+  }
+
+@media(max-width:800px){
+    #cards{
+        margin-top: 100px;
+    }
+    .listTitle{
+        font-size: 10vw;
+    }
+    .cardList{
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, auto);
+        align-items:center;
+      }
+}
+
+@media(max-width:500px){
+    #cards{
+        margin-top: 100px;
+    }
+    .listTitle{
+        font-size: 15vw;
+    }
+    .cardList{
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, auto);
+        align-items:center;
+      }
+}

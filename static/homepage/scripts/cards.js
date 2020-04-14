@@ -1,5 +1,4 @@
 /*property
-
 */
 
 
@@ -22,19 +21,22 @@ const Cards = (function() {
     const EVENT_INDEX = 'data-evntindex';
     const EVENTS_URL = 'https://raw.githubusercontent.com/isaacmcdgl/RifftideJSON/master/JSON/events.json'
     const FILTERS_DIV_ID = 'filtersDiv';
-    const IMAGE_BASE_URL = 'Images/cards/'
+    const LOADER_ID = 'loadingScreen';
+    const IMAGE_URL = 'https://storage.googleapis.com/rifftidesite-static/images/cards/'
     const IMAGE_FILE_TYPE = '.png'
     const INACTIVE_CLASS = 'inactiveCard';
     const LIST_SECTION_CLASS = 'listSection';
     const MEM_INDEX = 'data-memindex';
-    const MEMBERS_URL = 'https://raw.githubusercontent.com/isaacmcdgl/RifftideJSON/master/JSON/members.json'
+    const MEMBERS_URL = 'https://raw.githubusercontent.com/isaacmcdgl/RifftideJSON/master/JSON/members.json';
+    const MODAL_ID = 'cardPopUp';
     const REQUEST_GET = "GET";
     const REQUEST_STATUS_OK = 200;
     const REQUEST_STATUS_ERROR = 400;
     const SMALL_CARD_CLASS = 'smallCard';
     const SLIDER_CARD_CLASS = 'sliderCard';
     const SLIDER_ID = 'cardSlider';
-    const MODAL_ID = 'cardPopUp';
+    const THUMBNAIL_URL = 'https://storage.googleapis.com/rifftidesite-static/images/cards/thumbnails/';
+
 
   
     /*------------------------------------------------------------------------
@@ -45,11 +47,14 @@ const Cards = (function() {
     let cards = []
     let members = []
     let events =[]
+    let isInital = true;
     let showInactives = true;
     let cardsLoaded = false;
     let membsLoaded = false;
     let eventsLoaded = false;
     let gridContent = '';
+    let numLoaded = 0;
+    let imgsLoaded = 0;
     let popContent;
     let sortByEvent = true;
     let slider = ''
@@ -65,8 +70,11 @@ const Cards = (function() {
     let addCardList;
     let addCardstoPopover;
     let closeModal;
+    let fadeInCards;
     let htmlDiv;
     let htmlImg;
+    let hideLoader;
+    let imgLoaded;
     let loadCards;
     let loadMembers;
     let init;  
@@ -75,8 +83,11 @@ const Cards = (function() {
     let resize;
     let setInactive;
     let showInactive;
+    let showLoader;
     let setUpCards
     let setUpPopover;
+    let setUpWidthsGetters;
+    let showCardPopup;
     let toggleFilters;
     let showCards;
     let switchCards;
@@ -123,10 +134,10 @@ const Cards = (function() {
 
             id=`cardlist__${cardGroup.eventCards[0].eventcode}`
             contents = htmlDiv(``,'listTitle',`${cardGroup.eventName}`)
-               
+            
             cardGroup.eventCards.forEach(element => {
-                let attr = `data-event="${element.eventcode}" data-member="${element.member}" data-memindex="${element.memberindex}" data-evntindex="${element.eventindex}" onclick="showCards(this)"`
-                cardsString += htmlImg(`${element.eventcode}_${element.member}_${element.memberindex}`,SMALL_CARD_CLASS,`${IMAGE_BASE_URL}${element.img}${IMAGE_FILE_TYPE}`,attr)
+                let attr = `data-event="${element.eventcode}" data-member="${element.member}" data-memindex="${element.memberindex}" data-evntindex="${element.eventindex}" onclick="showCards(this)" onload="imgLoaded()"`
+                cardsString += htmlImg(`${element.eventcode}_${element.member}_${element.memberindex}`,SMALL_CARD_CLASS,`${THUMBNAIL_URL}${element.img}${IMAGE_FILE_TYPE}`,attr)
             });
 
         }
@@ -134,8 +145,8 @@ const Cards = (function() {
             id=`cardlist__${cardGroup.name}`
             contents = htmlDiv(``,'listTitle',`${cardGroup.name}`)
             cardGroup.memberCards.forEach(element => {
-                let attr = `data-event="${element.eventcode}" data-member="${element.member}" data-memindex="${element.memberindex}" data-evntindex="${element.eventindex}" onclick="showCards(this)"`
-                cardsString += htmlImg(`${element.eventcode}_${element.member}_${element.memberindex}`,SMALL_CARD_CLASS,`${IMAGE_BASE_URL}${element.img}${IMAGE_FILE_TYPE}`,attr)
+                let attr = `data-event="${element.eventcode}" data-member="${element.member}" data-memindex="${element.memberindex}" data-evntindex="${element.eventindex}" onclick="showCards(this)" onload="imgLoaded()"`
+                cardsString += htmlImg(`${element.eventcode}_${element.member}_${element.memberindex}`,SMALL_CARD_CLASS,`${THUMBNAIL_URL}${element.img}${IMAGE_FILE_TYPE}`,attr)
             });
         }
 
@@ -150,10 +161,10 @@ const Cards = (function() {
         cardsToAdd.forEach(element => {
             let content;
             if(sortByEvent){
-                content = htmlImg('',`${SLIDER_CARD_CLASS} ${ element.memberindex === 1 ?  ACTIVE_CARD_CLASS :''}`,`${IMAGE_BASE_URL}${element.img}${IMAGE_FILE_TYPE}`,`onClick="switchCards(${element.memberindex})"`)
+                content = htmlImg('',`${SLIDER_CARD_CLASS} ${ element.memberindex === 1 ?  ACTIVE_CARD_CLASS :''}`,`${IMAGE_URL}${element.img}${IMAGE_FILE_TYPE}`,`onClick="switchCards(${element.memberindex})" onload="showCardPopup(this)" `)
             }
             else{
-                content = htmlImg('',`${SLIDER_CARD_CLASS} ${ element.eventindex === 1 ?  ACTIVE_CARD_CLASS :''}`,`${IMAGE_BASE_URL}${element.img}${IMAGE_FILE_TYPE}`,`onClick="switchCards(${element.eventindex})"`)
+                content = htmlImg('',`${SLIDER_CARD_CLASS} ${ element.eventindex === 1 ?  ACTIVE_CARD_CLASS :''}`,`${IMAGE_URL}${element.img}${IMAGE_FILE_TYPE}`,`onClick="switchCards(${element.eventindex})" onload="showCardPopup(this)"`)
             }
             popContent+=htmlDiv('',CARD_CONTAINER_CLASS,content)
         });
@@ -161,8 +172,20 @@ const Cards = (function() {
 
     closeModal = function(){
         let modal = document.getElementById(MODAL_ID)
-        $(modal).animate({'opacity':0}, ANIMATION_DURATION_SHORT)
-        setTimeout(function(){$(modal).css('display','none')},ANIMATION_DURATION_SHORT)
+        $(modal).css({'opacity':0})
+        setTimeout(function(){$(modal).css('display','none')},500)
+    }
+
+    fadeInCards = function(){
+        let cardsDiv = document.getElementById(CARDSLIST_DIV_ID)
+        $(cardsDiv).animate({opacity:1,'padding-top':'0vh'},ANIMATION_DURATION_MEDIUM)
+        $(cardsDiv).css('padding-top','0vh');
+        $(document.getElementById('filtersTab')).animate({top:'75px'},ANIMATION_DURATION_MEDIUM)
+    }
+
+    hideLoader = function(){
+        $(document.getElementById(LOADER_ID)).css('opacity',0)
+        setTimeout(function(){$(document.getElementById(LOADER_ID)).css('display','none')},500)
     }
 
     htmlImg = function(id,className,imageSrc,extAtt){
@@ -171,6 +194,19 @@ const Cards = (function() {
 
     htmlDiv = function(id,className,contents){
         return `<div id="${id}" class="${className}">${contents}</div>`
+    }
+
+    imgLoaded = function(){
+        imgsLoaded++
+        if(imgsLoaded == cards.length)
+        {
+            hideLoader()
+            if(isInital){
+                fadeInCards()
+                isInital = false
+            }
+            
+        }
     }
 
     loadCards = function(){
@@ -219,6 +255,8 @@ const Cards = (function() {
     }
 
     init = function(onInitializedCallback) {
+        showLoader()
+        $(document.getElementById('cards')).animate({opacity:1},ANIMATION_DURATION_SHORT)
         let carousel = document.getElementById(CAROUSEL_ID);
         loadCards()
         if(showInactive){
@@ -227,7 +265,7 @@ const Cards = (function() {
         slider = document.getElementById(SLIDER_ID);
         items = carousel.getElementsByClassName(CARD_CONTAINER_CLASS);
         window.onresize = resize;  
-       
+        
         if(sortByEvent){
             document.getElementById('eventFilter').classList.add('activeFilter')
         }
@@ -245,8 +283,14 @@ const Cards = (function() {
       }
       
 
-    resize = function() {
-        width = $(document.getElementsByClassName(ACTIVE_CARD_CLASS)[0]).outerWidth()
+    resize = function(optwidth=0) {
+        if(optwidth == 0){
+            width = $(document.getElementsByClassName(ACTIVE_CARD_CLASS)[0]).outerWidth()
+        }
+        else{
+            width = optwidth
+        }
+
         totalWidth = window.innerWidth * items.length;
 
         let index = currIndex;
@@ -267,6 +311,11 @@ const Cards = (function() {
         else{
             setInactive();
         }
+    }
+
+    showLoader = function(){
+        $(document.getElementById(LOADER_ID)).css('display','flex')
+        setTimeout(function(){$(document.getElementById(LOADER_ID)).css('opacity',1)},100)
     }
     
     setInactive = function(){
@@ -291,7 +340,6 @@ const Cards = (function() {
             else{
                 cards.forEach(cardSet => {
                     cardSet.memberCards.forEach(element => {
-                        console.log(element.member == 'inactive' ?  element : '' )
                         if (inactives.includes(element.member) || element.member == 'inactive'){
                            document.getElementById(`${element.eventcode}_${element.member}_${element.memberindex}`).classList.add(INACTIVE_CLASS)
                         }
@@ -338,7 +386,6 @@ const Cards = (function() {
                 
             });
             cards = temp;
-            cardsDiv.innerHTML = gridContent;  
         }
         else{
             let temp = []
@@ -391,7 +438,9 @@ const Cards = (function() {
             }
         });
 
+        setUpWidthsGetters()
         cardsDiv.innerHTML = gridContent
+
 
     }
 
@@ -419,13 +468,33 @@ const Cards = (function() {
        popDiv.innerHTML = popContent
     }
 
+    setUpWidthsGetters = function(){
+        let slider2 = document.getElementById('cardSlider2')
+        let content = ''
+
+        cards.forEach(element =>{
+            let img =''
+            if(sortByEvent){
+                img = htmlImg('',`${SLIDER_CARD_CLASS}`,`${IMAGE_URL}${element.eventCards[0].img}${IMAGE_FILE_TYPE}`)
+            }
+            else{
+                img = htmlImg('',`${SLIDER_CARD_CLASS}`,`${IMAGE_URL}${element.memberCards[0].img}${IMAGE_FILE_TYPE}`)
+            }
+
+            content += htmlDiv('',`${CARD_CONTAINER_CLASS} ${ACTIVE_CARD_CLASS}`,img)
+        });
+
+        slider2.innerHTML = content
+    }
 
     showCards = function(element){
+        numLoaded = 0;
+        showLoader()
         setUpPopover(element);
         let modal = document.getElementById(MODAL_ID);
-        let scrollTop = document.documentElement.scrollTop;
+
         $(modal).css({'display':'block','top':`${55}px`});
-        
+
         resize()
         if(sortByEvent){
             switchCards(element.getAttribute(MEM_INDEX),0)
@@ -433,7 +502,18 @@ const Cards = (function() {
         else{
             switchCards(element.getAttribute(EVENT_INDEX),0)
         }
-        $(modal).animate({'opacity':1}, ANIMATION_DURATION_SHORT)
+
+
+    }
+
+    showCardPopup = function(element){
+        numLoaded++;
+        if(numLoaded == items.length){
+            let modal = document.getElementById(MODAL_ID);
+            resize($(element).innerWidth)
+            hideLoader()
+            $(modal).css({'opacity':1})
+        }
 
     }
   
@@ -476,6 +556,7 @@ const Cards = (function() {
                 cardImg.style.transform = "perspective(1200px) rotateY(" + (i < (index - 1) ? 40 : -40) + "deg)";
             }
         }
+        width = $(document.getElementsByClassName(ACTIVE_CARD_CLASS)[0]).outerWidth()
         let transform = (((index * -width) + (width / 2) + window.innerWidth / 2) + (window.innerWidth *.015 ))
         // if(isInitial){
         //     slider.style.transform = "translate3d(" + (((index * -width) + (width / 2) + window.innerWidth / 2) + (window.innerWidth *.015 )) + "px, 0, 0)";
@@ -532,18 +613,19 @@ const Cards = (function() {
                 showInactive()
             },500)
             $(cardsDiv).css({'transform':'translate(0vw)'})
-            cardsDiv.style= ''
+            cardsDiv.style= 'opacity:1'
         },500)
 
     }
 
     return {
         init,
+        imgLoaded,
         showCards,
         switchCards,
         closeModal,
         toggleFilters,
         showInactive,
+        showCardPopup,
     };
   }());
-  

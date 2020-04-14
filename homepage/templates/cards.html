@@ -1,0 +1,78 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; Cards</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }homepage/styles/cards.css">
+<link rel="stylesheet" media="(max-width:1375px)" href="${ STATIC_URL }homepage/styles/cards-mobile.css">
+<script src="${ STATIC_URL }homepage/scripts/cards.js"></script>
+</%block>
+
+<%block name="page_content">
+<div class="cardsContent">
+    <div id="loadingScreen">
+        <img src="https://storage.googleapis.com/rifftidesite-static/images/loaders/clearLoadFlower.gif" alt="loading GIF">
+    </div>
+    <div id="cards">
+      <div id="filtersDiv">
+            <div id="filters">
+              <div id="sortby">
+              </div>
+              
+            </div>
+            <div id="filtersTab" >
+              <p><span id="memberFilter" onclick="toggleFilters()"><span class="icon">p</span> Member</span> | <span id="eventFilter"><span class="icon">x</span> Event</span> | <span id="inactiveFilter" onclick="showInactives()"><span id="inactiveIcon" class=icon>S</span> Inactives</span>  </p>
+          </div>
+      </div>
+        <div id="cardLists">
+        </div>
+    </div>
+    <div id="cardPopUp">
+        <p class="closeSlider icon" onclick="closeModal()">*</p>
+        <div id="cardsScroller" >
+            <div class="sliderContainer">
+                <div id="cardSlider">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="widthGetter">
+        <div id="cardsScroller">
+            <div class="sliderContainer">
+                <div id="cardSlider2" style="transform: translate3d(581.435px, 0px, 0px); width: 9032px;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+    <script type="text/javascript">
+        //let showLocation;
+        function ready(fn) {
+            if (document.readyState != 'loading') {
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+
+        ready(function () {
+          Global.init();
+          Cards.init();
+          prev = Cards.prev
+          next = Cards.next
+          showCards = Cards.showCards
+          showCardPopup = Cards.showCardPopup
+          imgLoaded = Cards.imgLoaded
+          switchCards = Cards.switchCards
+          closeModal = Cards.closeModal
+          toggleFilters = Cards.toggleFilters
+          showInactives = Cards.showInactive
+    });
+    </script>
+</%block>

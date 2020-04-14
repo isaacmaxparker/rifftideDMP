@@ -95,7 +95,7 @@
         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/global.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="${ STATIC_URL }homepage/scripts/global.js"></script>
-        <%block name = "headLinks">
+        <%block name = "page_links">
         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/home.css">
         <script src="${ STATIC_URL }homepage/scripts/home.js"></script>
         </%block>
@@ -103,7 +103,7 @@
 
         ## render the static file links with the same name as this template
         <script src="/django_mako_plus/dmp-common.min.js"></script>
-        ${ django_mako_plus.links(self) }
+        
         <link rel="icon" href="${settings.IMAGE_URL}logos/favicon.ico">
 
     </head>
