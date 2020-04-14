@@ -566,16 +566,20 @@ const Cards = (function() {
             slider.style.transform = 'translate3d(0,0,0)'
         }
         
-        slider.animate([
-            // keyframes
-            { transform: slider.style.transform }, 
-            { transform: `translate3d(${transform}px, 0, 0)` }
-          ], { 
-            // timing options
-            duration: duration,
-            iterations: 1
-          });
+        $(slider).animate({ transform: `translate3d(${transform}px, 0, 0)` },duration)
+
+        // slider.animate([
+        //     // keyframes
+        //     { transform: slider.style.transform }, 
+        //     { transform: `translate3d(${transform}px, 0, 0)` }
+        //   ], { 
+        //     // timing options
+        //     duration: duration,
+        //     iterations: 1
+        //   });
+          console.log(width)
           $(slider).css("transform","translate3d(" + transform + "px, 0, 0)");
+          $(slider).css("-webkit-transform","translate3d(" + transform + "px, 0, 0)");
     }
      
     toggleFilters = function(){

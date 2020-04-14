@@ -9,7 +9,7 @@
 .cardList{
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(8, auto);
+  grid-template-columns: repeat(8,10vw);
   align-items:center;
 }
 
@@ -154,7 +154,7 @@ max-width: 50vw;
 
 #cardSlider {
     position: relative;
-    /* transition: transform 1s ease-in-out; */
+    transition: transform .4s ease-in-out; 
 }
 
 .closeSlider{
