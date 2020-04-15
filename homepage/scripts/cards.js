@@ -577,7 +577,6 @@ const Cards = (function() {
         //     duration: duration,
         //     iterations: 1
         //   });
-          console.log(width)
           $(slider).css("transform","translate3d(" + transform + "px, 0, 0)");
           $(slider).css("-webkit-transform","translate3d(" + transform + "px, 0, 0)");
     }
