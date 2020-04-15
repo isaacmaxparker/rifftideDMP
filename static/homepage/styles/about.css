@@ -91,6 +91,10 @@
     height: 100%;
     margin-bottom: -10px;
 }
+.isa{
+  margin-left: 3vw;
+  display: inline-block;
+}
 #groupBio{
     margin:0;
     padding:0;

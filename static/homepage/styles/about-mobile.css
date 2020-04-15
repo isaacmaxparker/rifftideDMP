@@ -1,4 +1,36 @@
 
+    
+    /* GROUP BIO */
+    
+    #groupBio{
+      font-size: 7vw;
+    }
+    
+    #groupName{
+      font-size:22vw;
+    }
+    .isa{
+      margin-left: 0;
+      font-size: 8vw;
+    }
+    .scrollContent{
+      font-size: 23vw;
+      line-height: 25vw;
+    }
+
+    .scrollContentContainer {
+      height: 49vw;
+    }
+
+    .scrollListItem {
+      line-height:25vw;
+      color:rgb(19, 194, 194);
+    }
+    #membersLink{
+      font-size: 9vw;
+    }
+
+    /* PROFILES */
     .profile{
         flex-direction: column;
     }

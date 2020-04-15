@@ -91,6 +91,10 @@
     height: 100%;
     margin-bottom: -10px;
 }
+.isa{
+  margin-left: 3vw;
+  display: inline-block;
+}
 #groupBio{
     margin:0;
     padding:0;
@@ -281,10 +285,16 @@
   color:rgb(8, 85, 8);
 }
 .strengthDance{
-  color: rgb(102, 87, 1);
+  color: rgb(182, 158, 26);
 }
 .strengthVocal{
   color:rgb(6, 6, 102);
+}
+.strengthVisual{
+  color:rgb(72, 6, 102);
+}
+.strengthRap{
+  color:rgb(167, 97, 17);
 }
 
 .viewCardText{
