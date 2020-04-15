@@ -62,9 +62,6 @@
         max-width: 100vw;
         padding-left:10px;
       }
-      .pastGroupImgDivMobile{
-        
-      }
       .pastGroupImageMobile{
         margin-left: 6vw;
           max-width: 80vw;
@@ -82,9 +79,6 @@
         flex-direction: column;
         align-items: left;
         margin-left:10vw;
-      }
-      .memberNames{
-
       }
       .pastGroupText div{
         display: block;
