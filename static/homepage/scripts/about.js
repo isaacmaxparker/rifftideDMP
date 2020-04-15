@@ -203,8 +203,6 @@ const About = (function () {
     for (let i = 1; i <= NUM_OF_PROFILES; i++) {
 
       let profile = document.getElementById(MEMBER_PROFILE_ID + i)
-
-      console.log($(profile).offset())
       let profTop = ($(profile).offset().top - (screenHeight / 2))
       let slideHeight = profile.clientHeight;
       let div = {

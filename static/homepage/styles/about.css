@@ -75,6 +75,7 @@
     min-width:100vw;
     max-width: 100vw;
     min-height: 100vh;
+    max-height: 100vh;
     object-fit: cover;
 }
 .blackCover{
@@ -420,6 +421,10 @@ display: none;
     .darkTeal{
         color:rgb(20, 235, 235);
     }
+        @-webkit-keyframes opacity {
+          0%, 100% {opacity:0;}
+          50% {opacity:1;}
+        }
     
         @-webkit-keyframes change {
             0%, 12.66%, 100% {transform:translate3d(0,0,0);}
