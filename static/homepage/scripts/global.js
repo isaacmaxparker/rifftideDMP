@@ -35,6 +35,7 @@ const Global = (function() {
   
     init = function(onInitializedCallback) {
         console.log("Started global init...");
+        window.scrollTo(0,0)
     };
 
     scrollToDiv = function(divId, speed=600){

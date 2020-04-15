@@ -1,0 +1,1138 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; Home</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }homepage/styles/about.css">
+<link rel="stylesheet" media="(max-width:1375px)" href="${ STATIC_URL }homepage/styles/about-mobile.css">
+<script src="${ STATIC_URL }homepage/scripts/about.js"></script>
+</%block>
+
+<%block name="page_content">
+<div class="aboutContent">
+    <div id="groupBioDiv" class="slide">
+        <div id="imgDiv">
+            <img id='groupImage' src="${settings.IMAGE_URL}backgrounds/whitemembers.png">
+        </div>
+        <div class="groupBioText top" id="groupBioText">
+            <div id="groupBioTitle">
+                <div id="groupName">Rifftide </div><div style="display: inline-block;margin-left: 3vw;"> is a </div>
+                    <div class="scrollContent">
+                        <div class="scrollContentContainer">                                    
+                          <ul class="scrollContentList">
+                            <li class="scrollListItem">Vocal Group</li>
+                            <li class="scrollListItem darkTeal">Youtube Artist</li>
+                            <li class="scrollListItem">Acapella Group</li>
+                            <li class="scrollListItem darkTeal">Original Artist</li>
+                          </ul>
+                        </div>
+                      </div>
+            
+            </div>
+            <p id="groupBio">
+                that combines tight harmonies, crisp choreography, and unique concepts to 
+                create fun and engaging videos and performances. 
+            </p>
+            <a id="membersLink" onclick="scrollToDiv('memberProfile1')">Meet the Members!</a>
+            <!-- <p class="centerrow memberNameLinks">
+                <a onclick="scrollToDiv('memberProfile1')">Isaac</a> | 
+                <a onclick="scrollToDiv('memberProfile2')">Cara</a> | 
+                <a onclick="scrollToDiv('memberProfile3')">Sam</a> | 
+                <a onclick="scrollToDiv('memberProfile4')">Johnnie</a> | 
+                <a onclick="scrollToDiv('memberProfile5')">Laurel</a> | 
+                <a onclick="scrollToDiv('memberProfile6')">Ashley</a> | 
+                <a onclick="scrollToDiv('memberProfile7')">Nathan</a> | 
+                <a onclick="scrollToDiv('memberProfile8')">Rachel</a> 
+
+            </p> -->
+        </div>
+    </div>
+    <div id="memberProfiles">
+        <div id="memberProfile1" class="profile">
+            <div class="memberPhoto">
+                <img class="memberImg" src="${settings.IMAGE_URL}profiles/profile_isaac.png">
+            </div>
+            <div class="memberText">
+                <div class="memberNameDiv">
+                    <p class="memberName">Isaac</p>
+                    <p class="memberPart">Baritone<br>
+                        <span class="memberYear">2016 - Current</span>
+                    </p>
+                </div>
+                <div class="memberBioDiv">
+                    <p class="memberBio">
+                        Isaac McDougal has directed the group since 2017. In addition to be a sexy beast, he 
+                        is a smart Master's student studying Information System. Isaac is known as the dancing
+                        machine of the group, and has been the undisputed hip shaking king since 2016.
+                    </p>
+                    <div class="memberStrengths">
+                        <p class="strengthLeader">
+                            Director
+                        </p>
+                        <p class="strengthDance">
+                            Main Dancer
+                        </p>
+                        <p class="strengthVocal">
+                            Lead Vocalist
+                        </p>
+                        <p class="memberSocial">
+                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCardsDiv">
+                <div class="memberCardHolder">
+                    <a href="" class="cardLink" >
+                        <img class="memberCardImg" src="${settings.IMAGE_URL}profiles/cards_isaac.png">
+                        <p class="viewCardText">View Cards</p>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        <div id="memberProfile2" class="profile">
+            <div class="memberPhoto">
+                <img class="memberImg" src="${settings.IMAGE_URL}profiles/profile_cara.png">
+            </div>
+            <div class="memberText">
+                <div class="memberNameDiv">
+                    <p class="memberName">Cara</p>
+                    <p class="memberPart">Mezzo-Soprano<br>
+                        <span class="memberYear">2017 - Current</span>
+                    </p>
+                </div>
+                <div class="memberBioDiv">
+                    <p class="memberBio">
+                        Cara Nickels is Rifftide's hidden star. She loves to read, work at the library,
+                        and study English. But once she steps in front of a camera  or on a stage 
+                        she transforms into a sassy mermaid superstar, shining bright in teal sequins.
+                    </p>
+                    <div class="memberStrengths">
+                        <p class="strengthVocal">
+                            Main Vocalist
+                        </p>
+                        <p class="strengthDance">
+                            Lead Dancer
+                        </p>
+                                                            <p class="memberSocial">
+                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCardsDiv">
+                <div class="memberCardHolder">
+                    <a href="" class="cardLink" >
+                        <img class="memberCardImg" src="${settings.IMAGE_URL}profiles/cards_cara.png">
+                        <p class="viewCardText">View Cards</p>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        <div id="memberProfile3" class="profile">
+            <div class="memberPhoto">
+                <img class="memberImg" src="${settings.IMAGE_URL}profiles/profile_sam.png">
+            </div>
+            <div class="memberText">
+                <div class="memberNameDiv">
+                    <p class="memberName">Sam</p>
+                    <p class="memberPart">Vocal Percussion<br>
+                        <span class="memberYear">2018 - Current</span>
+                    </p>
+                </div>
+                <div class="memberBioDiv">
+                    <p class="memberBio">
+                        In addition to providing slick beats to structure the group's flow,
+                        Sam Hepworth has been the Vice President since 2019, assisting
+                        Isaac in the group's management, and communicated with all the artists in the 
+                        <a href="https://www.youtube.com/watch?v=HlIqYECqlCY" target="_blank">Hymn of Christmas</a>
+                        video. He is the undisputed king of Smash Bros.
+                    </p>
+                    <div class="memberStrengths">
+                        <p class="strengthLeader">
+                            Vice President
+                        </p>
+                        <p class="strengthBass">
+                            Main Beat
+                        </p>
+                        <p class="strengthDance">
+                            Lead Dancer
+                        </p>
+                                                            <p class="memberSocial">
+                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCardsDiv">
+                <div class="memberCardHolder">
+                    <a href="" class="cardLink" >
+                        <img class="memberCardImg" src="${settings.IMAGE_URL}profiles/cards_sam.png">
+                        <p class="viewCardText">View Cards</p>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        <div id="memberProfile4" class="profile">
+            <div class="memberPhoto">
+                <img class="memberImg" src="${settings.IMAGE_URL}profiles/profile_johnnie.png">
+            </div>
+            <div class="memberText">
+                <div class="memberNameDiv">
+                    <p class="memberName">Johnnie</p>
+                    <p class="memberPart">Bass<br>
+                        <span class="memberYear">2018 - Current</span>
+                    </p>
+                </div>
+                <div class="memberBioDiv">
+                    <p class="memberBio">
+                        In addition to providing slick beats to structure the group's flow,
+                        Sam Hepworth has been the Vice President since 2019, assisting
+                        Isaac in the group's management, and communicated with all the artists in the 
+                        <a href="https://www.youtube.com/watch?v=HlIqYECqlCY" target="_blank">Hymn of Christmas</a>
+                        video. He is the undisputed king of Smash Bros.
+                    </p>
+                    <div class="memberStrengths">
+                        <p class="strengthLeader">
+                            Vice President
+                        </p>
+                        <p class="strengthBass">
+                            Main Beat
+                        </p>
+                        <p class="strengthDance">
+                            Lead Dancer
+                        </p>
+                                                            <p class="memberSocial">
+                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCardsDiv">
+                <div class="memberCardHolder">
+                    <a href="" class="cardLink" >
+                        <img class="memberCardImg" src="${settings.IMAGE_URL}profiles/cards_johnnie.png">
+                        <p class="viewCardText">View Cards</p>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        <div id="memberProfile5" class="profile">
+            <div class="memberPhoto">
+                <img class="memberImg" src="${settings.IMAGE_URL}profiles/profile_laurel.png">
+            </div>
+            <div class="memberText">
+                <div class="memberNameDiv">
+                    <p class="memberName">Laurel</p>
+                    <p class="memberPart">Contralto<br>
+                        <span class="memberYear">2018 - Current</span>
+                    </p>
+                </div>
+                <div class="memberBioDiv">
+                    <p class="memberBio">
+                        In addition to providing slick beats to structure the group's flow,
+                        Sam Hepworth has been the Vice President since 2019, assisting
+                        Isaac in the group's management, and communicated with all the artists in the 
+                        <a href="https://www.youtube.com/watch?v=HlIqYECqlCY" target="_blank">Hymn of Christmas</a>
+                        video. He is the undisputed king of Smash Bros.
+                    </p>
+                    <div class="memberStrengths">
+                        <p class="strengthLeader">
+                            Vice President
+                        </p>
+                        <p class="strengthBass">
+                            Main Beat
+                        </p>
+                        <p class="strengthDance">
+                            Lead Dancer
+                        </p>
+                                                            <p class="memberSocial">
+                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCardsDiv">
+                <div class="memberCardHolder">
+                    <a href="" class="cardLink" >
+                        <img class="memberCardImg" src="${settings.IMAGE_URL}profiles/cards_laurel.png">
+                        <p class="viewCardText">View Cards</p>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        <div id="memberProfile6" class="profile">
+            <div class="memberPhoto">
+                <img class="memberImg" src="${settings.IMAGE_URL}profiles/profile_ashley.png">
+            </div>
+            <div class="memberText">
+                <div class="memberNameDiv">
+                    <p class="memberName">Ashley</p>
+                    <p class="memberPart">Bass<br>
+                        <span class="memberYear">2020 - Current</span>
+                    </p>
+                </div>
+                <div class="memberBioDiv">
+                    <p class="memberBio">
+                        In addition to providing slick beats to structure the group's flow,
+                        Sam Hepworth has been the Vice President since 2019, assisting
+                        Isaac in the group's management, and communicated with all the artists in the 
+                        <a href="https://www.youtube.com/watch?v=HlIqYECqlCY" target="_blank">Hymn of Christmas</a>
+                        video. He is the undisputed king of Smash Bros.
+                    </p>
+                    <div class="memberStrengths">
+                        <p class="strengthLeader">
+                            Vice President
+                        </p>
+                        <p class="strengthBass">
+                            Main Beat
+                        </p>
+                        <p class="strengthDance">
+                            Lead Dancer
+                        </p>
+                                                            <p class="memberSocial">
+                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCardsDiv">
+                <div class="memberCardHolder">
+                    <a href="" class="cardLink" >
+                        <img class="memberCardImg" src="${settings.IMAGE_URL}profiles/cards_ashley.png">
+                        <p class="viewCardText">View Cards</p>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        <div id="memberProfile7" class="profile">
+            <div class="memberPhoto">
+                <img class="memberImg" src="${settings.IMAGE_URL}profiles/profile_nathan.png">
+            </div>
+            <div class="memberText">
+                <div class="memberNameDiv">
+                    <p class="memberName">Nathan</p>
+                    <p class="memberPart">Tenor<br>
+                        <span class="memberYear">2020 - Current</span>
+                    </p>
+                </div>
+                <div class="memberBioDiv">
+                    <p class="memberBio">
+                        In addition to providing slick beats to structure the group's flow,
+                        Sam Hepworth has been the Vice President since 2019, assisting
+                        Isaac in the group's management, and communicated with all the artists in the 
+                        <a href="https://www.youtube.com/watch?v=HlIqYECqlCY" target="_blank">Hymn of Christmas</a>
+                        video. He is the undisputed king of Smash Bros.
+                    </p>
+                    <div class="memberStrengths">
+                        <p class="strengthLeader">
+                            Vice President
+                        </p>
+                        <p class="strengthBass">
+                            Main Beat
+                        </p>
+                        <p class="strengthDance">
+                            Lead Dancer
+                        </p>
+                                                            <p class="memberSocial">
+                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCardsDiv">
+                <div class="memberCardHolder">
+                    <a href="" class="cardLink" >
+                        <img class="memberCardImg" src="${settings.IMAGE_URL}profiles/cards_nate.png">
+                        <p class="viewCardText">View Cards</p>
+                    </a>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spacer">
+        
+    </div>
+    <div id="pastGroups">
+        <div id="pastGroupsTitle">
+            <hr>
+            Previous Members:
+        </div>
+        <div class="pastGroupDiv" id="pastGroup1">
+            <div class="pastGroupImgDiv">
+                <img class="pastGroupImage" src="${settings.IMAGE_URL}profiles/2019Group.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastGroupYear">
+                        2019 - 2020
+                    </div>
+                    <div class="pastMembersList">
+                            Members (Left to Right)
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile5',2000)">Laurel Scott</a>
+                        </p>
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            Loryn Norton
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile3',2000)">Sam Hepworth</a>
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Bri Ellis
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile4')">Johnnie Johnson</a>
+                        </p>
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=HlIqYECqlCY" target="blank">Keep You With Me (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/rifftide" target="blank">Hymn of Christmas (Music Video)</a>
+                        </p>
+                        <p>
+                            ICCA Quarterfinalists
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=lzzlMHUzzcs" target="blank">BooLights and ZooLights </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+
+        </div>
+        <div class="pastGroupDiv" id="pastGroup2">
+            <div class="pastGroupImgDiv">
+                <img class="pastGroupImage" src="${settings.IMAGE_URL}profiles/2018Group.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastGroupYear">
+                        2018 - 2019
+                    </div>
+                    <div class="pastMembersList">
+                            Members (Left to Right)
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            Bri Ellis
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile4',2000)">Johnnie Johnson</a>
+                        </p>
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Brennan Butikofer
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile3',2000)">Sam Hepworth</a>
+                        </p>
+                        <p>
+                            Emily Grether
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=qIh-JV3RuSY" target="blank">Dream (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=RP2v7NnYGmg" target="blank">Just Evacuate (Music Video)</a>
+                        </p>
+                        <p>
+                            ICCA Semifinalists
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=xxvguUI8Loo&list=PLJaVJrQa31zPDbN0BIjDQpIJyUlnOwbfg" target="blank">Rifftide In Concert </a>
+                        </p>
+                        <p>
+                            Living Room Sessions
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup3">
+            <div class="pastGroupImgDiv">
+                <img class="pastGroupImage" src="${settings.IMAGE_URL}profiles/2018Spring.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastGroupYear">
+                        Spring 2018
+                    </div>
+                    <div class="pastMembersList">
+                            Members (Left to Right)
+                        <p>
+                            Jordan Alton
+                        </p>
+                        <p>
+                            Brennan Butikofer
+                        </p>
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            Arielle DeJesus
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            Caden Hobson
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                        <p>
+                            BYU Riff-Off
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup4">
+            <div class="pastGroupImgDiv">
+                <img class="pastGroupImage" src="${settings.IMAGE_URL}profiles/2017Fall.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastGroupYear">
+                    Fall 2017
+                    </div>
+                    <div class="pastMembersList">
+                            Members (Left to Right)
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            NataLee Hawkins
+                        </p>
+                        <p>
+                            Jordan Alton
+                        </p>
+                        <p>
+                            Brennan Butikofer
+                        </p>
+                        <p>
+                            Nate Hicken
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=m_tNbxop1FY" target="blank">What Child Is This? (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=kb7QOECMsW8" target="blank">Move Along (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://open.spotify.com/track/5gkvoWxI42qMeJZfGiU2HT" target="blank">Best of BYU Acapella CD</a>
+                        </p>
+                        <p>
+                            Feed the World Concert
+                        </p>
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup5">
+            <div class="pastGroupImgDiv">
+                <img class="pastGroupImage" src="${settings.IMAGE_URL}profiles/2017Spring.JPG">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastGroupYear">
+                        Spring 2017
+                    </div>
+                    <div class="pastMembersList">
+                            Members (Left to Right)
+                        <p>
+                            Mark Hanson
+                        </p>
+                        <p>
+                            Nate Hicken
+                        </p>
+                        <p>
+                            Rachel Turner
+                        </p>
+                        <p>
+                            Rebekah Gabbitas
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Emily Grether
+                        </p>
+                        <p>
+                            Ethan Walch
+                        </p>
+                        <p>
+                            Jordan Alton
+                        </p>
+                        <p>
+                            LaurieAnn Clark
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=qVLX-Iw66Xw" target="blank">Keep Flying Bravely (Lyric Video)</a>
+                        </p>
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup6">
+            <div class="pastGroupImgDiv">
+                <img class="pastGroupImage" src="${settings.IMAGE_URL}profiles/2016Fall.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastGroupYear">
+                        Fall 2016
+                    </div>
+                    <div class="pastMembersList">
+                            Members (Left to Right)
+                        <p>
+                            Rachel Turner
+                        </p>
+                        <p>
+                            Ethan Walch
+                        </p>
+                        <p>
+                            NataLee Hawkins
+                        </p>
+                        <p>
+                            Johnny Alan Price
+                        </p>
+                        <p>
+                            Mark Hanson
+                        </p>
+                        <p>
+                            Rebekah Gabbitas
+                        </p>
+                        <p>
+                            LaurieAnn Clark
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',4000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Jordan Alton
+                        </p>
+
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=7dsw2vkYSoU" target="blank">Sing! (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://open.spotify.com/track/21MRxIXhL9UzRTcgjEnG8V" target="blank">Best of BYU A Cappella CD</a>
+                        </p>
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+
+        </div>
+    </div>
+    <div id="pastGroupsMobile">
+        <div id="pastGroupsTitle">
+            <hr>
+            Previous Members:
+        </div>
+        <div class="pastGroupDiv" id="pastGroup1">
+            <div class="pastGroupYear">
+                2019 - 2020
+            </div>
+            <div class="pastGroupImgDivMobile">
+                <img class="pastGroupImageMobile" src="${settings.IMAGE_URL}profiles/2019Group.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastMembersList">
+                            Members (Left to Right)<br>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile5',2000)">Laurel Scott</a>
+                        </p>
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            Loryn Norton
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile3',2000)">Sam Hepworth</a>
+                        </p>
+                        <p>
+
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Bri Ellis
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile4')">Johnnie Johnson</a>
+                        </p>
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:<br>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=HlIqYECqlCY" target="blank">Keep You With Me (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/rifftide" target="blank">Hymn of Christmas (Music Video)</a>
+                        </p>
+                        <p>
+                            ICCA Quarterfinalists
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=lzzlMHUzzcs" target="blank">BooLights and ZooLights </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+
+        </div>
+        <div class="pastGroupDiv" id="pastGroup2">
+            <div class="pastGroupYear">
+                2018 - 2019
+            </div>
+            <div class="pastGroupImgDivMobile">
+                <img class="pastGroupImageMobile" src="${settings.IMAGE_URL}profiles/2018Group.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+
+                    <div class="pastMembersList">
+                            Members (Left to Right)<br>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            Bri Ellis
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile4',2000)">Johnnie Johnson</a>
+                        </p>
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Brennan Butikofer
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile3',2000)">Sam Hepworth</a>
+                        </p>
+                        <p>
+                            Emily Grether
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:<br>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=qIh-JV3RuSY" target="blank">Dream (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=RP2v7NnYGmg" target="blank">Just Evacuate (Music Video)</a>
+                        </p>
+                        <p>
+                            ICCA Semifinalists
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=xxvguUI8Loo&list=PLJaVJrQa31zPDbN0BIjDQpIJyUlnOwbfg" target="blank">Rifftide In Concert </a>
+                        </p>
+                        <p>
+                            Living Room Sessions
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup3">
+            <div class="pastGroupYear">
+                Spring 2018
+            </div>
+            <div class="pastGroupImgDivMobile">
+                <img class="pastGroupImageMobile" src="${settings.IMAGE_URL}profiles/2018Spring.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+                    <div class="pastMembersList">
+                            Members (Left to Right)<br>
+                        <p>
+                            Jordan Alton
+                        </p>
+                        <p>
+                            Brennan Butikofer
+                        </p>
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            Arielle DeJesus
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            Caden Hobson
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:<br>
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                        <p>
+                            BYU Riff-Off
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup4">
+            <div class="pastGroupYear">
+                Fall 2017
+                </div>
+            <div class="pastGroupImgDivMobile">
+                <img class="pastGroupImageMobile" src="${settings.IMAGE_URL}profiles/2017Fall.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+
+                    <div class="pastMembersList">
+                            Members (Left to Right)<br>
+                        <p>
+                            Zach Boyce
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile2',2000)">Cara Nickels</a>
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            NataLee Hawkins
+                        </p>
+                        <p>
+                            Jordan Alton
+                        </p>
+                        <p>
+                            Brennan Butikofer
+                        </p>
+                        <p>
+                            Nate Hicken
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:<br>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=m_tNbxop1FY" target="blank">What Child Is This? (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=kb7QOECMsW8" target="blank">Move Along (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://open.spotify.com/track/5gkvoWxI42qMeJZfGiU2HT" target="blank">Best of BYU Acapella CD</a>
+                        </p>
+                        <p>
+                            Feed the World Concert
+                        </p>
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup5">
+            <div class="pastGroupYear">
+                Spring 2017
+            </div>
+            <div class="pastGroupImgDivMobile">
+                <img class="pastGroupImageMobile" src="${settings.IMAGE_URL}profiles/2017Spring.JPG">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+
+                    <div class="pastMembersList">
+                            Members (Left to Right)<br>
+                        <p>
+                            Mark Hanson
+                        </p>
+                        <p>
+                            Nate Hicken
+                        </p>
+                        <p>
+                            Rachel Turner
+                        </p>
+                        <p>
+                            Rebekah Gabbitas
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',2000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Emily Grether
+                        </p>
+                        <p>
+                            Ethan Walch
+                        </p>
+                        <p>
+                            Jordan Alton
+                        </p>
+                        <p>
+                            LaurieAnn Clark
+                        </p>
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=qVLX-Iw66Xw" target="blank">Keep Flying Bravely (Lyric Video)</a>
+                        </p>
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+        </div>
+        <div class="pastGroupDiv" id="pastGroup6">
+            <div class="pastGroupYear">
+                Fall 2016
+            </div>
+            <div class="pastGroupImgDivMobile">
+                <img class="pastGroupImageMobile" src="${settings.IMAGE_URL}profiles/2016Fall.jpg">
+            </div>
+            <div class="pastGroupTextDiv">
+                <div class="pastGroupText">
+
+                    <div class="pastMembersList">
+                            Members (Left to Right)<br>
+                        <p>
+                            Rachel Turner
+                        </p>
+                        <p>
+                            Ethan Walch
+                        </p>
+                        <p>
+                            NataLee Hawkins
+                        </p>
+                        <p>
+                            Johnny Alan Price
+                        </p>
+                        <p>
+                            Mark Hanson
+                        </p>
+                        <p>
+                            Rebekah Gabbitas
+                        </p>
+                        <p>
+                            LaurieAnn Clark
+                        </p>
+                        <p>
+                            <a onclick="scrollToDiv('memberProfile1',4000)">Isaac McDougal</a>
+                        </p>
+                        <p>
+                            Jordan Alton
+                        </p>
+
+
+
+
+                    </div>
+                    <br>
+                    <div class="pastEventsList">
+                        Notable Events:<br>
+                        <p>
+                            <a href="https://www.youtube.com/watch?v=7dsw2vkYSoU" target="blank">Sing! (Music Video)</a>
+                        </p>
+                        <p>
+                            <a href="https://open.spotify.com/track/21MRxIXhL9UzRTcgjEnG8V" target="blank">Best of BYU A Cappella CD</a>
+                        </p>
+                        <p>
+                            BYU A Cappella Jam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pastGroupSpacer">
+
+        </div>
+    </div>
+    <div id="founding">
+        <div id="ourStoryBody" class="foundingContent">
+            <div class="foundingImages">
+                <img class="foundingBanner" src="${settings.IMAGE_URL}backgrounds/leftPhotos.png">
+                <img class="foundingBanner overlay" src="${settings.IMAGE_URL}backgrounds/whiteoverlay.png">
+                <img class="foundingBanner bannerLine" src="${settings.IMAGE_URL}backgrounds/leftLines.png">
+            </div>
+            <div id="storyBody"> 
+                <div id="ourStoryTitle" class="foundingTitle">
+                    Our Story
+                </div>
+                <div class="foundingText">
+                    <b>&emsp;&emsp;     It all started</b> fall semseter of 2016 when two BYU Students, NataLee Hawkins and Johnny Price teamed up to start a new collegiate a cappella group named “Riff Tide”. They joined the Brigham Young University A Cappella club, auditioning 6 singers to join the group, but were left with no percussionist.
+                    <br><br>&emsp;&emsp;Just a week after the group was formed, NataLee walked through campus and happened upon a student beatboxing on his way to class. She stopped him and asked him to audition, and just a few days later Jordan Alton joined the group as the official percussionist. Riff Tide practiced hard their first semester and were invited to perform in the BYU A Cappella club’s exclusive semi-annual Jam. They also were selected to be recorded for the Best Of BYU A Cappella CD. 
+                    <br><br>&emsp;&emsp;The following semester, alto LaurieAnn Clark and Jordan directed the group while the founding directors left for other pursuits. Again, this new group were selected to perform in the Club’s jam. That semester they also released their first music video “Sing!” which was received with much acclaim and helped solidify the group’s online presence. The group took a hiatus from performing the following summer., but released a lyric video for “Keep Flying Bravely” an original mashup written by Jordan that July. 
+                    <br><br>&emsp;&emsp;Entering the next school year, the group came back with only 4 remaining members, including the return of founder NataLee. With such a large loss of personnel, the group decided to cut it’s membership down to just 7, with no doubling of parts. Isaac McDougal, baritone in the original group, replaced Laurie and Jordan as the new group director. 
+                    <br><br>&emsp;&emsp;After auditioning for the remaining 3 parts, Rifftide got to work. Through their efforts the group started to grow rapidly. In addition to several other performances, that semester they hosted their very first concert, entitled “Feed The World”. They invited local groups to perform alongside them to raise food for local shelters and money for the Miracle Network Children’s Hospitals. The concert had a full house, including several audience members sitting in overflow sections. They also released two more music videos, both Christmas themed. Their “What Child Is This” video was accepted with similar acclaim to “Sing!”
+                    <br><br>&emsp;&emsp;The next semester things only got better. In just a year, Rifftide’s online following continued to grow, passing several of their fellow collegiate groups. The group performed at several other concerts, and their cover of “Move Along” was selected for the Best of BYU A Cappella 2018 CD, and an accompanying music video was released a few months later.
+                    <br><br>&emsp;&emsp;On April 11th at the BYU A Cappella Jam, Rifftide announced that they would be leaving the BYU A Cappella club and continuing as an independent group, leaving behind a legacy. To date they are one of the only groups to be invited to perform in every A Cappella Jam during their existence, and to be featured on every Best of BYU A Cappella CD while part of the club. 
+                    <br><br>&emsp;&emsp;After leaving BYU, Rifftide added an additional alto, increasing the group membership to 8. They have continued to grow and release new music, including the song and video "Dream". Rifftide hosted their first solo concert in March of 2018 and were semifinalists in the ICCA competition that same month. They filmed a new Music Video in April of that year, and in September released "Just Evacuate".
+                    <br><br>&emsp;&emsp;During the second year as an independent A Cappella group, Rifftide coordinated a christmas video featuring 13 artists titled "Hymn of Christmas", performed for the Hogle Zoo at their "BooLights" and "ZooLights" events, and competed in the quarterfinals of the ICCA competition. 
+                    <br><br>&emsp;&emsp;Starting in April of 2020, Rifftide decided to rebrand from "Rifftide Acapella" to just "Rifftide", switching their emphasis from performing cover songs to releasing original music. The first original song, "Keep You With Me" was released April 25th. 
+                    <br><br>&emsp;&emsp;Rifftide continues to create music videos and execute live performances. They anticipate releasing another video in the Fall of 2020.
+                    <br><br>&emsp;&emsp;<i>Stay tuned for more, this group's future is as bright as their shiny teal outfits.</i>
+                </div>
+            </div>
+            <div class="foundingImages">
+                <img class="foundingBanner" src="${settings.IMAGE_URL}backgrounds/rightPhotos.png">
+                <img class="foundingBanner overlay" src="${settings.IMAGE_URL}backgrounds/whiteoverlay.png">
+                <img class="foundingBanner bannerLine" src="${settings.IMAGE_URL}backgrounds/rightLines.png">
+            </div>
+        </div>
+        <div id="bottomPic">
+            <img src="${settings.IMAGE_URL}backgrounds/bottom photos.png">
+        </div>
+    </div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+<script type="text/javascript">
+    //let showLocation;
+    function ready(fn) {
+        if (document.readyState != 'loading') {
+            fn();
+        } else {
+            document.addEventListener('DOMContentLoaded', fn);
+        }
+    }
+
+    ready(function () {
+        Global.init();
+        About.init();
+        scrollToDiv = Global.scrollToDiv
+        cardHoverOn = About.cardHoverOn
+        cardHoverOff = About.cardHoverOff
+    });
+</script>
+</%block>
