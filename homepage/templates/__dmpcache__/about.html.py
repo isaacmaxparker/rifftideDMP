@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1586921498.2590513
+_modified_time = 1586923121.368014
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/about.html'
 _template_uri = 'about.html'
@@ -30,17 +30,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def page_content():
-            return render_page_content(context._locals(__M_locals))
-        def page_scripts():
-            return render_page_scripts(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        settings = context.get('settings', UNDEFINED)
         def page_title():
             return render_page_title(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def page_scripts():
+            return render_page_scripts(context._locals(__M_locals))
         def page_links():
             return render_page_links(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        settings = context.get('settings', UNDEFINED)
+        def page_content():
+            return render_page_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -83,9 +83,9 @@ def render_page_links(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        self = context.get('self', UNDEFINED)
         def page_links():
             return render_page_links(context)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n<link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
@@ -102,10 +102,10 @@ def render_page_links(context,**pageargs):
 def render_page_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        settings = context.get('settings', UNDEFINED)
         def page_content():
             return render_page_content(context)
         self = context.get('self', UNDEFINED)
-        settings = context.get('settings', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div class="aboutContent">\r\n    <div id="groupBioDiv" class="slide">\r\n        <div id="imgDiv">\r\n            <img id=\'groupImage\' src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))

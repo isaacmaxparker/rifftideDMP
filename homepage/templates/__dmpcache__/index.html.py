@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1586839205.3168697
+_modified_time = 1586923494.0675354
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/index.html'
 _template_uri = 'index.html'
@@ -30,16 +30,16 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        def page_content():
+            return render_page_content(context._locals(__M_locals))
+        def page_title():
+            return render_page_title(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
         def page_scripts():
             return render_page_scripts(context._locals(__M_locals))
-        def page_title():
-            return render_page_title(context._locals(__M_locals))
         settings = context.get('settings', UNDEFINED)
-        def page_content():
-            return render_page_content(context._locals(__M_locals))
         __M_writer = context.writer()
-        __M_writer('\r\n\r\n')
+        __M_writer('\r\n\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
             context['self'].page_title(**pageargs)
         
@@ -74,10 +74,10 @@ def render_page_title(context,**pageargs):
 def render_page_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
-        settings = context.get('settings', UNDEFINED)
         def page_content():
             return render_page_content(context)
+        settings = context.get('settings', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div class="homeContent">\r\n  <div class="slide" id="slide1">\r\n      <div class="imgDiv" id="imgDiv1">\r\n          <div class="blackCover"></div>\r\n          <img class="homeSlideImage" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( settings.IMAGE_URL ))
@@ -111,6 +111,6 @@ def render_page_scripts(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"29": 0, "42": 1, "47": 3, "52": 134, "62": 3, "68": 3, "74": 5, "82": 5, "83": 10, "84": 10, "85": 26, "86": 26, "87": 48, "88": 48, "89": 70, "90": 70, "91": 92, "92": 92, "93": 114, "94": 114, "100": 136, "106": 136, "112": 106}}
+{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"29": 0, "42": 1, "47": 4, "52": 135, "62": 4, "68": 4, "74": 6, "82": 6, "83": 11, "84": 11, "85": 27, "86": 27, "87": 49, "88": 49, "89": 71, "90": 71, "91": 93, "92": 93, "93": 115, "94": 115, "100": 137, "106": 137, "112": 106}}
 __M_END_METADATA
 """
