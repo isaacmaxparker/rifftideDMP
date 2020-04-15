@@ -190,7 +190,7 @@
 
 .memberImg{
   max-width:30vw;
-  width: auto;
+  width: 85%;
   filter: grayscale(100%);
   opacity: .1;
 }
