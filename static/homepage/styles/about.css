@@ -285,10 +285,16 @@
   color:rgb(8, 85, 8);
 }
 .strengthDance{
-  color: rgb(102, 87, 1);
+  color: rgb(182, 158, 26);
 }
 .strengthVocal{
   color:rgb(6, 6, 102);
+}
+.strengthVisual{
+  color:rgb(72, 6, 102);
+}
+.strengthRap{
+  color:rgb(167, 97, 17);
 }
 
 .viewCardText{
@@ -299,6 +305,7 @@
   font-size: 3vw;
   font-family: "Renner";
   opacity: 0 ;
+  left:4vw;
 }
 
 .mobileCardsDiv{
