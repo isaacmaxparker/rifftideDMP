@@ -26,9 +26,11 @@
         color:rgb(19, 194, 194);
       }
       #membersLink{
+        display: none;
         font-size: 9vw;
       }
       .memberNameLinks{
+        display: none;
         font-size: 3vw;
         opacity: .8;
       }
