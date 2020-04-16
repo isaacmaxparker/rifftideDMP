@@ -88,6 +88,13 @@ body{
     margin:0;
 }
 
+.lilMenu{
+    display: none;
+}
+.bigMenu{
+    display: block;
+}
+
  /* FOOTER */
  #content{
      min-height: calc(100vh - 6vw);
@@ -176,3 +183,4 @@ body{
     text-align: center;
     max-height: 100vh;
 }
+

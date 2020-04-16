@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1587009264.093163
+_modified_time = 1587013439.7883995
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/resources/templates/music.html'
 _template_uri = 'music.html'
@@ -30,17 +30,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        settings = context.get('settings', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         def page_content():
             return render_page_content(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        def page_title():
-            return render_page_title(context._locals(__M_locals))
-        def page_scripts():
-            return render_page_scripts(context._locals(__M_locals))
+        settings = context.get('settings', UNDEFINED)
         def page_links():
             return render_page_links(context._locals(__M_locals))
+        def page_scripts():
+            return render_page_scripts(context._locals(__M_locals))
+        def page_title():
+            return render_page_title(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -82,16 +82,16 @@ def render_page_title(context,**pageargs):
 def render_page_links(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         self = context.get('self', UNDEFINED)
         def page_links():
             return render_page_links(context)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n<link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
         __M_writer('resources/styles/music.css">\r\n<link rel="stylesheet" media="(max-width:1240px)" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
-        __M_writer('resources/styles/music-mobile.css">\r\n')
+        __M_writer('resources/styles/music-mobile.css">\r\n<script>\r\n      fadeIn = function(element,opacity=1,addtnl=0){\r\n      $(element).animate({\'opacity\':opacity},800)\r\n      if (addtnl !== 0){\r\n      $(addtnl).animate({\'opacity\':opacity},800)\r\n      }\r\n    }\r\n</script>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -100,9 +100,9 @@ def render_page_links(context,**pageargs):
 def render_page_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        settings = context.get('settings', UNDEFINED)
         def page_content():
             return render_page_content(context)
+        settings = context.get('settings', UNDEFINED)
         self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="musicsContent">\r\n    <div id="musicsList">\r\n        <div class="music">\r\n            <div class="musicImgDiv">\r\n                <img onload="fadeIn(this,.4)" src="')
@@ -159,7 +159,7 @@ def render_page_scripts(context,**pageargs):
         def page_scripts():
             return render_page_scripts(context)
         __M_writer = context.writer()
-        __M_writer('\r\n    <script type="text/javascript">\r\n        //let showLocation;\r\n        function ready(fn) {\r\n            if (document.readyState != \'loading\') {\r\n                fn();\r\n            } else {\r\n                document.addEventListener(\'DOMContentLoaded\', fn);\r\n            }\r\n        }\r\n\r\n        ready(function () {\r\n            Global.init();\r\n            fadeIn = Global.fadeIn\r\n            scrollToDiv = Global.scrollToDiv\r\n        });\r\n    </script>\r\n')
+        __M_writer('\r\n    <script type="text/javascript">\r\n        //let showLocation;\r\n        function ready(fn) {\r\n            if (document.readyState != \'loading\') {\r\n                fn();\r\n            } else {\r\n                document.addEventListener(\'DOMContentLoaded\', fn);\r\n            }\r\n        }\r\n\r\n        ready(function () {\r\n            Global.init();\r\n            scrollToDiv = Global.scrollToDiv\r\n        });\r\n    </script>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -167,6 +167,6 @@ def render_page_scripts(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/isaac/rifftideDMP/resources/templates/music.html", "uri": "music.html", "source_encoding": "utf-8", "line_map": {"29": 0, "45": 1, "50": 3, "55": 9, "60": 253, "70": 3, "76": 3, "82": 5, "90": 5, "91": 7, "92": 7, "93": 8, "94": 8, "100": 11, "108": 11, "109": 16, "110": 16, "111": 20, "112": 20, "113": 49, "114": 49, "115": 52, "116": 52, "117": 62, "118": 62, "119": 66, "120": 66, "121": 93, "122": 93, "123": 103, "124": 103, "125": 107, "126": 107, "127": 135, "128": 135, "129": 145, "130": 145, "131": 149, "132": 149, "133": 177, "134": 177, "135": 187, "136": 187, "137": 191, "138": 191, "139": 220, "140": 220, "141": 236, "142": 236, "143": 239, "144": 239, "145": 242, "146": 242, "147": 245, "148": 245, "149": 248, "150": 248, "156": 255, "162": 255, "168": 162}}
+{"filename": "C:/Users/isaac/rifftideDMP/resources/templates/music.html", "uri": "music.html", "source_encoding": "utf-8", "line_map": {"29": 0, "45": 1, "50": 3, "55": 17, "60": 261, "70": 3, "76": 3, "82": 5, "90": 5, "91": 7, "92": 7, "93": 8, "94": 8, "100": 19, "108": 19, "109": 24, "110": 24, "111": 28, "112": 28, "113": 57, "114": 57, "115": 60, "116": 60, "117": 70, "118": 70, "119": 74, "120": 74, "121": 101, "122": 101, "123": 111, "124": 111, "125": 115, "126": 115, "127": 143, "128": 143, "129": 153, "130": 153, "131": 157, "132": 157, "133": 185, "134": 185, "135": 195, "136": 195, "137": 199, "138": 199, "139": 228, "140": 228, "141": 244, "142": 244, "143": 247, "144": 247, "145": 250, "146": 250, "147": 253, "148": 253, "149": 256, "150": 256, "156": 263, "162": 263, "168": 162}}
 __M_END_METADATA
 """

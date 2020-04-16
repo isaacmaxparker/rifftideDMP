@@ -129,6 +129,7 @@ img{
     margin-left:1vw;
 }
 .listenNow img{
+    opacity: 1;
 max-width: 2vw;
 filter: brightness(0%);
 }

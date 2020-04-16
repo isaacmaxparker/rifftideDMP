@@ -6,6 +6,14 @@
 
 <link rel="stylesheet" href="${ STATIC_URL }resources/styles/videos.css">
 <link rel="stylesheet" media="(max-width:1240px)" href="${ STATIC_URL }resources/styles/videos-mobile.css">
+<script>
+    fadeIn = function(element,opacity=1,addtnl=0){
+    $(element).animate({'opacity':opacity},800)
+    if (addtnl !== 0){
+    $(addtnl).animate({'opacity':opacity},800)
+    }
+  }
+</script>
 </%block>
 
 <%block name="page_content">

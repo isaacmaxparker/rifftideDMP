@@ -13,8 +13,10 @@
 
         ## add any site-wide scripts or CSS here; for example, jquery:
         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/global.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="${ STATIC_URL }homepage/scripts/global.js"></script>
+        <link rel="stylesheet" media="(max-width:1275px)" href="${ STATIC_URL }homepage/styles/global-mobile.css">
         <%block name = "page_links">
         <link rel="stylesheet" href="${ STATIC_URL }homepage/styles/home.css">
         <link rel="stylesheet" media="(max-width:1375px)" href="${ STATIC_URL }homepage/styles/home-mobile.css">
@@ -26,11 +28,16 @@
         <script src="/django_mako_plus/dmp-common.min.js"></script>
         
         <link rel="icon" href="${settings.IMAGE_URL}logos/favicon.ico">
-
+        <script>
+            function checks(passed){
+                document.getElementById('navCheck').checked = !passed
+                document.getElementById('navCheck2').checked = !passed
+            }
+        </script>
     </head>
     <body>
         <div id="header">
-            <div id="nav">
+            <div id="nav" class="bigMenu">
                 <div class="navHead">
                     <a href="/"><img class="navLogo" src="${settings.IMAGE_URL}logos/thick logo - darker.png" alt="Rifftide Logo"></a>
                 </div>
@@ -45,6 +52,45 @@
                         <a href="/resources/">Resources</a>
                     </li>
                 </ul>
+            </div>
+            <div class="lilMenu">
+
+                <div id="menuToggle">
+                    <div class="navHead">
+                        <a href="/"><img class="navLogo" src="${settings.IMAGE_URL}logos/thick logo - darker.png" alt="Rifftide Logo"></a>
+                    </div>
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                   
+                    
+                    <!--
+                    Some spans to act as a hamburger.
+                    
+                    They are acting like a real hamburger,
+                    not that McDonalds stuff.
+                    -->
+                    <input id="navCheck" type="checkbox"/>
+        
+                    <div class="spans" onclick="checks(document.getElementById('navCheck').checked)">
+                        <input id="navCheck2" type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                    <!--
+                    Too bad the menu has to be inside of the button
+                    but hey, it's pure CSS magic.
+                    -->
+                    <ul id="menu">
+                      <a href="#"><li>Home</li></a>
+                      <a href="#"><li>About</li></a>
+                      <a href="#"><li>Info</li></a>
+                      <a href="#"><li>Contact</li></a>
+                      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                    </ul>
+                  </div>
             </div>
         </div>
         <div id="content" class="content-wrap">
