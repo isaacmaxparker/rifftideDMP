@@ -1,0 +1,72 @@
+#imgDiv{
+    height: 100%;
+    margin-bottom: -10px;
+    position: fixed;
+    z-index: 0;
+    background-color: black; 
+}
+body{
+    overflow: hidden;
+}
+#backgroundImage{
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width:100vw;
+    max-height: 100vh;;
+    object-fit: cover;
+    object-position: 50% 50%;
+    opacity: .3;
+}
+#content{
+    min-height: calc(100vh - 55px - 6vw);
+    max-height: calc(100vh - 55px - 6vw);
+}
+hr{
+    margin-top:0vh;
+    margin-bottom: 0vh;
+}
+
+#resourceListContainer{
+    overflow: hidden;
+    height: calc(65vh - 55px - 6vw);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 85%, transparent 100%);
+}
+#resourcesList{
+    overflow-y: auto;
+    max-height:calc(65vh - 60px - 6vw);
+    padding-right: 15px;
+}
+#resourcesGrid{
+    position: relative;
+    margin-top: 55px;
+    font-family: 'Renner';
+    font-size: 15vw;
+    color:white;
+    z-index: 5;
+    padding: 5vh 5vw;
+    text-shadow: 2px 2px #000000;
+    max-height:100%;
+}
+#resourcesTitle{
+    margin-bottom: 1.7vw;
+}
+
+.resource{
+margin-top: 2vh;
+margin-bottom: 2vh;
+}
+.resourceName{
+    font-size: 40%;
+}
+.resourceDetails{
+    font-size: 20%;
+    color: rgb(175, 175, 175);
+    margin-left:5vw;
+    margin-top: 1vh;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}

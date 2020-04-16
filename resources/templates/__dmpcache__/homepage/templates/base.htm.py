@@ -5,10 +5,10 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1587004910.0502417
+_modified_time = 1587004911.2473285
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/base.htm'
-_template_uri = 'base.htm'
+_template_uri = '/homepage/templates/base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
@@ -124,6 +124,6 @@ def render_page_scripts(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 0, "34": 2, "39": 12, "40": 15, "41": 15, "42": 15, "43": 17, "44": 17, "49": 22, "50": 26, "51": 28, "52": 28, "53": 35, "54": 35, "59": 52, "64": 81, "70": 12, "81": 18, "89": 18, "90": 19, "91": 19, "92": 20, "93": 20, "94": 21, "95": 21, "101": 51, "107": 51, "113": 64, "119": 64, "125": 119}}
+{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/base.htm", "uri": "/homepage/templates/base.htm", "source_encoding": "utf-8", "line_map": {"18": 0, "34": 2, "39": 12, "40": 15, "41": 15, "42": 15, "43": 17, "44": 17, "49": 22, "50": 26, "51": 28, "52": 28, "53": 35, "54": 35, "59": 52, "64": 81, "70": 12, "81": 18, "89": 18, "90": 19, "91": 19, "92": 20, "93": 20, "94": 21, "95": 21, "101": 51, "107": 51, "113": 64, "119": 64, "125": 119}}
 __M_END_METADATA
 """

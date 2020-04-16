@@ -1,0 +1,8 @@
+@media(min-width:2000px){
+    #resourceListContainer{
+        height: calc(60vh - 55px - 6vw);
+    }
+    #resourcesList{
+        max-height:calc(60vh - 60px - 6vw);
+    }
+}

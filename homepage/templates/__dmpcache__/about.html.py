@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1586983131.4064674
+_modified_time = 1587004873.185505
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/about.html'
 _template_uri = 'about.html'
@@ -30,17 +30,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        settings = context.get('settings', UNDEFINED)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def page_content():
             return render_page_content(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def page_links():
-            return render_page_links(context._locals(__M_locals))
         def page_scripts():
             return render_page_scripts(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
+        settings = context.get('settings', UNDEFINED)
         def page_title():
             return render_page_title(context._locals(__M_locals))
+        def page_links():
+            return render_page_links(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -82,10 +82,10 @@ def render_page_title(context,**pageargs):
 def render_page_links(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        self = context.get('self', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def page_links():
             return render_page_links(context)
-        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n<link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
@@ -102,8 +102,8 @@ def render_page_links(context,**pageargs):
 def render_page_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        settings = context.get('settings', UNDEFINED)
         self = context.get('self', UNDEFINED)
+        settings = context.get('settings', UNDEFINED)
         def page_content():
             return render_page_content(context)
         __M_writer = context.writer()
@@ -123,9 +123,9 @@ def render_page_content(context,**pageargs):
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('profiles/cards_sam.png">\r\n                        <p class="viewCardText">View<br>Cards</p>\r\n                    </a>    \r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div id="memberProfile4" class="profile">\r\n            <div class="memberPhoto">\r\n                <img class="memberImg" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('profiles/profile_johnnie.png">\r\n            </div>\r\n            <div class="memberText">\r\n                <div class="memberNameDiv">\r\n                    <p class="memberName" style="margin-bottom:1vh;">Johnnie</p>\r\n                    <p class="memberPart">Bass<br>\r\n                        <span class="memberYear">2018 - Current</span>\r\n                    </p>\r\n                </div>\r\n                <div class="memberBioDiv">\r\n                    <p class="memberBio">\r\n                        <i>W.R.Jonathan Johnson</i> is a sophisticated symbol of grace. His rich booming \r\n                        bass notes provide a strong foundation for the group, and his witty quips\r\n                        never fail to put a smile on their faces. He has been the official \r\n                        toastmaster for the group since early\r\n                        2019. Sorry ladies, he\'s taken. \r\n                    </p>\r\n                    <div class="memberStrengths">\r\n                        <p class="strengthBass">\r\n                            Main Bassline\r\n                        </p>\r\n                        <p class="strengthVisual">\r\n                            Lead Visual\r\n                        </p>\r\n                        <p class="memberSocial">\r\n                            <a class=icon href="https://instagram.com/johnniewalter4" target="blank">d</a>\r\n                        </p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class="memberCardsDiv">\r\n                <div class="memberCardHolder">\r\n                    <a href="" class="cardLink" >\r\n                        <img class="memberCardImg" src="')
+        __M_writer('profiles/profile_johnnie.png">\r\n            </div>\r\n            <div class="memberText">\r\n                <div class="memberNameDiv">\r\n                    <p class="memberName" style="margin-bottom:1vh;">Johnnie</p>\r\n                    <p class="memberPart">Bass<br>\r\n                        <span class="memberYear">2018 - Current</span>\r\n                    </p>\r\n                </div>\r\n                <div class="memberBioDiv">\r\n                    <p class="memberBio">\r\n                        <i>W.R.Jonathan Johnson</i> is a sophisticated symbol of grace. His rich booming \r\n                        bass notes provide a strong foundation for the group, and his witty quips\r\n                        never fail to put a smile on their faces. He has been the official \r\n                        toastmaster for the group since early\r\n                        2019. Sorry ladies, he\'s taken. \r\n                    </p>\r\n                    <div class="memberStrengths">\r\n                        <p class="strengthBass">\r\n                            Main Bassline\r\n                        </p>\r\n                        <p class="strengthVisual">\r\n                            Lead Visual\r\n                        </p>\r\n                        <p class="memberSocial">\r\n                            <a class=icon href="https://instagram.com/johnniewalter4" target="blank">d</a>\r\n                        </p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class="memberCardsDiv">\r\n                <div class="memberCardHolder">\r\n                    <a href="/cards/" class="cardLink" >\r\n                        <img class="memberCardImg" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('profiles/cards_johnnie.png">\r\n                        <p class="viewCardText">View Cards</p>\r\n                    </a>    \r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div id="memberProfile5" class="profile">\r\n            <div class="memberPhoto">\r\n                <img class="memberImg" src="')
+        __M_writer('profiles/cards_johnnie.png">\r\n                        <p class="viewCardText">View<br>Cards</p>\r\n                    </a>    \r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div id="memberProfile5" class="profile">\r\n            <div class="memberPhoto">\r\n                <img class="memberImg" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('profiles/profile_laurel.png">\r\n            </div>\r\n            <div class="memberText">\r\n                <div class="memberNameDiv">\r\n                    <p class="memberName">Laurel</p>\r\n                    <p class="memberPart">Contralto<br>\r\n                        <span class="memberYear">2018 - Current</span>\r\n                    </p>\r\n                </div>\r\n                <div class="memberBioDiv">\r\n                    <p class="memberBio">\r\n                        Laurel Scott rode into the scene on her signature red motorcycle, \r\n                        ready to take on any challenge. Her smooth and steady vocals cover a wide range, sometimes lower than Nathan.\r\n                        She is the Da Vincian artist behind the <a href="https://www.youtube.com/watch?v=lzzlMHUzzcs" target="blank">Halloween makeups</a>\r\n                        and the Vice President for visual aspects. She is still the shortest \r\n                        member of the group, but has enough personality and love to fill 10 NBA players. Dont worry fellas, <i> she\'s single.</i>\r\n                    </p>\r\n                    <div class="memberStrengths">\r\n                        <p class="strengthLeader">\r\n                            Visuals VP\r\n                        </p>\r\n                        <p class="strengthVocal">\r\n                            Main Vocalist\r\n                        </p>\r\n                        <p class="strengthDance">\r\n                            Supporting Dancer\r\n                        </p>\r\n                        <p class="memberSocial">\r\n                            <a class=icon href="https://instagram.com/laurel_lownote" target="blank">d</a>\r\n                        </p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class="memberCardsDiv">\r\n                <div class="memberCardHolder">\r\n                    <a href="/cards/" class="cardLink" >\r\n                        <img class="memberCardImg" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))

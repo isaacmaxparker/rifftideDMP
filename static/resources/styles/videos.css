@@ -1,0 +1,117 @@
+
+#videosList{
+    font-family: 'Renner';
+    margin-top:55px;
+}
+
+iframe{
+    opacity: 0;
+}
+
+/* each video */
+.video{
+    position: relative;
+}
+
+.videoImgDiv{
+    height: 100%;
+    margin-bottom: -10px;
+    position: absolute;
+    z-index: 0;
+    background-color: rgb(255, 255, 255); 
+    opacity: 1;
+}
+
+.videoImgDiv img{
+    position: relative;
+    object-fit: cover;
+    object-position: 50% 50%;
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    min-width: 100vw;
+    height:100%;
+}
+
+.videoInfo{
+    font-size: 4vw;
+    z-index: 100;
+    position: relative;
+    padding:5vw;
+    display: flex;
+    flex-direction: row;
+}
+.flipped{
+    flex-direction: row-reverse;
+}
+
+.dark{
+    background-color: black;
+}
+
+.flipped .videoText{
+    background-color: rgba(0,0,0, 0.847);
+    color:white;
+}
+
+.flipped .videoCredits{
+    color: rgb(175, 175, 175);
+}
+
+.flipped .videoSource{
+    padding-left:2.5vw;
+    padding-right: 0vw;
+}
+
+.videoSource{
+    padding-right:2.5vw;
+    min-width:50vw;
+    max-width:50vw;
+    display: flex;
+    justify-content:center;
+}
+
+.videoText{
+    padding:1vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.847);
+}
+.videoTextContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.videoTitle{
+    display: flex;
+}
+.videoName{
+    font-size: 80%;
+    width:80%;
+}
+.videoYear{
+    font-size: 65%;
+    float: right;
+    width: 20%;
+    text-align: right;
+    color: gray;
+}
+.videoBio{
+    margin-top:2vh;
+    font-family: 'RennerLight';
+    font-size: 40%;
+}
+.videoCredits{
+    margin-top:2vh;
+    font-family: 'RennerLight';
+    font-style: italic;
+    font-size: 28%;
+    line-height: 110%;
+}
+
+.youtubeVideo{
+    width:50vw;
+    height:calc(50vw * .5625);
+}
+

@@ -9,6 +9,7 @@ const Global = (function() {
     /*------------------------------------------------------------------------
      *              CONSTANTS
      */
+    const ANIMATION_DURATION = 800;
   
     /*------------------------------------------------------------------------
      *              PRIVATE VARIABLES
@@ -20,11 +21,19 @@ const Global = (function() {
 
     let hoverOn;
     let hoverOff;
+    let fadeIn;
     let init;  
     let scrollToDiv;
     /*------------------------------------------------------------------------
      *              PRIVATE METHOD DECLARATIONS
      */
+
+    fadeIn = function(element,opacity=1,addtnl=0){
+      $(element).animate({'opacity':opacity},ANIMATION_DURATION)
+      if (addtnl !== 0){
+      $(addtnl).animate({'opacity':opacity},ANIMATION_DURATION)
+      }
+    }
   
     hoverOn = function(id){
       $(document.getElementById(id)).animate({opacity:.7},50)
@@ -56,6 +65,7 @@ const Global = (function() {
         hoverOn,
         hoverOff,
         scrollToDiv,
+        fadeIn,
     };
   }());
   

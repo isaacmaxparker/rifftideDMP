@@ -1,0 +1,279 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; music</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }resources/styles/music.css">
+<link rel="stylesheet" media="(max-width:1240px)" href="${ STATIC_URL }resources/styles/music-mobile.css">
+<script>
+      fadeIn = function(element,opacity=1,addtnl=0){
+      $(element).animate({'opacity':opacity},ANIMATION_DURATION)
+      if (addtnl !== 0){
+      $(addtnl).animate({'opacity':opacity},ANIMATION_DURATION)
+      }
+    }
+</script>
+</%block>
+
+<%block name="page_content">
+<div id="musicsContent">
+    <div id="musicsList">
+        <div class="music">
+            <div class="musicImgDiv">
+                <img onload="fadeIn(this,.4)" src="${settings.IMAGE_URL}backgrounds/kywmback.jpg">
+            </div>
+            <div class="musicInfo">
+                <div class="musicSource">
+                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="${settings.IMAGE_URL}resources/kywmAlbumArt.png"></a>
+                </div>
+                <div class="musicTextContainer">
+                    <div class="musicText">
+                        <div class="musicTitle">
+
+                                <div class="musicName">
+                                    Keep You With Me
+                                </div>
+                                <div class="musicYear">
+                                    2020
+                                </div>
+                        </div>
+                        <div class="musicBio">
+                            Keep You With Me was the first original song released by the group. The song was written by group director Isaac McDougal. The song originally was dedicated
+                            to the members of Rifftide as they prepared to end the season, but after the Covid 19 pandemic broke out the group decided to dedicate the song to everyone
+                            who wasn't able to say goodbye to someone due to the pandemic.
+                        </div>
+                        <div class="musicCredits">
+                            <b>Original Artist</b>: Rifftide, 
+                            <b>Written and Arranged by</b>: Isaac McDougal, 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Album Art by</b>: Isaac McDougal.
+                            
+                        </div>
+                        <div class="listenNow">
+                            <div>
+                                <p>Listen Now:</p>
+                                <a href="" target="blank">
+                                    <img src="${settings.IMAGE_URL}logos/spotify.png">
+                                </a>
+                                <a href="" target="blank">
+                                    <img src="${settings.IMAGE_URL}logos/itunes.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="music">
+            <div class="musicImgDiv dark">
+                <img onload="fadeIn(this,.4)" src="${settings.IMAGE_URL}backgrounds/justdanceAlbumArt.png">
+            </div>
+            <div class="musicInfo flipped">
+                <div class="musicSource">
+                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="${settings.IMAGE_URL}resources/justdanceAlbumArt.png"></a>
+                </div>
+                <div class="musicTextContainer">
+                    <div class="musicText">
+                        <div class="musicTitle">
+
+                                <div class="musicName">
+                                    Just Dance / Evacuate the Dancefloor
+                                </div>
+                                <div class="musicYear">
+                                    2019
+                                </div>
+                        </div>
+                        <div class="musicBio">
+                            This song is a mashup of Lady Gaga's "Just Dance" and Cascada's "Evacuate the Dancefloor". The song was originally performed back in the Spring of 2018,
+                            but wasn't recorded until 2019.
+                        </div>
+                        <div class="musicCredits">
+                            <b>Original Artists</b>: Lady Gaga & Cascada,
+                            <b>Arranged by</b>: Isaac McDougal, 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Album Art by</b>: Isaac McDougal.
+                        </div>
+                        <div class="listenNow">
+                            <div>
+                                <p>Listen Now:</p>
+                                <a href="https://open.spotify.com/track/3oLxWFaZNR4BhKNUDE4d8D" target="blank">
+                                    <img src="${settings.IMAGE_URL}logos/spotify.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="music">
+            <div class="musicImgDiv">
+                <img onload="fadeIn(this,.4)" src="${settings.IMAGE_URL}backgrounds/dreamAlbumArt.png">
+            </div>
+            <div class="musicInfo">
+                <div class="musicSource">
+                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="${settings.IMAGE_URL}resources/dreamAlbumArt.png"></a>
+                </div>
+                <div class="musicTextContainer">
+                    <div class="musicText">
+                        <div class="musicTitle">
+
+                                <div class="musicName">
+                                    Dream
+                                </div>
+                                <div class="musicYear">
+                                    2019
+                                </div>
+                        </div>
+                        <div class="musicBio">
+                            Dream was recorded and released just months after it was chosen and arranged. 
+                            This was Rifftide's first single self-recorded by the group. 
+                        </div>
+                        <div class="musicCredits">
+                            <b>Original Artist</b>: Imagine Dragons, 
+                            <b>Arranged by</b>: Emily Grether 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Album Art by</b>: Isaac McDougal.
+                            
+                        </div>
+                        <div class="listenNow">
+                            <div>
+                                <p>Listen Now:</p>
+                                <a href="https://open.spotify.com/track/1nldk66lxxwRuselDP4Doq" target="blank">
+                                    <img src="${settings.IMAGE_URL}logos/spotify.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="music">
+            <div class="musicImgDiv dark">
+                <img onload="fadeIn(this,.4)" src="${settings.IMAGE_URL}backgrounds/moveAlbumArt.jpg">
+            </div>
+            <div class="musicInfo flipped">
+                <div class="musicSource">
+                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="${settings.IMAGE_URL}resources/moveAlbumArt.jpg"></a>
+                </div>
+                <div class="musicTextContainer">
+                    <div class="musicText">
+                        <div class="musicTitle">
+
+                                <div class="musicName">
+                                    Move Along
+                                </div>
+                                <div class="musicYear">
+                                    2018
+                                </div>
+                        </div>
+                        <div class="musicBio">
+                            Move Along was the second Rifftide cover selected to be on a Best of BYU A Cappella album. 
+                            The song was recorded as part of that album's release, and then released as a single a few months later.
+                        </div>
+                        <div class="musicCredits">
+                            <b>Original Artist</b>: The All-American Rejects
+                            <b>Arranged by</b>: Isaac McDougal, 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Album Art by</b>: Isaac McDougal.
+                            
+                        </div>
+                        <div class="listenNow">
+                            <div>
+                                <p>Listen Now:</p>
+                                <a href="https://open.spotify.com/album/1A9bWfQWtnR3Sb6gQveDKl" target="blank">
+                                    <img src="${settings.IMAGE_URL}logos/spotify.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="music">
+            <div class="musicImgDiv">
+                <img onload="fadeIn(this,.4)" src="${settings.IMAGE_URL}backgrounds/singback.png">
+            </div>
+            <div class="musicInfo">
+                <div class="musicSource">
+                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="${settings.IMAGE_URL}resources/singAlbumArt.jpg"></a>
+                </div>
+                <div class="musicTextContainer">
+                    <div class="musicText">
+                        <div class="musicTitle">
+
+                                <div class="musicName">
+                                    Sing!
+                                </div>
+                                <div class="musicYear">
+                                    2017
+                                </div>
+                        </div>
+                        <div class="musicBio">
+                            Sing! was the first single ever released by Rifftide. It was selected to be on the 2017 Best of BYU A Cappella album. 
+                            The song was recorded as part of that album's release, and then released as a single a month later. The song remains as
+                            Rifftide's most well known cover.
+                        </div>
+                        <div class="musicCredits">
+                            <b>Original Artist</b>: Pentatonix,
+                            <b>Arranged by</b>: Scott Shattuck 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Album Art by</b>: Isaac McDougal.
+                            
+                        </div>
+                        <div class="listenNow">
+                            <div>
+                                <p>Listen Now:</p>
+                                <a href="https://open.spotify.com/album/6qK5m07etOecI5Kiif5QEa" target="blank">
+                                    <img src="${settings.IMAGE_URL}logos/spotify.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="listenToUs">
+
+        <div style="z-index: 500;">
+            Listen to Rifftide on any platform!
+        </div>
+        <div class="musicLogos">
+            <a href="https://open.spotify.com/artist/6TRcbaV03EF0bofJNKUSI8" target="blank">
+                <img src="${settings.IMAGE_URL}logos/spotify.png">
+            </a>
+            <a href="https://music.apple.com/us/artist/rifftide/1229959671" target="blank">
+                <img src="${settings.IMAGE_URL}logos/itunes.png">
+            </a>
+            <a href="https://www.youtube.com/playlist?list=PLJaVJrQa31zOv6yErJMfBFDF_vBZkwNOL&app=desktop" target="blank">
+                <img src="${settings.IMAGE_URL}logos/youtube.png">
+            </a>
+            <a href="https://music.youtube.com/channel/UCsbF4jCCUrORCMV8s0WJhcQ" target="blank">
+                <img src="${settings.IMAGE_URL}logos/youtubemusic.png">
+            </a>
+            <a href="https://music.amazon.com/artists/B06XWJ26J2?tab=CATALOG&ref=dm_wcp_artist_link_ad" target="blank">
+                <img src="${settings.IMAGE_URL}logos/amazon music.png">
+            </a>
+        </div>
+    </div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+    <script type="text/javascript">
+        //let showLocation;
+        function ready(fn) {
+            if (document.readyState != 'loading') {
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+
+        ready(function () {
+            Global.init();
+            scrollToDiv = Global.scrollToDiv
+        });
+    </script>
+</%block>

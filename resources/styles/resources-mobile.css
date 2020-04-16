@@ -1,0 +1,14 @@
+.resourceName{
+    font-size: 80%;
+}
+.resourceDetails{
+    font-size: 40%;
+    color: rgb(175, 175, 175);
+    margin-left:5vw;
+}
+#resourceListContainer{
+    height: calc(75vh - 55px - 6vw);
+}
+#resourcesList{
+    max-height:calc(75vh - 60px - 6vw);
+}

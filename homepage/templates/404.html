@@ -1,0 +1,26 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; Home</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }homepage/styles/404.css">
+</%block>
+
+<%block name="page_content">
+<div class="errorBody">
+<div>
+    <img src="${settings.IMAGE_URL}resources/404Bri.jpg">
+</div>
+<div class="bodyText">
+    404 Error<p>Uh Oh! It looks like the page you're looking for has been moved. Search our <a href="resources">resources</a> page to find it!</p>
+</div>
+<div>
+    <img src="${settings.IMAGE_URL}resources/404Johnnie.jpg">
+</div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+
+</%block>

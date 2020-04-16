@@ -1,0 +1,23 @@
+.musicInfo, .flipped{
+    flex-direction: column;
+    font-size:8vw;
+}
+.musicSource{
+    max-width: 100vw;
+    padding:0px !important;
+    margin-bottom: 5vh;
+}
+.musicText{
+    padding:5vw;
+}
+.albumArt{
+    width: 70vw;
+}
+.youtubemusic{
+    width:90vw;
+    height:calc(90vw * .5625);
+}
+.listenNow img{
+    margin-top:1vh;
+    max-width: 5vw;
+}

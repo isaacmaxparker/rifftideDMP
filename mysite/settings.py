@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'homepage',
     'account',
     'store',
+    'resources',
     'adminportal',
 ]
 

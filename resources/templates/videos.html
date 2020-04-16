@@ -1,0 +1,207 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; videos</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }resources/styles/videos.css">
+<link rel="stylesheet" media="(max-width:1240px)" href="${ STATIC_URL }resources/styles/videos-mobile.css">
+</%block>
+
+<%block name="page_content">
+<div id="videosContent">
+    <div id="videosList">
+        <div class="video">
+            <div class="videoImgDiv">
+                <img src="${settings.IMAGE_URL}backgrounds/kywmback.jpg" onload="fadeIn(this,.4)">
+            </div>
+            <div class="videoInfo">
+                <div class="videoSource">
+                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/videoseries?list=PLJaVJrQa31zNG6P_6ltV3y-CJ6qUtgn0U&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="videoTextContainer" >
+                    <div class="videoText" onload="fadeIn(this)">
+                        <div class="videoTitle">
+
+                                <div class="videoName">
+                                    Keep You With Me
+                                </div>
+                                <div class="videoYear">
+                                    2020
+                                </div>
+                        </div>
+                        <div class="videoBio">
+                            Keep You With Me was the first original song released by the group. The video is set years into the future, and follows each member as they've moved on and participate in various activies.
+                            Each member finds a mysterious envelope which leads them to a communal meeting spot in the end.
+                        </div>
+                        <div class="videoCredits">
+                            <b>Song by</b>: Isaac McDougal, 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Filmed by</b>: Josh Sales, 
+                            <b>Edited by</b>: Isaac McDougal,
+                            <b>Costumes by</b>: Rifftide,<br>
+                            <b>Script by</b>: Isaac McDougal, Sam Hepworth, Laurel Scott.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="videoImgDiv dark">
+                <img src="${settings.IMAGE_URL}backgrounds/hocback.jpg" onload="fadeIn(this,.4)">
+            </div>
+            <div class="videoInfo flipped">
+                <div class="videoSource">
+                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/videoseries?list=PLJaVJrQa31zMLN9vecpvFYdNunXJWN5Kd" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="videoTextContainer">
+                    <div class="videoText">
+                        <div class="videoTitle">
+
+                                <div class="videoName">
+                                    Hymn of Christmas
+                                </div>
+                                <div class="videoYear">
+                                    2019
+                                </div>
+                        </div>
+                        <div class="videoBio">
+                           Hymn of Christmas is the largest scale project Rifftide has done to date. The song was a mashup of 7 well known Christmas carols and 
+                           featured 13 local artists! The video follows a one-shot style showcasing all of the collaborators.
+                        </div>
+                        <div class="videoCredits">
+                            <b>Song by</b>: Isaac McDougal and Sam Hepworth,
+                            <b>Produced By</b>: JustNick,
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Filmed and Edited by</b>: Brandon Young,
+                            <b>Script by</b>: Isaac McDougal,Sam Hepworth, Bri Ellis.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="videoImgDiv">
+                <img src="${settings.IMAGE_URL}backgrounds/justdanceback.jpeg" onload="fadeIn(this,.4)">
+            </div>
+            <div class="videoInfo">
+                <div class="videoSource">
+                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/RP2v7NnYGmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="videoTextContainer">
+                    <div class="videoText">
+                        <div class="videoTitle">
+
+                                <div class="videoName">
+                                    Just Evacuate
+                                </div>
+                                <div class="videoYear">
+                                    2019
+                                </div>
+                        </div>
+                        <div class="videoBio">
+                            This song is a mashup of "Just Dance" by Lady Gaga and "Evacuate the Dancefloor" by Cascada. The video takes place in a footloose-style town where
+                            dancing is not allowed. It shows each Rifftide member as two characters, an office employee in the town, and a technocolored visitor from the future 
+                            who travels back in time to show the office people how to dance. 
+                        </div>
+                        <div class="videoCredits">
+                            <b>Arranged by</b>: Isaac McDougal, 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Filmed by</b>: Tyler Edwards,
+                            <b>Edited by</b>: Isaac McDougal,
+                            <b>Costumes by</b>: Rifftide,<br>
+                            <b>Script by</b>: Isaac McDougal, Emily Grether.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="videoImgDiv dark">
+                <img src="${settings.IMAGE_URL}backgrounds/dreamback.jpeg" onload="fadeIn(this,.4)">
+            </div>
+            <div class="videoInfo flipped">
+                <div class="videoSource">
+                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/videoseries?list=PLJaVJrQa31zMAlXuG341gdQe3s9zRgaWm" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="videoTextContainer">
+                    <div class="videoText">
+                        <div class="videoTitle">
+
+                                <div class="videoName">
+                                    Dream
+                                </div>
+                                <div class="videoYear">
+                                    2019
+                                </div>
+                        </div>
+                        <div class="videoBio">
+                            Dream was the first large scale music video Rifftide took on. The video is set far in a post-apocalyptic wasteland. The 8 members have formed a small clan and the video follows them as they 
+                            travel around trying to survive. Halfway they are separated, but they are able to rejoin using smoke bombs as flares for one last standoff. It ends with a twist!
+                        </div>
+                        <div class="videoCredits">
+                            <b>Song by</b>: Imagine Dragons, 
+                            <b>Arranged by</b>: Emily Grether, 
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Filmed and Edited by</b>: Tyler Edwards, 
+                            <b>Costumes by</b>: Rifftide,<br>
+                            <b>Script by</b>: Isaac McDougal, Emily Grether, Bri Ellis.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="videoImgDiv">
+                <img src="${settings.IMAGE_URL}backgrounds/singback.png" onload="fadeIn(this,.4)">
+            </div>
+            <div class="videoInfo">
+                <div class="videoSource">
+                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/7dsw2vkYSoU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="videoTextContainer">
+                    <div class="videoText">
+                        <div class="videoTitle">
+
+                                <div class="videoName">
+                                    Sing!
+                                </div>
+                                <div class="videoYear">
+                                    2017
+                                </div>
+                        </div>
+                        <div class="videoBio">
+                            Sing! was the debut music video for Rifftide. The video shows each member in a Brady Bunch Intro style rainbox box performing the song. 
+                        </div>
+                        <div class="videoCredits">
+                            <b>Song by</b>: Pentatonix, 
+                            <b>Arranged by</b>: Scott Shattuck,
+                            <b>Mixed by</b>: Becky Willard, 
+                            <b>Filmed and Edited by</b>: Isaac McDougal.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+    <script type="text/javascript">
+        //let showLocation;
+        function ready(fn) {
+            if (document.readyState != 'loading') {
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+
+        ready(function () {
+            Global.init();
+            fadeIn = Global.fadeIn
+            scrollToDiv = Global.scrollToDiv
+        });
+    </script>
+</%block>

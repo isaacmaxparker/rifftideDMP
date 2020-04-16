@@ -1,0 +1,86 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; Resources</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }resources/styles/resources.css">
+<link rel="stylesheet" media="(max-width:1240px)" href="${ STATIC_URL }resources/styles/resources-mobile.css">
+<link rel="stylesheet" media="(min-width:2140px)" href="${ STATIC_URL }resources/styles/resources-large.css">
+</%block>
+
+<%block name="page_content">
+<div id="resourcesContent">
+    <div id="imgDiv">
+        <img id='backgroundImage' src="${settings.IMAGE_URL}backgrounds/tealmembers.png">
+    </div>
+    <div id="resourcesGrid">
+        <div id="resourcesTitle">
+            Resources
+        </div>
+        <hr>
+        <div id="resourceListContainer">
+            <div id="resourcesList">
+                <div class="resource" style="margin-top:3vh;">
+                    <div class="resourceName">
+                        <a href="/404/">Vocal Warm-Ups</a>
+                    </div>
+                    <div class="resourceDetails">
+                        Generate random exercises to warm up your voice
+                    </div>
+                </div>
+                <div class="resource">
+                    <div class="resourceName">
+                        <a href="/resources/music/">Discography</a>
+                    </div>
+                    <div class="resourceDetails">
+                        View information about the group's songs.
+                    </div>
+                </div>
+                <div class="resource">
+                    <div class="resourceName">
+                        <a href="/resources/videos/">Music Videos</a>
+                    </div>
+                    <div class="resourceDetails">
+                        View information about the group's music videos
+                    </div>
+                </div>
+                <div class="resource" style="margin-bottom:6vh;">
+                    <div class="resourceName">
+                        <a href="https://www.patreon.com/rifftide" target="blank">Patreon</a>
+                    </div>
+                    <div class="resourceDetails">
+                        Help support Rifftide on Patreon!
+                    </div>
+                </div>
+                <div class="resource" style="margin-bottom:6vh;">
+                    <div class="resourceName">
+                        <a href="https://www.youtube.com/channel/UCKG2CQdai0C7qsRT21Lx8mw" target="blank">Riffclips</a>
+                    </div>
+                    <div class="resourceDetails">
+                        Check out Rifftide's bonus content on our secondary channel.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+    <script type="text/javascript">
+        //let showLocation;
+        function ready(fn) {
+            if (document.readyState != 'loading') {
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+
+        ready(function () {
+            Global.init();
+            scrollToDiv = Global.scrollToDiv
+        });
+    </script>
+</%block>
