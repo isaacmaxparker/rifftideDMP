@@ -154,6 +154,7 @@ body{
 
 .navLogo{
     max-height: 55px;
+    opacity: 1 !important;
 }
 
 
