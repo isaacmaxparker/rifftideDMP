@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1587004873.185505
+_modified_time = 1587020387.05358
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/about.html'
 _template_uri = 'about.html'
@@ -30,17 +30,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def page_links():
+            return render_page_links(context._locals(__M_locals))
         def page_content():
             return render_page_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def page_scripts():
             return render_page_scripts(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
-        settings = context.get('settings', UNDEFINED)
         def page_title():
             return render_page_title(context._locals(__M_locals))
-        def page_links():
-            return render_page_links(context._locals(__M_locals))
+        settings = context.get('settings', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -83,9 +83,9 @@ def render_page_links(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         self = context.get('self', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def page_links():
             return render_page_links(context)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n<link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
@@ -103,13 +103,13 @@ def render_page_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         self = context.get('self', UNDEFINED)
-        settings = context.get('settings', UNDEFINED)
         def page_content():
             return render_page_content(context)
+        settings = context.get('settings', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div class="aboutContent">\r\n    <div id="groupBioDiv" class="slide">\r\n        <div id="imgDiv">\r\n            <img id=\'groupImage\' src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('backgrounds/whitemembers.png" style="min-height: 100vh; object-fit: cover;">\r\n        </div>\r\n        <div class="groupBioText top" id="groupBioText">\r\n            <div id="groupBioTitle">\r\n                <div id="groupName">Rifftide </div><div class="isa" style="display: inline-block;margin-left: 3vw;"> is a </div>\r\n                    <div class="scrollContent">\r\n                        <div class="scrollContentContainer">                                    \r\n                          <ul class="scrollContentList">\r\n                            <li class="scrollListItem">Vocal Group</li>\r\n                            <li class="scrollListItem darkTeal">Youtube Artist</li>\r\n                            <li class="scrollListItem">Acapella Group</li>\r\n                            <li class="scrollListItem darkTeal">Original Artist</li>\r\n                          </ul>\r\n                        </div>\r\n                      </div>\r\n            \r\n            </div>\r\n            <p id="groupBio">\r\n                that combines tight harmonies, crisp choreography, and unique concepts to \r\n                create fun and engaging videos and performances. \r\n            </p>\r\n            <a id="membersLink" onclick="scrollToDiv(\'memberProfile1\')">Meet the Members!</a>\r\n            <p class="centerrow memberNameLinks">\r\n                <a onclick="scrollToDiv(\'memberProfile1\')">Isaac</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile2\')">Cara</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile3\')">Sam</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile4\')">Johnnie</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile5\')">Laurel</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile6\')">Ashley</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile7\')">Nathan</a> \r\n                 | <a onclick="scrollToDiv(\'memberProfile8\')">Rachel</a> \r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div id="memberProfiles">\r\n        <div id="memberProfile1" class="profile">\r\n            <div class="memberPhoto">\r\n                <img class="memberImg" src="')
+        __M_writer('backgrounds/whitemembers.png" style="min-height: 100vh; object-fit: cover;">\r\n        </div>\r\n        <div class="groupBioText top" id="groupBioText">\r\n            <div id="groupBioTitle">\r\n                <div id="groupName">Rifftide </div><div class="isa" style="display: inline-block;margin-left: 3vw;"> is a </div>\r\n                    <div class="scrollContent">\r\n                        <div class="scrollContentContainer">                                    \r\n                          <ul class="scrollContentList">\r\n                            <li class="scrollListItem">Vocal Group</li>\r\n                            <li class="scrollListItem darkTeal">Youtube Artist</li>\r\n                            <li class="scrollListItem">Acapella Group</li>\r\n                            <li class="scrollListItem darkTeal">Original Artist</li>\r\n                          </ul>\r\n                        </div>\r\n                      </div>\r\n            \r\n            </div>\r\n            <p id="groupBio">\r\n                that combines tight harmonies, crisp choreography, and unique concepts to \r\n                create fun and engaging videos and performances. \r\n            </p>\r\n            <a id="membersLink" onclick="scrollToDiv(\'memberProfile1\')">Meet the Members!</a>\r\n            <p class="centerrow memberNameLinks">\r\n                <a onclick="scrollToDiv(\'memberProfile1\')">Isaac</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile2\')">Cara</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile3\')">Sam</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile4\')">Johnnie</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile5\')">Laurel</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile6\')">Ashley</a> | \r\n                <a onclick="scrollToDiv(\'memberProfile7\')">Nathan</a> \r\n                 | <a onclick="scrollToDiv(\'memberProfile8\')">Rachel</a> \r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div id="memberProfiles" style="margin-top: 55px;">\r\n        <div id="memberProfile1" class="profile">\r\n            <div class="memberPhoto">\r\n                <img class="memberImg" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('profiles/profile_isaac.png">\r\n            </div>\r\n            <div class="memberText">\r\n                <div class="memberNameDiv">\r\n                    <p class="memberName">Isaac</p>\r\n                    <p class="memberPart">Baritone<br>\r\n                        <span class="memberYear">2016 - Current</span>\r\n                    </p>\r\n                </div>\r\n                <div class="memberBioDiv">\r\n                    <p class="memberBio">\r\n                        Isaac McDougal has directed the group since 2017. In addition to be a sexy beast, he \r\n                        is a smart Master\'s student who splits his time between delivering powerful\r\n                        vocals and piercing rap lines. Isaac is known as the dancing machine of the group,\r\n                         and is the undisputed hip-shaking king.\r\n                    </p>\r\n                    <div class="memberStrengths">\r\n                        <p class="strengthLeader">\r\n                            Director\r\n                        </p>\r\n                        <p class="strengthDance">\r\n                            Main Dancer\r\n                        </p>\r\n                        <p class="strengthVocal">\r\n                            Lead Vocalist\r\n                        </p>\r\n                        <p class="strengthRap">\r\n                            Main Rapper\r\n                        </p>\r\n                        <p class="memberSocial">\r\n                            <a class=icon href="https://instagram.com/isaactheparker" target="blank">d</a>\r\n                        </p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class="memberCardsDiv">\r\n                <div class="memberCardHolder">\r\n                    <a href="/cards/" class="cardLink" >\r\n                        <img class="memberCardImg" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
