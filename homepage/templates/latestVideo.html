@@ -1,0 +1,56 @@
+<script>
+   const RELEASE_URL = 'https://raw.githubusercontent.com/isaacmcdgl/RifftideJSON/master/JSON/releases.json'
+   const REQUEST_STATUS_OK = 200;
+    const REQUEST_STATUS_ERROR = 400;
+
+   function ajax(url, successCallback, failureCallback, skipJsonParse) {
+
+    let request = new XMLHttpRequest();
+    request.open('GET', url, true);
+
+    request.onload = function() {
+        if (this.status >= REQUEST_STATUS_OK && this.status < REQUEST_STATUS_ERROR) {
+        
+            let data = (
+                skipJsonParse 
+                ? request.response 
+                : JSON.parse(request.response)
+            );
+
+            if (typeof successCallback === 'function') {
+                successCallback(data);
+            }
+        } else {
+            if (typeof failureCallback === 'function') {
+                failureCallback(request);
+            }
+        }
+    };
+
+    request.onerror = failureCallback;
+    request.send();
+    };
+
+    window.onload = (event) => {
+        loadURL();
+    };
+
+    function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key];
+        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+    });
+    }
+
+    function loadURL(){
+        ajax(RELEASE_URL, function(data) {
+                releases = data;
+                releaser = sortByKey(releases,'release_date')
+                console.log(releaser)
+                release = releaser[0];
+
+                //window.location.href = release.youtube_url;
+            }
+        );
+    }
+</script>
