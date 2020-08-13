@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1587020355.849267
+_modified_time = 1589771985.4155657
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/base.htm'
 _template_uri = '/homepage/templates/base.htm'
@@ -19,17 +19,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def page_links():
-            return render_page_links(context._locals(__M_locals))
-        def page_content():
-            return render_page_content(context._locals(__M_locals))
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def page_scripts():
-            return render_page_scripts(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
         def page_title():
             return render_page_title(context._locals(__M_locals))
         settings = context.get('settings', UNDEFINED)
+        def page_links():
+            return render_page_links(context._locals(__M_locals))
+        def page_scripts():
+            return render_page_scripts(context._locals(__M_locals))
+        def page_content():
+            return render_page_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\r\n<html>\r\n<meta charset="UTF-8">\r\n    <head>\r\n        <meta charset="utf-8">\r\n        <meta name="author" content="Isaac McDougal">\r\n        <meta name="viewport" content="width=device-width,initial-scale=1.0">\r\n\r\n\r\n\r\n        <title>Rifftide')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -53,7 +53,7 @@ def render_body(context,**pageargs):
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('logos/favicon.ico">\r\n        <script>\r\n            function checks(passed){\r\n                document.getElementById(\'navCheck\').checked = !passed\r\n                document.getElementById(\'navCheck2\').checked = !passed\r\n            }\r\n        </script>\r\n    </head>\r\n    <body>\r\n        <div id="header">\r\n            <div id="nav" class="bigMenu">\r\n                <div class="navHead">\r\n                    <a href="/"><img class="navLogo" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('logos/thick logo - darker.png" alt="Rifftide Logo"></a>\r\n                </div>\r\n                <ul>\r\n                    <li>\r\n                        <a href="/about/">About</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/cards/">Card Gallery</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/resources/">Resources</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/resources/">Discography</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/resources/">Music Videos</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="https://patreon.com/rifftide">Patreon</a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <div class="lilMenu">\r\n\r\n                <div id="menuToggle">\r\n                    <div class="navHead">\r\n                        <a href="/"><img class="navLogo" src="')
+        __M_writer('logos/thick logo - darker.png" alt="Rifftide Logo"></a>\r\n                </div>\r\n                <ul>\r\n                    <li>\r\n                        <a href="/about/">About</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/cards/">Card Gallery</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/resources/">Resources</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/resources/music/">Discography</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="/resources/videos/">Music Videos</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href="https://patreon.com/rifftide" target="_blank">Patreon</a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <div class="lilMenu">\r\n\r\n                <div id="menuToggle">\r\n                    <div class="navHead">\r\n                        <a href="/"><img class="navLogo" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('logos/thick logo - darker.png" alt="Rifftide Logo"></a>\r\n                    </div>\r\n                    <!--\r\n                    A fake / hidden checkbox is used as click reciever,\r\n                    so you can use the :checked selector on it.\r\n                    -->\r\n                   \r\n                    \r\n                    <!--\r\n                    Some spans to act as a hamburger.\r\n                    \r\n                    They are acting like a real hamburger,\r\n                    not that McDonalds stuff.\r\n                    -->\r\n                    <input id="navCheck" type="checkbox"/>\r\n        \r\n                    <div class="spans" onclick="checks(document.getElementById(\'navCheck\').checked)">\r\n                        <input id="navCheck2" type="checkbox"/>\r\n                    <span></span>\r\n                    <span></span>\r\n                    <span></span>\r\n                    </div>\r\n                    <!--\r\n                    Too bad the menu has to be inside of the button\r\n                    but hey, it\'s pure CSS magic.\r\n                    -->\r\n                    <ul id="menu">\r\n                      <a href="/"><li>Home</li></a>\r\n                      <a href="/about/"><li>About</li></a>\r\n                      <a href="/cards/"><li>Card Gallery</li></a>\r\n                      <a href="/resources/"><li>Resources</li></a>\r\n                      <a href="/resources/music/"><li>Discography</li></a>\r\n                      <a href="/resources/videos/"><li>Music Videos</li></a>\r\n                    </ul>\r\n                  </div>\r\n            </div>\r\n        </div>\r\n        <div id="content" class="content-wrap">\r\n            ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_content'):
@@ -85,10 +85,10 @@ def render_page_title(context,**pageargs):
 def render_page_links(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         self = context.get('self', UNDEFINED)
         def page_links():
             return render_page_links(context)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n        <link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))

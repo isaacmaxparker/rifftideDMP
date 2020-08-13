@@ -5,10 +5,10 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1589771325.96691
+_modified_time = 1589771587.9596539
 _enable_loop = True
-_template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/404.html'
-_template_uri = '404.html'
+_template_filename = 'C:/Users/isaac/rifftideDMP/homepage/templates/underConstruction.html'
+_template_uri = 'underConstruction.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
@@ -30,17 +30,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def page_title():
-            return render_page_title(context._locals(__M_locals))
-        def page_content():
-            return render_page_content(context._locals(__M_locals))
-        def page_scripts():
-            return render_page_scripts(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         self = context.get('self', UNDEFINED)
         settings = context.get('settings', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def page_title():
+            return render_page_title(context._locals(__M_locals))
         def page_links():
             return render_page_links(context._locals(__M_locals))
+        def page_scripts():
+            return render_page_scripts(context._locals(__M_locals))
+        def page_content():
+            return render_page_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -82,8 +82,8 @@ def render_page_title(context,**pageargs):
 def render_page_links(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         def page_links():
             return render_page_links(context)
         __M_writer = context.writer()
@@ -100,12 +100,12 @@ def render_page_content(context,**pageargs):
     try:
         def page_content():
             return render_page_content(context)
-        self = context.get('self', UNDEFINED)
         settings = context.get('settings', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div class="errorBody">\r\n<div>\r\n    <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('resources/404Bri.jpg">\r\n</div>\r\n<div class="bodyText">\r\n    404 Error<p>Uh Oh! It looks like the page you\'re looking for has been moved. Search our <a href="resources">resources</a> page to find it!</p>\r\n</div>\r\n<div>\r\n    <img src="')
+        __M_writer('resources/404Bri.jpg">\r\n</div>\r\n<div class="bodyText">\r\n    Oops!<p>This Page is still under construction. In the meantime, you can support us on <a href="https://patreon.com/rifftide" target="_blank">Patreon</a>!</p>\r\n</div>\r\n<div>\r\n    <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('resources/404Johnnie.jpg">\r\n</div>\r\n</div>\r\n')
         return ''
@@ -127,6 +127,6 @@ def render_page_scripts(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/404.html", "uri": "404.html", "source_encoding": "utf-8", "line_map": {"29": 0, "45": 1, "50": 3, "55": 8, "60": 22, "70": 3, "76": 3, "82": 5, "90": 5, "91": 7, "92": 7, "98": 10, "106": 10, "107": 13, "108": 13, "109": 19, "110": 19, "116": 24, "122": 24, "128": 122}}
+{"filename": "C:/Users/isaac/rifftideDMP/homepage/templates/underConstruction.html", "uri": "underConstruction.html", "source_encoding": "utf-8", "line_map": {"29": 0, "45": 1, "50": 3, "55": 8, "60": 22, "70": 3, "76": 3, "82": 5, "90": 5, "91": 7, "92": 7, "98": 10, "106": 10, "107": 13, "108": 13, "109": 19, "110": 19, "116": 24, "122": 24, "128": 122}}
 __M_END_METADATA
 """

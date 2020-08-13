@@ -1,0 +1,27 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; Home</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }homepage/styles/404.css">
+</%block>
+
+<%block name="page_content">
+<div class="errorBody">
+<div>
+    <img src="${settings.IMAGE_URL}resources/404Bri.jpg">
+</div>
+<div class="bodyText">
+    Whoops!<p>Uh Oh! It looks like there was a problem loading this page. <br><br>
+        <a href="/" style="text-align: center;">Home</a></p>
+</div>
+<div>
+    <img src="${settings.IMAGE_URL}resources/404Johnnie.jpg">
+</div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+
+</%block>

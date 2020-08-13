@@ -1,0 +1,26 @@
+<%inherit file="app_base.htm" />
+
+<%block name="page_title">&mdash; Home</%block>
+
+<%block name="page_links">
+
+<link rel="stylesheet" href="${ STATIC_URL }homepage/styles/404.css">
+</%block>
+
+<%block name="page_content">
+<div class="errorBody">
+<div>
+    <img src="${settings.IMAGE_URL}resources/404Bri.jpg">
+</div>
+<div class="bodyText">
+    Oops!<p>This Page is still under construction. In the meantime, you can support us on <a href="https://patreon.com/rifftide" target="_blank">Patreon</a>!</p>
+</div>
+<div>
+    <img src="${settings.IMAGE_URL}resources/404Johnnie.jpg">
+</div>
+</div>
+</%block>
+
+<%block name="page_scripts">
+
+</%block>

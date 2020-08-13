@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1587013477.8546722
+_modified_time = 1589770476.8497825
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/resources/templates/videos.html'
 _template_uri = 'videos.html'
@@ -31,16 +31,16 @@ def render_body(context,**pageargs):
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         self = context.get('self', UNDEFINED)
+        def page_links():
+            return render_page_links(context._locals(__M_locals))
         def page_content():
             return render_page_content(context._locals(__M_locals))
         settings = context.get('settings', UNDEFINED)
-        def page_links():
-            return render_page_links(context._locals(__M_locals))
         def page_scripts():
             return render_page_scripts(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def page_title():
             return render_page_title(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -100,14 +100,14 @@ def render_page_links(context,**pageargs):
 def render_page_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        def page_content():
-            return render_page_content(context)
         settings = context.get('settings', UNDEFINED)
         self = context.get('self', UNDEFINED)
+        def page_content():
+            return render_page_content(context)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="videosContent">\r\n    <div id="videosList">\r\n        <div class="video">\r\n            <div class="videoImgDiv">\r\n                <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('backgrounds/kywmback.jpg" onload="fadeIn(this,.4)">\r\n            </div>\r\n            <div class="videoInfo">\r\n                <div class="videoSource">\r\n                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/videoseries?list=PLJaVJrQa31zNG6P_6ltV3y-CJ6qUtgn0U&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\r\n                </div>\r\n                <div class="videoTextContainer" >\r\n                    <div class="videoText" onload="fadeIn(this)">\r\n                        <div class="videoTitle">\r\n\r\n                                <div class="videoName">\r\n                                    Keep You With Me\r\n                                </div>\r\n                                <div class="videoYear">\r\n                                    2020\r\n                                </div>\r\n                        </div>\r\n                        <div class="videoBio">\r\n                            Keep You With Me was the first original song released by the group. The video is set years into the future, and follows each member as they\'ve moved on and participate in various activies.\r\n                            Each member finds a mysterious envelope which leads them to a communal meeting spot in the end.\r\n                        </div>\r\n                        <div class="videoCredits">\r\n                            <b>Song by</b>: Isaac McDougal, \r\n                            <b>Mixed by</b>: Becky Willard, \r\n                            <b>Filmed by</b>: Josh Sales, \r\n                            <b>Edited by</b>: Isaac McDougal,\r\n                            <b>Costumes by</b>: Rifftide,<br>\r\n                            <b>Script by</b>: Isaac McDougal, Sam Hepworth, Laurel Scott.\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="video">\r\n            <div class="videoImgDiv dark">\r\n                <img src="')
+        __M_writer('backgrounds/kywmback.jpg" onload="fadeIn(this,.4)">\r\n            </div>\r\n            <div class="videoInfo">\r\n                <div class="videoSource">\r\n                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/videoseries?list=PLJaVJrQa31zN1MQQSrmr-LTM-czLDQr6a&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\r\n                </div>\r\n                <div class="videoTextContainer" >\r\n                    <div class="videoText" onload="fadeIn(this)">\r\n                        <div class="videoTitle">\r\n\r\n                                <div class="videoName">\r\n                                    Keep You With Me\r\n                                </div>\r\n                                <div class="videoYear">\r\n                                    2020\r\n                                </div>\r\n                        </div>\r\n                        <div class="videoBio">\r\n                            Keep You With Me was the first original song released by the group. The video is set years into the future, and follows each member as they\'ve moved on and participate in various activies.\r\n                            Each member finds a mysterious envelope which leads them to a communal meeting spot in the end.\r\n                        </div>\r\n                        <div class="videoCredits">\r\n                            <b>Song by</b>: Isaac McDougal, \r\n                            <b>Mixed by</b>: Becky Willard, \r\n                            <b>Filmed by</b>: Josh Sales, \r\n                            <b>Edited by</b>: Isaac McDougal,\r\n                            <b>Costumes by</b>: Rifftide,<br>\r\n                            <b>Script by</b>: Isaac McDougal, Sam Hepworth, Laurel Scott.\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="video">\r\n            <div class="videoImgDiv dark">\r\n                <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('backgrounds/hocback.jpg" onload="fadeIn(this,.4)">\r\n            </div>\r\n            <div class="videoInfo flipped">\r\n                <div class="videoSource">\r\n                    <iframe onload="fadeIn(this,1,this.parentElement.parentElement.children[1])" class="youtubeVideo" src="https://www.youtube.com/embed/videoseries?list=PLJaVJrQa31zMLN9vecpvFYdNunXJWN5Kd" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\r\n                </div>\r\n                <div class="videoTextContainer">\r\n                    <div class="videoText">\r\n                        <div class="videoTitle">\r\n\r\n                                <div class="videoName">\r\n                                    Hymn of Christmas\r\n                                </div>\r\n                                <div class="videoYear">\r\n                                    2019\r\n                                </div>\r\n                        </div>\r\n                        <div class="videoBio">\r\n                           Hymn of Christmas is the largest scale project Rifftide has done to date. The song was a mashup of 7 well known Christmas carols and \r\n                           featured 13 local artists! The video follows a one-shot style showcasing all of the collaborators.\r\n                        </div>\r\n                        <div class="videoCredits">\r\n                            <b>Song by</b>: Isaac McDougal and Sam Hepworth,\r\n                            <b>Produced By</b>: JustNick,\r\n                            <b>Mixed by</b>: Becky Willard, \r\n                            <b>Filmed and Edited by</b>: Brandon Young,\r\n                            <b>Script by</b>: Isaac McDougal,Sam Hepworth, Bri Ellis.\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="video">\r\n            <div class="videoImgDiv">\r\n                <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))

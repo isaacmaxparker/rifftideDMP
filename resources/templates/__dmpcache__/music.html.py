@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1587013439.7883995
+_modified_time = 1589772543.1147604
 _enable_loop = True
 _template_filename = 'C:/Users/isaac/rifftideDMP/resources/templates/music.html'
 _template_uri = 'music.html'
@@ -30,17 +30,17 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        self = context.get('self', UNDEFINED)
         def page_content():
             return render_page_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         settings = context.get('settings', UNDEFINED)
+        def page_title():
+            return render_page_title(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def page_links():
             return render_page_links(context._locals(__M_locals))
         def page_scripts():
             return render_page_scripts(context._locals(__M_locals))
-        def page_title():
-            return render_page_title(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'page_title'):
@@ -82,10 +82,10 @@ def render_page_title(context,**pageargs):
 def render_page_links(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def page_links():
             return render_page_links(context)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n<link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
@@ -100,32 +100,38 @@ def render_page_links(context,**pageargs):
 def render_page_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        self = context.get('self', UNDEFINED)
         def page_content():
             return render_page_content(context)
         settings = context.get('settings', UNDEFINED)
-        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n<div id="musicsContent">\r\n    <div id="musicsList">\r\n        <div class="music">\r\n            <div class="musicImgDiv">\r\n                <img onload="fadeIn(this,.4)" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('backgrounds/kywmback.jpg">\r\n            </div>\r\n            <div class="musicInfo">\r\n                <div class="musicSource">\r\n                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="')
+        __M_writer('backgrounds/kywmback.jpg">\r\n            </div>\r\n            <div class="musicInfo">\r\n                <div class="musicSource">\r\n                    <a href="https://open.spotify.com/album/2yqeudxwbTnp5GzKV7hDwp" target="blank"><img onload="fadeIn(this)" class="albumArt" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('resources/kywmAlbumArt.png"></a>\r\n                </div>\r\n                <div class="musicTextContainer">\r\n                    <div class="musicText">\r\n                        <div class="musicTitle">\r\n\r\n                                <div class="musicName">\r\n                                    Keep You With Me\r\n                                </div>\r\n                                <div class="musicYear">\r\n                                    2020\r\n                                </div>\r\n                        </div>\r\n                        <div class="musicBio">\r\n                            Keep You With Me was the first original song released by the group. The song was written by group director Isaac McDougal. The song originally was dedicated\r\n                            to the members of Rifftide as they prepared to end the season, but after the Covid 19 pandemic broke out the group decided to dedicate the song to everyone\r\n                            who wasn\'t able to say goodbye to someone due to the pandemic.\r\n                        </div>\r\n                        <div class="musicCredits">\r\n                            <b>Original Artist</b>: Rifftide, \r\n                            <b>Written and Arranged by</b>: Isaac McDougal, \r\n                            <b>Mixed by</b>: Becky Willard, \r\n                            <b>Album Art by</b>: Isaac McDougal.\r\n                            \r\n                        </div>\r\n                        <div class="listenNow">\r\n                            <div>\r\n                                <p>Listen Now:</p>\r\n                                <a href="" target="blank">\r\n                                    <img src="')
+        __M_writer('resources/kywmAlbumArt.png"></a>\r\n                </div>\r\n                <div class="musicTextContainer">\r\n                    <div class="musicText">\r\n                        <div class="musicTitle">\r\n\r\n                                <div class="musicName">\r\n                                    Keep You With Me\r\n                                </div>\r\n                                <div class="musicYear">\r\n                                    2020\r\n                                </div>\r\n                        </div>\r\n                        <div class="musicBio">\r\n                            Keep You With Me was the first original song released by the group. The song was written by group director Isaac McDougal. The song originally was dedicated\r\n                            to the members of Rifftide as they prepared to end the season, but after the Covid 19 pandemic broke out the group decided to dedicate the song to everyone\r\n                            who wasn\'t able to say goodbye to someone due to the pandemic.\r\n                        </div>\r\n                        <div class="musicCredits">\r\n                            <b>Original Artist</b>: Rifftide, \r\n                            <b>Written and Arranged by</b>: Isaac McDougal, \r\n                            <b>Mixed by</b>: Becky Willard, \r\n                            <b>Album Art by</b>: Isaac McDougal.\r\n                            \r\n                        </div>\r\n                        <div class="listenNow">\r\n                            <div>\r\n                                <p>Listen Now:</p>\r\n                                <a href="https://open.spotify.com/album/2yqeudxwbTnp5GzKV7hDwp" target="blank">\r\n                                    <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('logos/spotify.png">\r\n                                </a>\r\n                                <a href="" target="blank">\r\n                                    <img src="')
+        __M_writer('logos/spotify.png">\r\n                                </a>\r\n                                <a href="https://music.apple.com/au/album/keep-you-with-me-single/1511490702" target="blank">\r\n                                    <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('logos/itunes.png">\r\n                                </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="music">\r\n            <div class="musicImgDiv dark">\r\n                <img onload="fadeIn(this,.4)" src="')
+        __M_writer('logos/itunes.png">\r\n                                </a>\r\n                                <a href="" target="blank">\r\n                                    <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('backgrounds/justdanceAlbumArt.png">\r\n            </div>\r\n            <div class="musicInfo flipped">\r\n                <div class="musicSource">\r\n                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="')
+        __M_writer('logos/amazon music.png">\r\n                                </a>\r\n                                <a href="" target="blank">\r\n                                    <img src="')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
+        __M_writer('logos/youtubemusic.png">\r\n                                </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="music">\r\n            <div class="musicImgDiv dark">\r\n                <img onload="fadeIn(this,.4)" src="')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
+        __M_writer('backgrounds/justdanceAlbumArt.png">\r\n            </div>\r\n            <div class="musicInfo flipped">\r\n                <div class="musicSource">\r\n                    <a href="https://open.spotify.com/track/3oLxWFaZNR4BhKNUDE4d8D" target="blank"><img onload="fadeIn(this)" class="albumArt" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('resources/justdanceAlbumArt.png"></a>\r\n                </div>\r\n                <div class="musicTextContainer">\r\n                    <div class="musicText">\r\n                        <div class="musicTitle">\r\n\r\n                                <div class="musicName">\r\n                                    Just Dance / Evacuate the Dancefloor\r\n                                </div>\r\n                                <div class="musicYear">\r\n                                    2019\r\n                                </div>\r\n                        </div>\r\n                        <div class="musicBio">\r\n                            This song is a mashup of Lady Gaga\'s "Just Dance" and Cascada\'s "Evacuate the Dancefloor". The song was originally performed back in the Spring of 2018,\r\n                            but wasn\'t recorded until 2019.\r\n                        </div>\r\n                        <div class="musicCredits">\r\n                            <b>Original Artists</b>: Lady Gaga & Cascada,\r\n                            <b>Arranged by</b>: Isaac McDougal, \r\n                            <b>Mixed by</b>: Becky Willard, \r\n                            <b>Album Art by</b>: Isaac McDougal.\r\n                        </div>\r\n                        <div class="listenNow">\r\n                            <div>\r\n                                <p>Listen Now:</p>\r\n                                <a href="https://open.spotify.com/track/3oLxWFaZNR4BhKNUDE4d8D" target="blank">\r\n                                    <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('logos/spotify.png">\r\n                                </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="music">\r\n            <div class="musicImgDiv">\r\n                <img onload="fadeIn(this,.4)" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('backgrounds/dreamAlbumArt.png">\r\n            </div>\r\n            <div class="musicInfo">\r\n                <div class="musicSource">\r\n                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="')
+        __M_writer('backgrounds/dreamAlbumArt.png">\r\n            </div>\r\n            <div class="musicInfo">\r\n                <div class="musicSource">\r\n                    <a href="https://open.spotify.com/track/1nldk66lxxwRuselDP4Doq" target="blank"><img onload="fadeIn(this)" class="albumArt" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('resources/dreamAlbumArt.png"></a>\r\n                </div>\r\n                <div class="musicTextContainer">\r\n                    <div class="musicText">\r\n                        <div class="musicTitle">\r\n\r\n                                <div class="musicName">\r\n                                    Dream\r\n                                </div>\r\n                                <div class="musicYear">\r\n                                    2019\r\n                                </div>\r\n                        </div>\r\n                        <div class="musicBio">\r\n                            Dream was recorded and released just months after it was chosen and arranged. \r\n                            This was Rifftide\'s first single self-recorded by the group. \r\n                        </div>\r\n                        <div class="musicCredits">\r\n                            <b>Original Artist</b>: Imagine Dragons, \r\n                            <b>Arranged by</b>: Emily Grether \r\n                            <b>Mixed by</b>: Becky Willard, \r\n                            <b>Album Art by</b>: Isaac McDougal.\r\n                            \r\n                        </div>\r\n                        <div class="listenNow">\r\n                            <div>\r\n                                <p>Listen Now:</p>\r\n                                <a href="https://open.spotify.com/track/1nldk66lxxwRuselDP4Doq" target="blank">\r\n                                    <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
-        __M_writer('logos/spotify.png">\r\n                                </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="music">\r\n            <div class="musicImgDiv dark">\r\n                <img onload="fadeIn(this,.4)" src="')
+        __M_writer('logos/spotify.png">\r\n                                </a>\r\n                                <a href="https://music.apple.com/au/album/dream/1451480973" target="blank">\r\n                                    <img src="')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
+        __M_writer('logos/itunes.png">\r\n                                </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class="music">\r\n            <div class="musicImgDiv dark">\r\n                <img onload="fadeIn(this,.4)" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
         __M_writer('backgrounds/moveAlbumArt.jpg">\r\n            </div>\r\n            <div class="musicInfo flipped">\r\n                <div class="musicSource">\r\n                    <a href=""><img onload="fadeIn(this)" class="albumArt" src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)(settings.IMAGE_URL))
@@ -167,6 +173,6 @@ def render_page_scripts(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/isaac/rifftideDMP/resources/templates/music.html", "uri": "music.html", "source_encoding": "utf-8", "line_map": {"29": 0, "45": 1, "50": 3, "55": 17, "60": 261, "70": 3, "76": 3, "82": 5, "90": 5, "91": 7, "92": 7, "93": 8, "94": 8, "100": 19, "108": 19, "109": 24, "110": 24, "111": 28, "112": 28, "113": 57, "114": 57, "115": 60, "116": 60, "117": 70, "118": 70, "119": 74, "120": 74, "121": 101, "122": 101, "123": 111, "124": 111, "125": 115, "126": 115, "127": 143, "128": 143, "129": 153, "130": 153, "131": 157, "132": 157, "133": 185, "134": 185, "135": 195, "136": 195, "137": 199, "138": 199, "139": 228, "140": 228, "141": 244, "142": 244, "143": 247, "144": 247, "145": 250, "146": 250, "147": 253, "148": 253, "149": 256, "150": 256, "156": 263, "162": 263, "168": 162}}
+{"filename": "C:/Users/isaac/rifftideDMP/resources/templates/music.html", "uri": "music.html", "source_encoding": "utf-8", "line_map": {"29": 0, "45": 1, "50": 3, "55": 17, "60": 270, "70": 3, "76": 3, "82": 5, "90": 5, "91": 7, "92": 7, "93": 8, "94": 8, "100": 19, "108": 19, "109": 24, "110": 24, "111": 28, "112": 28, "113": 57, "114": 57, "115": 60, "116": 60, "117": 63, "118": 63, "119": 66, "120": 66, "121": 76, "122": 76, "123": 80, "124": 80, "125": 107, "126": 107, "127": 117, "128": 117, "129": 121, "130": 121, "131": 149, "132": 149, "133": 152, "134": 152, "135": 162, "136": 162, "137": 166, "138": 166, "139": 194, "140": 194, "141": 204, "142": 204, "143": 208, "144": 208, "145": 237, "146": 237, "147": 253, "148": 253, "149": 256, "150": 256, "151": 259, "152": 259, "153": 262, "154": 262, "155": 265, "156": 265, "162": 272, "168": 272, "174": 168}}
 __M_END_METADATA
 """
